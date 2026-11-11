@@ -110,8 +110,9 @@ PLinOpt.
 
 The rectangular schemes were verified exactly against the Brent equations when they were found.  Two independent
 routes were used: an exact modular contraction with a bound on the entries, and an integer contraction after clearing
-denominators.  Details and logs are in
-[matmul/tomar_line](https://github.com/gsidebottom/logic/tree/master/matmul/tomar_line) of the logic repository.
+denominators.  The logs of those runs, with the pivots of each reduction, are in
+[checks/discovery](checks/discovery): every one ends with the output verifying exactly and the corrupted copy
+rejected.
 
 ### Lean proofs
 
