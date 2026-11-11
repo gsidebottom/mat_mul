@@ -1,0 +1,157 @@
+start 2026-11-11 13:38:02
+schemes/12x13x13_1275_rational/12x13x13_1275_rational: <12x13x13:1275> over Q, nonzeros L 38542 R 23020 P 20175, 20139291 trilinear terms
+  2 random products, wrong entries per trial [0, 0]: EXACT
+  control, one P coefficient changed: REJECTED
+  RESULT: PASS
+  SLPchecker 12x13x13_1275_rational_L.slp: SUCCESS
+  SLPchecker 12x13x13_1275_rational_P.slp: SUCCESS
+  SLPchecker 12x13x13_1275_rational_R.slp: SUCCESS
+  MMchecker run 1: SUCCESS
+  MMchecker run 2: SUCCESS
+  MMchecker run 3: SUCCESS
+schemes/13x14x14_1564_rational/13x14x14_1564_rational: <13x14x14:1564> over Q, nonzeros L 60377 R 119856 P 108484, 1196643120 trilinear terms
+  2 random products, wrong entries per trial [0, 0]: EXACT
+  control, one P coefficient changed: REJECTED
+  RESULT: PASS
+  SLPchecker 13x14x14_1564_rational_L.slp: SUCCESS
+  SLPchecker 13x14x14_1564_rational_P.slp: SUCCESS
+  SLPchecker 13x14x14_1564_rational_R.slp: SUCCESS
+  MMchecker run 1: SUCCESS
+  MMchecker run 2: SUCCESS
+  MMchecker run 3: SUCCESS
+schemes/13x14x16_1805_ternary/13x14x16_1805_ternary: <13x14x16:1805> over Q, nonzeros L 19243 R 15874 P 21972, 1607986 trilinear terms
+  2 random products, wrong entries per trial [0, 0]: EXACT
+  control, one P coefficient changed: REJECTED
+  RESULT: PASS
+  SLPchecker 13x14x16_1805_ternary_L.slp: SUCCESS
+  SLPchecker 13x14x16_1805_ternary_P.slp: SUCCESS
+  SLPchecker 13x14x16_1805_ternary_R.slp: SUCCESS
+  MMchecker run 1: SUCCESS
+  MMchecker run 2: SUCCESS
+  MMchecker run 3: SUCCESS
+schemes/13x15x15_1763_rational/13x15x15_1763_rational: <13x15x15:1763> over Q, nonzeros L 35626 R 34136 P 29193, 26684640 trilinear terms
+  2 random products, wrong entries per trial [0, 0]: EXACT
+  control, one P coefficient changed: REJECTED
+  RESULT: PASS
+  SLPchecker 13x15x15_1763_rational_L.slp: SUCCESS
+  SLPchecker 13x15x15_1763_rational_P.slp: SUCCESS
+  SLPchecker 13x15x15_1763_rational_R.slp: SUCCESS
+  MMchecker run 1: SUCCESS
+  MMchecker run 2: SUCCESS
+  MMchecker run 3: SUCCESS
+schemes/14x14x15_1715_rational/14x14x15_1715_rational: <14x14x15:1715> over Q, nonzeros L 45019 R 61360 P 30739, 55965896 trilinear terms
+  2 random products, wrong entries per trial [0, 0]: EXACT
+  control, one P coefficient changed: REJECTED
+  RESULT: PASS
+  SLPchecker 14x14x15_1715_rational_L.slp: SUCCESS
+  SLPchecker 14x14x15_1715_rational_P.slp: SUCCESS
+  SLPchecker 14x14x15_1715_rational_R.slp: SUCCESS
+  MMchecker run 1: SUCCESS
+  MMchecker run 2: SUCCESS
+  MMchecker run 3: SUCCESS
+schemes/14x15x15_1842_rational/14x15x15_1842_rational: <14x15x15:1842> over Q, nonzeros L 62867 R 35592 P 31539, 42180094 trilinear terms
+  2 random products, wrong entries per trial [0, 0]: EXACT
+  control, one P coefficient changed: REJECTED
+  RESULT: PASS
+  SLPchecker 14x15x15_1842_rational_L.slp: SUCCESS
+  SLPchecker 14x15x15_1842_rational_P.slp: SUCCESS
+  SLPchecker 14x15x15_1842_rational_R.slp: SUCCESS
+  MMchecker run 1: SUCCESS
+  MMchecker run 2: SUCCESS
+  MMchecker run 3: SUCCESS
+schemes/15x16x16_2202_rational/15x16x16_2202_rational: <15x16x16:2202> over Q, nonzeros L 80552 R 200395 P 187008, 3081078976 trilinear terms
+  2 random products, wrong entries per trial [0, 0]: EXACT
+  control, one P coefficient changed: REJECTED
+  RESULT: PASS
+  SLPchecker 15x16x16_2202_rational_L.slp: SUCCESS
+  SLPchecker 15x16x16_2202_rational_P.slp: SUCCESS
+  SLPchecker 15x16x16_2202_rational_R.slp: SUCCESS
+  MMchecker run 1: SUCCESS
+  MMchecker run 2: SUCCESS
+  MMchecker run 3: SUCCESS
+schemes/3x3x3_23_55/3x3x3_23_55: <3x3x3:23> over Q, nonzeros L 66 R 53 P 58, 423 trilinear terms
+  Brent equations, all 729 coefficients: EXACT
+  control, one P coefficient changed: REJECTED
+  RESULT: PASS
+  SLPchecker 3x3x3_23_55_L.slp: SUCCESS
+  SLPchecker 3x3x3_23_55_P.slp: SUCCESS
+  SLPchecker 3x3x3_23_55_R.slp: SUCCESS
+  MMchecker run 1: SUCCESS
+  MMchecker run 2: SUCCESS
+  MMchecker run 3: SUCCESS
+schemes/3x3x3_23_ks51/3x3x3_23_ks51: <3x3x3:23> over Q, nonzeros L 49 R 57 P 52, 211 trilinear terms
+  Brent equations, all 729 coefficients: EXACT
+  control, one P coefficient changed: REJECTED
+  ALT_L CoB_L == L, ALT_R CoB_R == R, CoB_P ALT_P == P: [True, True, True]
+  RESULT: PASS
+  SLPchecker 3x3x3_23_ks51-ALT_L.slp: SUCCESS
+  SLPchecker 3x3x3_23_ks51-ALT_P.slp: SUCCESS
+  SLPchecker 3x3x3_23_ks51-ALT_R.slp: SUCCESS
+  SLPchecker 3x3x3_23_ks51-CoB_L.slp: SUCCESS
+  SLPchecker 3x3x3_23_ks51-CoB_P.slp: SUCCESS
+  SLPchecker 3x3x3_23_ks51-CoB_R.slp: SUCCESS
+  SLPchecker 3x3x3_23_ks51_L.slp: SUCCESS
+  SLPchecker 3x3x3_23_ks51_P.slp: SUCCESS
+  SLPchecker 3x3x3_23_ks51_R.slp: SUCCESS
+  MMchecker run 1: SUCCESS
+  MMchecker run 2: SUCCESS
+  MMchecker run 3: SUCCESS
+  ALTchecker CoB+ALT L: SUCCESS
+  ALTchecker CoB+ALT R: SUCCESS
+  ALTchecker ALT+CoB P: SUCCESS
+schemes/4x4x4_47_mod_2_166/4x4x4_47_mod_2_166: <4x4x4:47> over F_2, nonzeros L 258 R 260 P 268, 7748 trilinear terms
+  Brent equations, all 4096 coefficients: EXACT
+  control, one P coefficient changed: REJECTED
+  RESULT: PASS
+  SLPchecker 4x4x4_47_mod_2_166_L.slp: SUCCESS
+  SLPchecker 4x4x4_47_mod_2_166_P.slp: SUCCESS
+  SLPchecker 4x4x4_47_mod_2_166_R.slp: SUCCESS
+  SLPchecker 4x4x4_47_mod_2_166b_L.slp: SUCCESS
+  SLPchecker 4x4x4_47_mod_2_166b_P.slp: SUCCESS
+  SLPchecker 4x4x4_47_mod_2_166b_R.slp: SUCCESS
+  MMchecker run 1: SUCCESS
+  MMchecker run 2: SUCCESS
+  MMchecker run 3: SUCCESS
+schemes/4x4x4_47_mod_2_166/4x4x4_47_mod_2_166b: <4x4x4:47> over F_2, nonzeros L 268 R 260 P 258, 7748 trilinear terms
+  Brent equations, all 4096 coefficients: EXACT
+  control, one P coefficient changed: REJECTED
+  RESULT: PASS
+  SLPchecker 4x4x4_47_mod_2_166b_L.slp: SUCCESS
+  SLPchecker 4x4x4_47_mod_2_166b_P.slp: SUCCESS
+  SLPchecker 4x4x4_47_mod_2_166b_R.slp: SUCCESS
+  MMchecker run 1: SUCCESS
+  MMchecker run 2: SUCCESS
+  MMchecker run 3: SUCCESS
+schemes/4x4x4_47_mod_2_167/4x4x4_47_mod_2_167: <4x4x4:47> over F_2, nonzeros L 264 R 272 P 263, 7664 trilinear terms
+  Brent equations, all 4096 coefficients: EXACT
+  control, one P coefficient changed: REJECTED
+  RESULT: PASS
+  SLPchecker 4x4x4_47_mod_2_167_L.slp: SUCCESS
+  SLPchecker 4x4x4_47_mod_2_167_P.slp: SUCCESS
+  SLPchecker 4x4x4_47_mod_2_167_R.slp: SUCCESS
+  MMchecker run 1: SUCCESS
+  MMchecker run 2: SUCCESS
+  MMchecker run 3: SUCCESS
+schemes/4x4x4_48_201-balanced/4x4x4_48_201-balanced: <4x4x4:48> over Q, nonzeros L 236 R 236 P 248, 5570 trilinear terms
+  Brent equations, all 4096 coefficients: EXACT
+  control, one P coefficient changed: REJECTED
+  RESULT: PASS
+  SLPchecker 4x4x4_48_201-balanced_L.slp: SUCCESS
+  SLPchecker 4x4x4_48_201-balanced_P.slp: SUCCESS
+  SLPchecker 4x4x4_48_201-balanced_R.slp: SUCCESS
+  MMchecker run 1: SUCCESS
+  MMchecker run 2: SUCCESS
+  MMchecker run 3: SUCCESS
+schemes/4x4x4_48_201/4x4x4_48_201: <4x4x4:48> over Q, nonzeros L 232 R 216 P 248, 5006 trilinear terms
+  Brent equations, all 4096 coefficients: EXACT
+  control, one P coefficient changed: REJECTED
+  RESULT: PASS
+  SLPchecker 4x4x4_48_201_L.slp: SUCCESS
+  SLPchecker 4x4x4_48_201_P.slp: SUCCESS
+  SLPchecker 4x4x4_48_201_R.slp: SUCCESS
+  MMchecker run 1: SUCCESS
+  MMchecker run 2: SUCCESS
+  MMchecker run 3: SUCCESS
+ALL: PASS
+exit 0
+end 13:41:23
