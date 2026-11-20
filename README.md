@@ -5,10 +5,12 @@ or for the number of additions, and a few near records.  Every scheme is in the 
 [PLinOpt](https://github.com/jgdumas/plinopt), with a straight-line program for each of its three linear maps, and has
 been checked exactly.  Three of them come with Lean 4 proofs that they compute the matrix product.
 
-Status as of 2026-11-11.  "Previous best" is what we knew of when the scheme was found; the rank comparisons use
+Status as of 2026-11-20.  "Previous best" is what we knew of when the scheme was found; the rank comparisons use
 Alexandre Sedoglavic's table at [fmm.univ-lille.fr](https://fmm.univ-lille.fr/) (its `fmm_sota.json` of 2026-11-09)
 and Andrew Perminov's catalog
-[FastMatrixMultiplication](https://github.com/dronperminov/FastMatrixMultiplication) (commit 6f8ef61 of 2026-11-09).
+[FastMatrixMultiplication](https://github.com/dronperminov/FastMatrixMultiplication) (commit 6f8ef61 of 2026-11-09
+for the schemes of 2026-11-10 and 11; commit f70078c of 2026-11-16, still its head on 2026-11-20, for those of
+2026-11-20).
 
 ## Index
 
@@ -23,17 +25,66 @@ and Andrew Perminov's catalog
 
 ### Lowest rank for rectangular formats
 
-| Scheme | Format | Rank | Previous best: table / catalog | Valid over | Exponent (previous) | Operations: additions + scalings | Found | Lean proof |
-|---|---|---|---|---|---|---|---|---|
-| [13x14x14_1564_rational](schemes/13x14x14_1564_rational) | ⟨13×14×14⟩ | 1564 | 1579 / 1582 | 2 and 5 invertible | 2.813315 (2.816966) | 32,015 + 12,945 | 2026-11-11 | none |
-| [13x15x15_1763_rational](schemes/13x15x15_1763_rational) | ⟨13×15×15⟩ | 1763 | 1776 / 1776 | 2, 5 and 17 invertible | 2.809695 (2.812457) | 16,335 + 3,666 | 2026-11-10 | none |
-| [14x14x15_1715_rational](schemes/14x14x15_1715_rational) | ⟨14×14×15⟩ | 1715 | 1789 / 1790 | 2, 5 and 17 invertible | 2.797526 (2.813395) | 16,825 + 3,890 | 2026-11-10 | none |
-| [14x15x15_1842_rational](schemes/14x15x15_1842_rational) | ⟨14×15×15⟩ | 1842 | 1848 / 1848 | 2, 5 and 17 invertible | 2.800171 (2.801382) | 17,598 + 3,933 | 2026-11-10 | none |
-| [15x16x16_2202_rational](schemes/15x16x16_2202_rational) | ⟨15×16×16⟩ | 2202 | 2220 / 2223 | 2, 3 and 5 invertible | 2.797859 (2.800818) | 43,925 + 15,699 | 2026-11-11 | none |
-| [13x14x16_1805_ternary](schemes/13x14x16_1805_ternary) | ⟨13×14×16⟩ | 1805 | with integer coefficients: 1806 in the catalog; with rational ones: 1796 / 1796 | every ring | 2.820119 (2.818239 with rational coefficients) | 10,903 + 0 | 2026-11-10 | none |
+Grouped by what the coefficients need: integers, which work over every ring; ℤ[1/2], which needs only 2 to be
+invertible; and rationals with other denominators.  "Previous best" is Sedoglavic's table / Perminov's catalog when
+the scheme was found, and "(ours)" marks a catalog entry that is one of our earlier schemes.  None of these has a
+Lean proof.
 
-The ternary 13×14×16 scheme is a record only among schemes with integer coefficients, which work over every ring; a
-rational scheme of rank 1796 is known.
+#### Integer coefficients: valid over every ring
+
+| Scheme | Format | Rank | Previous best: table / catalog | Valid over | Exponent (previous) | Operations: additions + scalings | Found |
+|---|---|---|---|---|---|---|---|
+| [4x11x14_426_integer](schemes/4x11x14_426_integer) | ⟨4×11×14⟩ | 426 | 429 / 429 | every ring | 2.827747 (2.831025) | 2,655 + 10 | 2026-11-20 |
+| [13x14x16_1805_ternary](schemes/13x14x16_1805_ternary) | ⟨13×14×16⟩ | 1805 | with integer coefficients: 1806 in the catalog; with rational ones: 1796 / 1796 | every ring | 2.820119 (2.818239 with rational coefficients) | 10,903 + 0 | 2026-11-10 |
+
+The ⟨4×11×14⟩ scheme has coefficients between −2 and 2 and is below the table and the catalog outright; the catalog's
+best integer scheme for the format has rank 429 as well.  The ternary 13×14×16 scheme is a record only among schemes
+with integer coefficients; a rational scheme of rank 1796 is known.
+
+#### Coefficients in ℤ[1/2]: valid wherever 2 is invertible
+
+| Scheme | Format | Rank | Previous best: table / catalog | Valid over | Exponent (previous) | Operations: additions + scalings | Found |
+|---|---|---|---|---|---|---|---|
+| [4x11x13_397_dyadic](schemes/4x11x13_397_dyadic) | ⟨4×11×13⟩ | 397 | 400 / 400 | 2 invertible | 2.827440 (2.830997) | 2,602 + 72 | 2026-11-20 |
+| [4x11x16_477_dyadic](schemes/4x11x16_477_dyadic) | ⟨4×11×16⟩ | 477 | 480 / 480 | 2 invertible | 2.821896 (2.824765) | 2,702 + 6 | 2026-11-20 |
+| [4x13x14_498_dyadic](schemes/4x13x14_498_dyadic) | ⟨4×13×14⟩ | 498 | 500 / 500 | 2 invertible | 2.827155 (2.828979) | 7,631 + 4,261 | 2026-11-20 |
+| [8x11x13_749_dyadic](schemes/8x11x13_749_dyadic) | ⟨8×11×13⟩ | 749 | 750 / 750 | 2 invertible | 2.819570 (2.820138) | 7,502 + 1,606 | 2026-11-20 |
+| [9x11x11_705_dyadic](schemes/9x11x11_705_dyadic) | ⟨9×11×11⟩ | 705 | 710 / 708 | 2 invertible | 2.813464 (2.815285) | 7,347 + 2,674 | 2026-11-20 |
+| [9x11x16_987_dyadic](schemes/9x11x16_987_dyadic) | ⟨9×11×16⟩ | 987 | 996 / 996 | 2 invertible | 2.807387 (2.811083) | 9,985 + 3,807 | 2026-11-20 |
+| [11x13x16_1444_dyadic](schemes/11x13x16_1444_dyadic) | ⟨11×13×16⟩ | 1444 | 1446 / 1446 | 2 invertible | 2.821499 (2.822036) | 9,988 + 457 | 2026-11-20 |
+
+Every denominator in these seven is a power of 2, at most 16, and their programs divide by powers of 2 only.
+
+#### Rational coefficients with other denominators
+
+| Scheme | Format | Rank | Previous best: table / catalog | Valid over | Exponent (previous) | Operations: additions + scalings | Found |
+|---|---|---|---|---|---|---|---|
+| [9x11x15_953_rational](schemes/9x11x15_953_rational) | ⟨9×11×15⟩ | 953 | 956 / 956 | 2 and 3 invertible | 2.817796 (2.819087) | 10,054 + 3,403 | 2026-11-20 |
+| [13x13x14_1477_rational](schemes/13x13x14_1477_rational) | ⟨13×13×14⟩ | 1477 | 1511 / 1511 | 2, 5 and 17 invertible | 2.818050 (2.826838) | 14,475 + 5,231 | 2026-11-20 |
+| [13x13x15_1577_rational](schemes/13x13x15_1577_rational) | ⟨13×13×15⟩ | 1577 | 1591 / 1591 | 2, 5 and 17 invertible | 2.818319 (2.821702) | 14,718 + 5,044 | 2026-11-20 |
+| [13x14x14_1538_rational](schemes/13x14x14_1538_rational) | ⟨13×14×14⟩ | 1538 | 1579 / 1564 (ours) | 2, 5 and 17 invertible | 2.806902 (2.813315) | 15,078 + 5,447 | 2026-11-20 |
+| [13x14x15_1645_rational](schemes/13x14x15_1645_rational) | ⟨13×14×15⟩ | 1645 | 1681 / 1681 | 2, 5 and 17 invertible | 2.807928 (2.816137) | 15,678 + 5,594 | 2026-11-20 |
+| [13x15x15_1762_rational](schemes/13x15x15_1762_rational) | ⟨13×15×15⟩ | 1762 | 1776 / 1763 (ours) | 2, 5 and 17 invertible | 2.809482 (2.809695) | 16,036 + 5,424 | 2026-11-20 |
+| [14x14x15_1715_rational](schemes/14x14x15_1715_rational) | ⟨14×14×15⟩ | 1715 | 1789 / 1790 | 2, 5 and 17 invertible | 2.797526 (2.813395) | 16,825 + 3,890 | 2026-11-10 |
+| [14x15x15_1842_rational](schemes/14x15x15_1842_rational) | ⟨14×15×15⟩ | 1842 | 1848 / 1848 | 2, 5 and 17 invertible | 2.800171 (2.801382) | 17,598 + 3,933 | 2026-11-10 |
+| [15x16x16_2200_rational](schemes/15x16x16_2200_rational) | ⟨15×16×16⟩ | 2200 | 2220 / 2223; ours 2202 | 2, 3, 5 and 7 invertible | 2.797528 (2.797859) | 43,330 + 22,473 | 2026-11-20 |
+
+A scheme for ⟨m×k×n⟩ gives one of the same rank for every ordering of m, k and n, by cyclic rotation and
+transposition of the trilinear form, so the tables of records index formats by the sorted shape, and every scheme
+here is stored in that ordering.  Four of them (13x13x14_1477, 13x13x15_1577, 13x14x15_1645 and 15x16x16_2200) were
+found in another ordering and rotated or transposed with [tools/scheme_orient.py](tools/scheme_orient.py); the result
+was verified exactly again ([sorted_formats.verify.log](checks/discovery/sorted_formats.verify.log)).
+
+#### Superseded by the schemes above
+
+| Scheme | Format | Rank | Superseded by | Valid over | Found |
+|---|---|---|---|---|---|
+| [13x14x14_1564_rational](schemes/13x14x14_1564_rational) | ⟨13×14×14⟩ | 1564 | 13x14x14_1538 | 2 and 5 invertible | 2026-11-11 |
+| [13x15x15_1763_rational](schemes/13x15x15_1763_rational) | ⟨13×15×15⟩ | 1763 | 13x15x15_1762 | 2, 5 and 17 invertible | 2026-11-10 |
+| [15x16x16_2202_rational](schemes/15x16x16_2202_rational) | ⟨15×16×16⟩ | 2202 | 15x16x16_2200 | 2, 3 and 5 invertible | 2026-11-11 |
+
+These three were records when found (against 1579 / 1582, 1776 / 1776 and 2220 / 2223).  They stay here because
+PLinOpt's `data/` and, for the first two, Perminov's catalog hold them under these names.
 
 ### Near records
 
@@ -52,8 +103,8 @@ the entries of C = AB as linear combinations of the products.
 **Operations.** Additions are binary additions and subtractions; a negation is free.  Scalings are multiplications or
 divisions by a constant other than ±1.  Over F₂ every addition is an XOR.  The counts are those of PLinOpt's
 `OpCount.sh` on the programs in each folder, written A side + B side + C side.  For the rectangular schemes the
-programs come from one randomized loop of PLinOpt's `optimizer -O 1`, so their counts are upper bounds that more
-optimization would lower.
+programs come from one quick heuristic pass (see [the rectangular schemes](#the-rectangular-schemes-projection-and-2-reduction)),
+so their counts are upper bounds that more optimization would lower.
 
 **Exponent.** 3 ln r / ln(mkn), as in the complexity column of fmm.univ-lille.fr: composing the scheme with its two
 cyclic rotations gives a scheme for ⟨mkn×mkn×mkn:r³⟩, and recursion on it multiplies N×N matrices in O(N^ω) for this
@@ -63,7 +114,7 @@ for the 55, 4.64 for KS-51 (plus O(N² log N) for its basis changes), 7.28 for t
 
 **Rings and fields.** Where a scheme works depends on its coefficients:
 
-- integer coefficients (here 0, ±1): every ring;
+- integer coefficients: every ring;
 - coefficients in ℤ[1/2]: every ring in which 2 is invertible, such as ℚ, ℝ, ℂ and F_p for odd p;
 - rational coefficients whose denominators have the prime factors p₁, …, p_k: every ring in which those primes are
   invertible; for the finite fields F_p, every prime p other than p₁, …, p_k;
@@ -99,14 +150,17 @@ python3 tools/check_scheme.py schemes/4x4x4_48_201/4x4x4_48_201
 python3 tools/check_scheme.py --mod 2 schemes/4x4x4_47_mod_2_166/4x4x4_47_mod_2_166
 tools/check_all.sh                              # every scheme, Python standard library only
 PLINOPT=/path/to/plinopt tools/check_all.sh     # also PLinOpt's SLPchecker, MMchecker and ALTchecker
+python3 tools/ring_slp.py --check schemes/4x11x14_426_integer/4x11x14_426_integer   # programs against their matrices
 ```
 
 `check_scheme.py` checks the 3×3 and 4×4 schemes against the Brent equations, exactly: every coefficient of the
 trilinear form (729 or 4,096 of them) must be right, modulo 2 for the F₂ schemes.  The rectangular schemes are too big
 for that in plain Python, so it runs them on random integer matrices with entries up to 10⁹ in exact rational
 arithmetic, where a wrong scheme passes a trial with probability below 10⁻⁶.  Every run also changes one coefficient
-and requires the check to fail.  [checks/check_all.log](checks/check_all.log) is the output of the last full run with
-PLinOpt.
+and requires the check to fail.  For every scheme whose programs are plain sums, `check_all.sh` also runs
+`ring_slp.py --check`: it evaluates each program symbolically, requires it to equal its matrix exactly, and requires
+every division to be by a prime that occurs in a denominator of that matrix.
+[checks/check_all.log](checks/check_all.log) is the output of the last full run with PLinOpt.
 
 The rectangular schemes were verified exactly against the Brent equations when they were found.  Two independent
 routes were used: an exact modular contraction with a bound on the entries, and an integer contraction after clearing
@@ -235,72 +289,158 @@ where J.-G. Dumas later compacted the A-side program; the files here are the one
 
 ### The rectangular schemes: projection and 2-reduction
 
-Six of the seven start from the square schemes of Khoruzhii, Serafin, Gelß and Pokutta, *Local Improvements to
-Trilinear Aggregation* ([khoruzhii/lita](https://github.com/khoruzhii/lita)), as included in Perminov's catalog.  The
-steps:
+Twelve of the twenty-two start from the square schemes of Khoruzhii, Serafin, Gelß and Pokutta, *Local Improvements
+to Trilinear Aggregation* ([khoruzhii/lita](https://github.com/khoruzhii/lita)), as included in Perminov's catalog.
+Nine start from other schemes of that catalog, and one is a direct 2-reduction of a ternary catalog scheme by
+MerlijnW70 ([MerlijnW70/fmm-schemes](https://github.com/MerlijnW70/fmm-schemes)).  The steps:
 
-1. **Project.** Delete one index, for example one row of A.  This gives a scheme for the next smaller format;
-   products whose A factor becomes zero disappear.
+1. **Project.** Delete one index: a row of A, a column of B, or an inner index (a column of A together with the
+   matching row of B).  This gives a scheme for the next smaller format; products with a factor that becomes zero
+   disappear.
 2. **Reduce.** In the projected scheme the Kronecker products of two of the three factors of the products become
    linearly dependent; the scheme is *2-reducible* in LITA's sense.  Each dependency lets one product's third factor
    be folded into the others, which removes that product.
 3. **Choose what to remove.** Which products the dependencies remove is a search.  An exchange search over pivot sets
    picks them so that many more products vanish than there are dependencies: 14 dependencies remove 30 products for
-   13×14×14, and 17 remove 113 for 14×15×15.
+   13×14×14 at rank 1564, and 17 remove 113 for 14×15×15.
 
 The pivot search runs modulo the prime 1048573.  The reduction is then replayed exactly over ℚ, with the
 dependencies lifted from several primes.  The result is verified against the Brent equations by two independent
 routes, and a copy with one coefficient changed must be rejected.  Finally an independent program runs it on random
-integer matrices.  The method is LITA's, and Perminov's catalog already holds projected LITA schemes; our part is the choice of which
-products to remove.  The seventh scheme
-is a direct 2-reduction of a ternary catalog scheme by MerlijnW70
-([MerlijnW70/fmm-schemes](https://github.com/MerlijnW70/fmm-schemes)).
+integer matrices.  The method is LITA's, and Perminov's catalog already holds projected LITA schemes; our part is the
+choice of which products to remove.
+
+**The sweep of 2026-11-20.**  The pivot search was rewritten in Rust, about ten times faster per core, and run over
+every scheme file of the catalog at commit f70078c that it could read: 2,625 files, each reduced directly and after
+every single-index deletion in each of the three positions, 72,826 runs.  Every result below both the table and the
+catalog was replayed exactly and verified as above.  The verified schemes were then used as sources themselves,
+round after round, until a round gave nothing new.  What it showed:
+
+- Which index is deleted matters, and so does its position.  From LITA's ⟨16×16×16:2236⟩ the best row deletion gives
+  2202, and inner index 9 gives 2200.
+- Reducing a catalog scheme without deleting anything gave no record.
+- Schemes found this way are good sources.  LITA's ⟨15×15×15:1977⟩ alone leads to seven of the schemes here, each
+  from an earlier one by one more deletion: 14×15×15, 14×14×15, 13×15×15, 13×14×15, 13×14×14, 13×13×15 and 13×13×14.
+  The family ends there in our runs: one more deletion reaches ⟨13×13×13⟩ at 1417 at best, where LITA's own square
+  has 1379, and the formats with a 12 come out 44 or more above the tables.
+- More search per reduction (5 times the idle budget and 16 times the restarts) found nothing that the standard
+  setting does not find.
+
+How each scheme was derived.  "Products left" is the count after the deletion and before the reduction; a + b in
+the next two columns means successive reductions along different factors.  Indices count from 0 and refer to the
+source in the ordering in which it was found, which for the four reordered schemes is not the ordering stored here;
+the path files in [checks/discovery](checks/discovery) give every step as it was run.
 
 | Scheme | Source | Deleted | Products left | Dependencies | Products removed | Rank | Found |
 |---|---|---|---|---|---|---|---|
-| 13x14x14_1564 | LITA ⟨14×14×14:1594⟩ | row 7 of A | 1594 | 14 | 30 | 1564 | 2026-11-10, verified 2026-11-11 |
-| 15x16x16_2202 | LITA ⟨16×16×16:2237⟩ | row 9 of A | 2237 | 16 | 35 | 2202 | 2026-11-10, verified 2026-11-11 |
-| 14x15x15_1842 | LITA ⟨15×15×15:1977⟩ | row 0 of A | 1955 | 17 | 113 | 1842 | 2026-11-10 |
-| 14x14x15_1715 | the 14x15x15 scheme above | inner index 0: column 0 of A, row 0 of B | 1827 | 17 | 112 | 1715 | 2026-11-10 |
-| 13x15x15_1763 | the 14x15x15 scheme above | row 7 of A | 1797 | 21 | 34 | 1763 | 2026-11-10 |
+| 4x11x13_397 | catalog ⟨4×12×13:423⟩, ternary | inner index 0 | 418 | 17 | 21 | 397 | 2026-11-20 |
+| 4x11x14_426 | catalog ⟨4×12×14:455⟩, ternary | inner index 3 | 443 | 16 | 17 | 426 | 2026-11-20 |
+| 4x11x16_477 | catalog ⟨4×12×16:513⟩, ternary | inner index 11 | 501 | 18 | 24 | 477 | 2026-11-20 |
+| 4x13x14_498 | catalog ⟨4×13×15:520⟩ | column 2 of B | 520 | 17 | 22 | 498 | 2026-11-20 |
+| 8x11x13_749 | catalog ⟨8×12×13:785⟩ | inner index 5 | 775 | 22 | 26 | 749 | 2026-11-20 |
+| 9x11x11_705 | catalog ⟨9×11×12:738⟩ | column 7 of B | 728 | 20 | 23 | 705 | 2026-11-20 |
+| 9x11x15_953 | catalog ⟨9×12×15:996⟩ | inner index 0 | 985 | 15 + 5 + 1 | 25 + 6 + 1 | 953 | 2026-11-20 |
+| 9x11x16_987 | catalog ⟨9×12×16:1035⟩ | inner index 2 | 1012 | 11 + 6 | 19 + 6 | 987 | 2026-11-20 |
+| 11x13x16_1444 | catalog ⟨12×13×16:1509⟩ | row 1 of A | 1479 | 19 + 11 + 2 | 22 + 11 + 2 | 1444 | 2026-11-20 |
 | 12x13x13_1275 | LITA ⟨13×13×13:1379⟩ | row 0 of A | 1360 | 15 | 85 | 1275 | 2026-11-10, verified 2026-11-11 |
+| 13x13x14_1477 | the 13x13x15_1577 scheme | inner index 0 | 1560 | 14 | 83 | 1477 | 2026-11-20 |
+| 13x13x15_1577 | the 13x15x15_1762 scheme | column 10 of B, reduced to 1645, then column 2 of B | 1747, then 1610 | 19, then 14 + 6 | 102, then 27 + 6 | 1577 | 2026-11-20 |
+| 13x14x14_1538 | the 13x14x15_1645 scheme | inner index 0 | 1628 | 15 | 90 | 1538 | 2026-11-20 |
+| 13x14x14_1564 | LITA ⟨14×14×14:1594⟩ | row 7 of A | 1594 | 14 | 30 | 1564 | 2026-11-10, verified 2026-11-11 |
+| 13x14x15_1645 | the 13x15x15_1762 scheme | column 0 of B | 1742 | 14 | 97 | 1645 | 2026-11-20 |
 | 13x14x16_1805 | MerlijnW70's ⟨13×14×16:1806⟩, ternary | none | 1806 | 1 | 1 | 1805 | 2026-11-10 |
+| 13x15x15_1762 | LITA ⟨15×15×15:1977⟩ | row 14 of A, reduced to 1842, then row 6 of A | 1961, then 1791 | 23, then 16 | 119, then 29 | 1762 | 2026-11-20 |
+| 13x15x15_1763 | the 14x15x15_1842 scheme | row 7 of A | 1797 | 21 | 34 | 1763 | 2026-11-10 |
+| 14x14x15_1715 | the 14x15x15_1842 scheme | inner index 0 | 1827 | 17 | 112 | 1715 | 2026-11-10 |
+| 14x15x15_1842 | LITA ⟨15×15×15:1977⟩ | row 0 of A | 1955 | 17 | 113 | 1842 | 2026-11-10 |
+| 15x16x16_2200 | LITA ⟨16×16×16:2236⟩ | inner index 9 | 2236 | 16 + 1 | 34 + 2 | 2200 | 2026-11-20 |
+| 15x16x16_2202 | LITA ⟨16×16×16:2237⟩ | row 9 of A | 2237 | 16 | 35 | 2202 | 2026-11-10, verified 2026-11-11 |
 
-Coefficients: the six projected schemes are over ℚ and not dyadic.  After each product is rescaled so that its A and
-B factors are primitive integer vectors, all denominators sit on the C side, and each entry of C needs one division
-by a constant.
+The catalog sources are in its `schemes/results`; the exact paths, the pivots and the verification logs of every
+scheme are in [checks/discovery](checks/discovery).
+
+Coefficients.  After each product is rescaled so that its A and B factors are primitive integer vectors, all
+denominators sit on the C side, and an entry of C needs at most one division by a constant; the fourth column counts
+the entries of C that need one.
 
 | Scheme | Denominator primes | Largest denominator | Divisions after rescaling | Valid over F_p for |
 |---|---|---|---|---|
-| 13x14x14_1564 | 2, 5 | 200 | 182, one per entry of C | p ≠ 2, 5 |
-| 13x15x15_1763 | 2, 5, 17 | 1088 | 195 | p ≠ 2, 5, 17 |
-| 14x14x15_1715 | 2, 5, 17 | 1088 | 210 | p ≠ 2, 5, 17 |
-| 14x15x15_1842 | 2, 5, 17 | 1088 | 210 | p ≠ 2, 5, 17 |
-| 15x16x16_2202 | 2, 3, 5 | 720 | 240 | p ≠ 2, 3, 5 |
-| 12x13x13_1275 | 2, 3, 13 | 117 | 156 | p ≠ 2, 3, 13 |
+| 4x11x14_426 | none (coefficients −2 to 2) | 1 | 0 | every p |
 | 13x14x16_1805 | none (coefficients −1, 0, 1) | 1 | 0 | every p |
+| 4x11x13_397 | 2 | 2 | 29 of the 52 entries of C | p ≠ 2 |
+| 4x11x16_477 | 2 | 2 | 20 of 64 | p ≠ 2 |
+| 4x13x14_498 | 2 | 8 | 56, one per entry of C | p ≠ 2 |
+| 8x11x13_749 | 2 | 16 | 104, one per entry | p ≠ 2 |
+| 9x11x11_705 | 2 | 8 | 99, one per entry | p ≠ 2 |
+| 9x11x16_987 | 2 | 8 | 144, one per entry | p ≠ 2 |
+| 11x13x16_1444 | 2 | 8 | 104 of 176 | p ≠ 2 |
+| 9x11x15_953 | 2, 3 | 432 | 135, one per entry | p ≠ 2, 3 |
+| 12x13x13_1275 | 2, 3, 13 | 117 | 156, one per entry | p ≠ 2, 3, 13 |
+| 13x13x14_1477 | 2, 5, 17 | 1088 | 182, one per entry | p ≠ 2, 5, 17 |
+| 13x13x15_1577 | 2, 5, 17 | 1088 | 195, one per entry | p ≠ 2, 5, 17 |
+| 13x14x14_1538 | 2, 5, 17 | 1088 | 182, one per entry | p ≠ 2, 5, 17 |
+| 13x14x14_1564 | 2, 5 | 200 | 182, one per entry | p ≠ 2, 5 |
+| 13x14x15_1645 | 2, 5, 17 | 1088 | 195, one per entry | p ≠ 2, 5, 17 |
+| 13x15x15_1762 | 2, 5, 17 | 1088 | 195, one per entry | p ≠ 2, 5, 17 |
+| 13x15x15_1763 | 2, 5, 17 | 1088 | 195, one per entry | p ≠ 2, 5, 17 |
+| 14x14x15_1715 | 2, 5, 17 | 1088 | 210, one per entry | p ≠ 2, 5, 17 |
+| 14x15x15_1842 | 2, 5, 17 | 1088 | 210, one per entry | p ≠ 2, 5, 17 |
+| 15x16x16_2200 | 2, 3, 5, 7 | 1440 | 240, one per entry | p ≠ 2, 3, 5, 7 |
+| 15x16x16_2202 | 2, 3, 5 | 720 | 240, one per entry | p ≠ 2, 3, 5 |
 
-Programs, totals over the three sides; the divisions and integer multiplications together are the scalings:
+Programs.  The programs of the fifteen schemes of 2026-11-20 are made by [tools/ring_slp.py](tools/ring_slp.py), a
+greedy elimination of common pairs that only ever forms p·x + q·y with p and q coprime integers.  Every constant
+of such a program is an integer or has a denominator that occurs in the scheme: the integer scheme's programs
+contain no division, and those of the ℤ[1/2] schemes divide by powers of 2 only.  The C side is made from the
+program of its transpose.  Counts are A side + B side + C side; the divisions and integer multiplications together
+are the scalings.
 
 | Scheme | Additions | Divisions (of which by a power of 2) | Integer multiplications | Total |
 |---|---|---|---|---|
+| 4x11x13_397 | 482 + 1,244 + 876 = 2,602 | 25 (25) | 47 | 2,674 |
+| 4x11x14_426 | 472 + 1,194 + 989 = 2,655 | 0 | 10 | 2,665 |
+| 4x11x16_477 | 489 + 1,134 + 1,079 = 2,702 | 3 (3) | 3 | 2,708 |
+| 4x13x14_498 | 1,356 + 5,041 + 1,234 = 7,631 | 2,002 (2,002) | 2,259 | 11,892 |
+| 8x11x13_749 | 1,863 + 2,935 + 2,704 = 7,502 | 759 (759) | 847 | 9,108 |
+| 9x11x11_705 | 1,339 + 3,533 + 2,475 = 7,347 | 1,172 (1,172) | 1,502 | 10,021 |
+| 9x11x15_953 | 1,726 + 4,010 + 4,318 = 10,054 | 1,713 (1,472) | 1,690 | 13,457 |
+| 9x11x16_987 | 1,755 + 3,462 + 4,768 = 9,985 | 2,091 (2,091) | 1,716 | 13,792 |
+| 11x13x16_1444 | 2,775 + 3,157 + 4,056 = 9,988 | 345 (345) | 112 | 10,445 |
+| 13x13x14_1477 | 4,192 + 4,420 + 5,863 = 14,475 | 3,024 (1,188) | 2,207 | 19,706 |
+| 13x13x15_1577 | 4,271 + 4,890 + 5,557 = 14,718 | 2,861 (1,123) | 2,183 | 19,762 |
+| 13x14x14_1538 | 4,467 + 4,604 + 6,007 = 15,078 | 3,071 (1,204) | 2,376 | 20,525 |
+| 13x14x15_1645 | 4,666 + 4,556 + 6,456 = 15,678 | 3,260 (1,377) | 2,334 | 21,272 |
+| 13x15x15_1762 | 5,044 + 5,100 + 5,892 = 16,036 | 3,119 (1,306) | 2,305 | 21,460 |
+| 15x16x16_2200 | 14,074 + 13,892 + 15,364 = 43,330 | 9,661 (4,319) | 12,812 | 65,803 |
+
+The programs of the seven schemes of 2026-11-10 and 11 come from one randomized loop of PLinOpt's `optimizer -O 1`.
+They are correct over ℚ, but apart from the ternary one they also divide by constants the scheme itself does not
+need, so over another ring use the matrices, or make new programs with `python3 tools/ring_slp.py PREFIX`.
+
+| Scheme | Additions | Divisions (of which by a power of 2) | Integer multiplications | Total |
+|---|---|---|---|---|
+| 12x13x13_1275 | 12,287 | 2,160 (1,735) | 984 | 15,431 |
 | 13x14x14_1564 | 32,015 | 11,422 (1,223) | 1,523 | 44,960 |
+| 13x14x16_1805 | 10,903 | 0 | 0 | 10,903 |
 | 13x15x15_1763 | 16,335 | 2,495 (694) | 1,171 | 20,001 |
 | 14x14x15_1715 | 16,825 | 2,680 (792) | 1,210 | 20,715 |
 | 14x15x15_1842 | 17,598 | 2,741 (845) | 1,192 | 21,531 |
 | 15x16x16_2202 | 43,925 | 13,636 (2,368) | 2,063 | 59,624 |
-| 12x13x13_1275 | 12,287 | 2,160 (1,735) | 984 | 15,431 |
-| 13x14x16_1805 | 10,903 | 0 | 0 | 10,903 |
 
-The first five are in PLinOpt's pull request [jgdumas/plinopt#40](https://github.com/jgdumas/plinopt/pull/40), opened
-2026-11-11.
+Both sets of counts are upper bounds that more optimization would lower.
+
+Five of the earlier schemes (13x14x14_1564, 13x15x15_1763, 14x14x15_1715, 14x15x15_1842 and 15x16x16_2202) are in
+PLinOpt's `data/` through [jgdumas/plinopt#40](https://github.com/jgdumas/plinopt/pull/40), merged 2026-11-13, and
+the first four are in Perminov's catalog since its commit f70078c.  The schemes of 2026-11-20 are, for now, only
+here.
 
 ## Credits
 
-- Khoruzhii, Serafin, Gelß and Pokutta ([LITA](https://github.com/khoruzhii/lita)): the square schemes behind six of
-  the rectangular ones, and 2-reducibility, the reduction they use.
+- Khoruzhii, Serafin, Gelß and Pokutta ([LITA](https://github.com/khoruzhii/lita)): the square schemes behind twelve
+  of the rectangular ones, and 2-reducibility, the reduction all of them use.
 - Andrew Perminov's [catalog](https://github.com/dronperminov/FastMatrixMultiplication), where we found LITA's and
-  MerlijnW70's schemes, and his 58-addition scheme cn122, the start of the 55.
+  MerlijnW70's schemes and the nine schemes that nine of the records of 2026-11-20 start from, and his 58-addition
+  scheme cn122, the start of the 55.
 - Alexandre Sedoglavic's table at [fmm.univ-lille.fr](https://fmm.univ-lille.fr/).
 - Heule, Kauers and Seidl's database of rank-23 3×3 schemes; Yinqi Sun's chain covering; Karstadt and Schwartz's
   alternative-basis model; Nielsen's 52; Stapleton and Perminov's 51.

@@ -1,0 +1,28 @@
+13x13x14_m1477_Q.json: shape (13, 13, 14), m = 1477
+  [scheme] m = 1477; common denominators [40, 5440, 40]; bound B on every entry: 40 bits (below 2^53)
+  [scheme] slot-2 index convention ik: modular route: contraction 1 FAILS modulo 1048573 (0.0 s); direct route: float64 contraction FAILS (4680 entries differ) (0.0 s)
+  [scheme] slot-2 index convention ki: modular route: both contractions EXACT MATCH modulo 3 + 3 primes (each product above 2 (B + DD), 41 bits) (0.6 s); direct route: float64 and int64 contractions EXACT MATCH (1.0 s)
+  [negative control: one entry changed] m = 1477; common denominators [40, 5440, 40]; bound B on every entry: 40 bits (below 2^53)
+  [negative control: one entry changed] slot-2 index convention ki: modular route: contraction 1 FAILS modulo 1048573 (0.0 s); direct route: float64 contraction FAILS (32 entries differ) (0.0 s)
+RESULT 13x13x14_m1477_Q.json: 1477 products; VERIFIES EXACTLY (ki); corrupted copy REJECTED; ring: RATIONAL; distinct values per slot [105, 122, 157]
+13x13x15_m1577_Q.json: shape (13, 13, 15), m = 1577
+  [scheme] m = 1577; common denominators [40, 5440, 40]; bound B on every entry: 39 bits (below 2^53)
+  [scheme] slot-2 index convention ik: modular route: contraction 1 FAILS modulo 1048573 (0.0 s); direct route: float64 contraction FAILS (4992 entries differ) (0.0 s)
+  [scheme] slot-2 index convention ki: modular route: both contractions EXACT MATCH modulo 2 + 2 primes (each product above 2 (B + DD), 40 bits) (0.4 s); direct route: float64 and int64 contractions EXACT MATCH (0.5 s)
+  [negative control: one entry changed] m = 1577; common denominators [40, 5440, 40]; bound B on every entry: 39 bits (below 2^53)
+  [negative control: one entry changed] slot-2 index convention ki: modular route: contraction 1 FAILS modulo 1048573 (0.0 s); direct route: float64 contraction FAILS (152 entries differ) (0.0 s)
+RESULT 13x13x15_m1577_Q.json: 1577 products; VERIFIES EXACTLY (ki); corrupted copy REJECTED; ring: RATIONAL; distinct values per slot [105, 132, 90]
+13x14x15_m1645_Q.json: shape (13, 14, 15), m = 1645
+  [scheme] m = 1645; common denominators [40, 40, 5440]; bound B on every entry: 40 bits (below 2^53)
+  [scheme] slot-2 index convention ik: modular route: contraction 1 FAILS modulo 1048573 (0.0 s); direct route: float64 contraction FAILS (5376 entries differ) (0.1 s)
+  [scheme] slot-2 index convention ki: modular route: both contractions EXACT MATCH modulo 3 + 3 primes (each product above 2 (B + DD), 41 bits) (0.7 s); direct route: float64 and int64 contractions EXACT MATCH (0.5 s)
+  [negative control: one entry changed] m = 1645; common denominators [40, 40, 5440]; bound B on every entry: 40 bits (below 2^53)
+  [negative control: one entry changed] slot-2 index convention ki: modular route: contraction 1 FAILS modulo 1048573 (0.0 s); direct route: float64 contraction FAILS (2100 entries differ) (0.1 s)
+RESULT 13x14x15_m1645_Q.json: 1645 products; VERIFIES EXACTLY (ki); corrupted copy REJECTED; ring: RATIONAL; distinct values per slot [150, 83, 130]
+15x16x16_m2200_Q.json: shape (15, 16, 16), m = 2200
+  [scheme] m = 2200; common denominators [2880, 720, 25200]; bound B on every entry: 50 bits (below 2^53)
+  [scheme] slot-2 index convention ik: modular route: contraction 1 FAILS modulo 1048573 (0.1 s); direct route: float64 contraction FAILS (7616 entries differ) (0.1 s)
+  [scheme] slot-2 index convention ki: modular route: both contractions EXACT MATCH modulo 3 + 3 primes (each product above 2 (B + DD), 51 bits) (5.5 s); direct route: float64 and int64 contractions EXACT MATCH (7.0 s)
+  [negative control: one entry changed] m = 2200; common denominators [2880, 720, 25200]; bound B on every entry: 50 bits (below 2^53)
+  [negative control: one entry changed] slot-2 index convention ki: modular route: contraction 1 FAILS modulo 1048573 (0.1 s); direct route: float64 contraction FAILS (196 entries differ) (0.1 s)
+RESULT 15x16x16_m2200_Q.json: 2200 products; VERIFIES EXACTLY (ki); corrupted copy REJECTED; ring: RATIONAL; distinct values per slot [602, 187, 236]

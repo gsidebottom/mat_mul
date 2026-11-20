@@ -14,6 +14,19 @@ for d in schemes/*/; do
     case "$prefix" in *mod_2*) opts+=(--mod 2) ;; esac
     [ -e "${prefix}-ALT_L.sms" ] && opts+=(--alt)
     python3 tools/check_scheme.py "${opts[@]}" "$prefix" || fail=1
+    # programs made by tools/ring_slp.py (no parentheses): each equals its matrix exactly and divides only by the
+    # matrix's own denominator primes
+    case "$prefix" in *mod_2*) ;; *)
+      tmp=$(mktemp)
+      if ! grep -q '(' "${prefix}_L.slp" "${prefix}_R.slp" "${prefix}_P.slp"; then
+        if python3 tools/ring_slp.py --check "$prefix" > "$tmp" 2>&1; then
+          printf '  ring check: %s\n' "$(tail -1 "$tmp" | sed 's/^[^:]*: //'); programs equal their matrices and use only the matrices' denominator primes: $(grep -o 'matrix \[[^]]*\]' "$tmp" | tr '\n' ' ')"
+        else
+          printf '  ring check: FAIL %s\n' "$(tail -1 "$tmp")"; fail=1
+        fi
+      fi
+      rm -f "$tmp" ;;
+    esac
     if [ -n "${PLINOPT:-}" ]; then
       q=(); mm=(-b 64); case "$prefix" in *mod_2*) q=(-q 2); mm=(-q 2) ;; esac
       for f in "$prefix"*.slp; do

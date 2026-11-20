@@ -1,4 +1,15 @@
-start 2026-11-11 13:38:02
+start 2026-11-20 16:33:56
+schemes/11x13x16_1444_dyadic/11x13x16_1444_dyadic: <11x13x16:1444> over Q, nonzeros L 15597 R 16937 P 15107, 3589196 trilinear terms
+  2 random products, wrong entries per trial [0, 0]: EXACT
+  control, one P coefficient changed: REJECTED
+  RESULT: PASS
+  ring check: total 9988 additions + 457 scalings = 10445; programs equal their matrices and use only the matrices' denominator primes: matrix [2] matrix [] matrix [] 
+  SLPchecker 11x13x16_1444_dyadic_L.slp: SUCCESS
+  SLPchecker 11x13x16_1444_dyadic_P.slp: SUCCESS
+  SLPchecker 11x13x16_1444_dyadic_R.slp: SUCCESS
+  MMchecker run 1: SUCCESS
+  MMchecker run 2: SUCCESS
+  MMchecker run 3: SUCCESS
 schemes/12x13x13_1275_rational/12x13x13_1275_rational: <12x13x13:1275> over Q, nonzeros L 38542 R 23020 P 20175, 20139291 trilinear terms
   2 random products, wrong entries per trial [0, 0]: EXACT
   control, one P coefficient changed: REJECTED
@@ -6,6 +17,39 @@ schemes/12x13x13_1275_rational/12x13x13_1275_rational: <12x13x13:1275> over Q, n
   SLPchecker 12x13x13_1275_rational_L.slp: SUCCESS
   SLPchecker 12x13x13_1275_rational_P.slp: SUCCESS
   SLPchecker 12x13x13_1275_rational_R.slp: SUCCESS
+  MMchecker run 1: SUCCESS
+  MMchecker run 2: SUCCESS
+  MMchecker run 3: SUCCESS
+schemes/13x13x14_1477_rational/13x13x14_1477_rational: <13x13x14:1477> over Q, nonzeros L 28157 R 28786 P 53060, 36670292 trilinear terms
+  2 random products, wrong entries per trial [0, 0]: EXACT
+  control, one P coefficient changed: REJECTED
+  RESULT: PASS
+  ring check: total 14475 additions + 5231 scalings = 19706; programs equal their matrices and use only the matrices' denominator primes: matrix [2, 5] matrix [2, 5, 17] matrix [2, 5] 
+  SLPchecker 13x13x14_1477_rational_L.slp: SUCCESS
+  SLPchecker 13x13x14_1477_rational_P.slp: SUCCESS
+  SLPchecker 13x13x14_1477_rational_R.slp: SUCCESS
+  MMchecker run 1: SUCCESS
+  MMchecker run 2: SUCCESS
+  MMchecker run 3: SUCCESS
+schemes/13x13x15_1577_rational/13x13x15_1577_rational: <13x13x15:1577> over Q, nonzeros L 28847 R 32796 P 28539, 23397497 trilinear terms
+  2 random products, wrong entries per trial [0, 0]: EXACT
+  control, one P coefficient changed: REJECTED
+  RESULT: PASS
+  ring check: total 14718 additions + 5044 scalings = 19762; programs equal their matrices and use only the matrices' denominator primes: matrix [2, 5] matrix [2, 5, 17] matrix [2, 5] 
+  SLPchecker 13x13x15_1577_rational_L.slp: SUCCESS
+  SLPchecker 13x13x15_1577_rational_P.slp: SUCCESS
+  SLPchecker 13x13x15_1577_rational_R.slp: SUCCESS
+  MMchecker run 1: SUCCESS
+  MMchecker run 2: SUCCESS
+  MMchecker run 3: SUCCESS
+schemes/13x14x14_1538_rational/13x14x14_1538_rational: <13x14x14:1538> over Q, nonzeros L 29936 R 43020 P 54559, 55301494 trilinear terms
+  2 random products, wrong entries per trial [0, 0]: EXACT
+  control, one P coefficient changed: REJECTED
+  RESULT: PASS
+  ring check: total 15078 additions + 5447 scalings = 20525; programs equal their matrices and use only the matrices' denominator primes: matrix [2, 5, 17] matrix [2, 5] matrix [2, 5] 
+  SLPchecker 13x14x14_1538_rational_L.slp: SUCCESS
+  SLPchecker 13x14x14_1538_rational_P.slp: SUCCESS
+  SLPchecker 13x14x14_1538_rational_R.slp: SUCCESS
   MMchecker run 1: SUCCESS
   MMchecker run 2: SUCCESS
   MMchecker run 3: SUCCESS
@@ -19,13 +63,36 @@ schemes/13x14x14_1564_rational/13x14x14_1564_rational: <13x14x14:1564> over Q, n
   MMchecker run 1: SUCCESS
   MMchecker run 2: SUCCESS
   MMchecker run 3: SUCCESS
+schemes/13x14x15_1645_rational/13x14x15_1645_rational: <13x14x15:1645> over Q, nonzeros L 55882 R 29416 P 34081, 41890742 trilinear terms
+  2 random products, wrong entries per trial [0, 0]: EXACT
+  control, one P coefficient changed: REJECTED
+  RESULT: PASS
+  ring check: total 15678 additions + 5594 scalings = 21272; programs equal their matrices and use only the matrices' denominator primes: matrix [2, 5] matrix [2, 5] matrix [2, 5, 17] 
+  SLPchecker 13x14x15_1645_rational_L.slp: SUCCESS
+  SLPchecker 13x14x15_1645_rational_P.slp: SUCCESS
+  SLPchecker 13x14x15_1645_rational_R.slp: SUCCESS
+  MMchecker run 1: SUCCESS
+  MMchecker run 2: SUCCESS
+  MMchecker run 3: SUCCESS
 schemes/13x14x16_1805_ternary/13x14x16_1805_ternary: <13x14x16:1805> over Q, nonzeros L 19243 R 15874 P 21972, 1607986 trilinear terms
   2 random products, wrong entries per trial [0, 0]: EXACT
   control, one P coefficient changed: REJECTED
   RESULT: PASS
+  ring check: total 10903 additions + 0 scalings = 10903; programs equal their matrices and use only the matrices' denominator primes: matrix [] matrix [] matrix [] 
   SLPchecker 13x14x16_1805_ternary_L.slp: SUCCESS
   SLPchecker 13x14x16_1805_ternary_P.slp: SUCCESS
   SLPchecker 13x14x16_1805_ternary_R.slp: SUCCESS
+  MMchecker run 1: SUCCESS
+  MMchecker run 2: SUCCESS
+  MMchecker run 3: SUCCESS
+schemes/13x15x15_1762_rational/13x15x15_1762_rational: <13x15x15:1762> over Q, nonzeros L 34891 R 34102 P 30620, 26527080 trilinear terms
+  2 random products, wrong entries per trial [0, 0]: EXACT
+  control, one P coefficient changed: REJECTED
+  RESULT: PASS
+  ring check: total 16036 additions + 5424 scalings = 21460; programs equal their matrices and use only the matrices' denominator primes: matrix [2, 5, 17] matrix [2, 5] matrix [2, 5] 
+  SLPchecker 13x15x15_1762_rational_L.slp: SUCCESS
+  SLPchecker 13x15x15_1762_rational_P.slp: SUCCESS
+  SLPchecker 13x15x15_1762_rational_R.slp: SUCCESS
   MMchecker run 1: SUCCESS
   MMchecker run 2: SUCCESS
   MMchecker run 3: SUCCESS
@@ -59,6 +126,17 @@ schemes/14x15x15_1842_rational/14x15x15_1842_rational: <14x15x15:1842> over Q, n
   MMchecker run 1: SUCCESS
   MMchecker run 2: SUCCESS
   MMchecker run 3: SUCCESS
+schemes/15x16x16_2200_rational/15x16x16_2200_rational: <15x16x16:2200> over Q, nonzeros L 182808 R 198127 P 185534, 7985811428 trilinear terms
+  2 random products, wrong entries per trial [0, 0]: EXACT
+  control, one P coefficient changed: REJECTED
+  RESULT: PASS
+  ring check: total 43330 additions + 22473 scalings = 65803; programs equal their matrices and use only the matrices' denominator primes: matrix [2, 3, 5] matrix [2, 3, 5] matrix [2, 3, 5, 7] 
+  SLPchecker 15x16x16_2200_rational_L.slp: SUCCESS
+  SLPchecker 15x16x16_2200_rational_P.slp: SUCCESS
+  SLPchecker 15x16x16_2200_rational_R.slp: SUCCESS
+  MMchecker run 1: SUCCESS
+  MMchecker run 2: SUCCESS
+  MMchecker run 3: SUCCESS
 schemes/15x16x16_2202_rational/15x16x16_2202_rational: <15x16x16:2202> over Q, nonzeros L 80552 R 200395 P 187008, 3081078976 trilinear terms
   2 random products, wrong entries per trial [0, 0]: EXACT
   control, one P coefficient changed: REJECTED
@@ -73,6 +151,7 @@ schemes/3x3x3_23_55/3x3x3_23_55: <3x3x3:23> over Q, nonzeros L 66 R 53 P 58, 423
   Brent equations, all 729 coefficients: EXACT
   control, one P coefficient changed: REJECTED
   RESULT: PASS
+  ring check: total 55 additions + 0 scalings = 55; programs equal their matrices and use only the matrices' denominator primes: matrix [] matrix [] matrix [] 
   SLPchecker 3x3x3_23_55_L.slp: SUCCESS
   SLPchecker 3x3x3_23_55_P.slp: SUCCESS
   SLPchecker 3x3x3_23_55_R.slp: SUCCESS
@@ -84,6 +163,7 @@ schemes/3x3x3_23_ks51/3x3x3_23_ks51: <3x3x3:23> over Q, nonzeros L 49 R 57 P 52,
   control, one P coefficient changed: REJECTED
   ALT_L CoB_L == L, ALT_R CoB_R == R, CoB_P ALT_P == P: [True, True, True]
   RESULT: PASS
+  ring check: total 62 additions + 0 scalings = 62; programs equal their matrices and use only the matrices' denominator primes: matrix [] matrix [] matrix [] 
   SLPchecker 3x3x3_23_ks51-ALT_L.slp: SUCCESS
   SLPchecker 3x3x3_23_ks51-ALT_P.slp: SUCCESS
   SLPchecker 3x3x3_23_ks51-ALT_R.slp: SUCCESS
@@ -99,6 +179,50 @@ schemes/3x3x3_23_ks51/3x3x3_23_ks51: <3x3x3:23> over Q, nonzeros L 49 R 57 P 52,
   ALTchecker CoB+ALT L: SUCCESS
   ALTchecker CoB+ALT R: SUCCESS
   ALTchecker ALT+CoB P: SUCCESS
+schemes/4x11x13_397_dyadic/4x11x13_397_dyadic: <4x11x13:397> over Q, nonzeros L 2511 R 5995 P 2529, 253530 trilinear terms
+  Brent equations, all 327184 coefficients: EXACT
+  control, one P coefficient changed: REJECTED
+  RESULT: PASS
+  ring check: total 2602 additions + 72 scalings = 2674; programs equal their matrices and use only the matrices' denominator primes: matrix [] matrix [2] matrix [] 
+  SLPchecker 4x11x13_397_dyadic_L.slp: SUCCESS
+  SLPchecker 4x11x13_397_dyadic_P.slp: SUCCESS
+  SLPchecker 4x11x13_397_dyadic_R.slp: SUCCESS
+  MMchecker run 1: SUCCESS
+  MMchecker run 2: SUCCESS
+  MMchecker run 3: SUCCESS
+schemes/4x11x14_426_integer/4x11x14_426_integer: <4x11x14:426> over Q, nonzeros L 2424 R 5364 P 2855, 171468 trilinear terms
+  Brent equations, all 379456 coefficients: EXACT
+  control, one P coefficient changed: REJECTED
+  RESULT: PASS
+  ring check: total 2655 additions + 10 scalings = 2665; programs equal their matrices and use only the matrices' denominator primes: matrix [] matrix [] matrix [] 
+  SLPchecker 4x11x14_426_integer_L.slp: SUCCESS
+  SLPchecker 4x11x14_426_integer_P.slp: SUCCESS
+  SLPchecker 4x11x14_426_integer_R.slp: SUCCESS
+  MMchecker run 1: SUCCESS
+  MMchecker run 2: SUCCESS
+  MMchecker run 3: SUCCESS
+schemes/4x11x16_477_dyadic/4x11x16_477_dyadic: <4x11x16:477> over Q, nonzeros L 2473 R 6698 P 2723, 174824 trilinear terms
+  Brent equations, all 495616 coefficients: EXACT
+  control, one P coefficient changed: REJECTED
+  RESULT: PASS
+  ring check: total 2702 additions + 6 scalings = 2708; programs equal their matrices and use only the matrices' denominator primes: matrix [] matrix [2] matrix [] 
+  SLPchecker 4x11x16_477_dyadic_L.slp: SUCCESS
+  SLPchecker 4x11x16_477_dyadic_P.slp: SUCCESS
+  SLPchecker 4x11x16_477_dyadic_R.slp: SUCCESS
+  MMchecker run 1: SUCCESS
+  MMchecker run 2: SUCCESS
+  MMchecker run 3: SUCCESS
+schemes/4x13x14_498_dyadic/4x13x14_498_dyadic: <4x13x14:498> over Q, nonzeros L 6555 R 29276 P 3782, 3025522 trilinear terms
+  2 random products, wrong entries per trial [0, 0]: EXACT
+  control, one P coefficient changed: REJECTED
+  RESULT: PASS
+  ring check: total 7631 additions + 4261 scalings = 11892; programs equal their matrices and use only the matrices' denominator primes: matrix [2] matrix [2] matrix [2] 
+  SLPchecker 4x13x14_498_dyadic_L.slp: SUCCESS
+  SLPchecker 4x13x14_498_dyadic_P.slp: SUCCESS
+  SLPchecker 4x13x14_498_dyadic_R.slp: SUCCESS
+  MMchecker run 1: SUCCESS
+  MMchecker run 2: SUCCESS
+  MMchecker run 3: SUCCESS
 schemes/4x4x4_47_mod_2_166/4x4x4_47_mod_2_166: <4x4x4:47> over F_2, nonzeros L 258 R 260 P 268, 7748 trilinear terms
   Brent equations, all 4096 coefficients: EXACT
   control, one P coefficient changed: REJECTED
@@ -146,12 +270,57 @@ schemes/4x4x4_48_201/4x4x4_48_201: <4x4x4:48> over Q, nonzeros L 232 R 216 P 248
   Brent equations, all 4096 coefficients: EXACT
   control, one P coefficient changed: REJECTED
   RESULT: PASS
+  ring check: total 197 additions + 4 scalings = 201; programs equal their matrices and use only the matrices' denominator primes: matrix [2] matrix [2] matrix [] 
   SLPchecker 4x4x4_48_201_L.slp: SUCCESS
   SLPchecker 4x4x4_48_201_P.slp: SUCCESS
   SLPchecker 4x4x4_48_201_R.slp: SUCCESS
   MMchecker run 1: SUCCESS
   MMchecker run 2: SUCCESS
   MMchecker run 3: SUCCESS
+schemes/8x11x13_749_dyadic/8x11x13_749_dyadic: <8x11x13:749> over Q, nonzeros L 11586 R 14746 P 10481, 3187026 trilinear terms
+  2 random products, wrong entries per trial [0, 0]: EXACT
+  control, one P coefficient changed: REJECTED
+  RESULT: PASS
+  ring check: total 7502 additions + 1606 scalings = 9108; programs equal their matrices and use only the matrices' denominator primes: matrix [] matrix [2] matrix [] 
+  SLPchecker 8x11x13_749_dyadic_L.slp: SUCCESS
+  SLPchecker 8x11x13_749_dyadic_P.slp: SUCCESS
+  SLPchecker 8x11x13_749_dyadic_R.slp: SUCCESS
+  MMchecker run 1: SUCCESS
+  MMchecker run 2: SUCCESS
+  MMchecker run 3: SUCCESS
+schemes/9x11x11_705_dyadic/9x11x11_705_dyadic: <9x11x11:705> over Q, nonzeros L 12116 R 17709 P 10792, 9479440 trilinear terms
+  2 random products, wrong entries per trial [0, 0]: EXACT
+  control, one P coefficient changed: REJECTED
+  RESULT: PASS
+  ring check: total 7347 additions + 2674 scalings = 10021; programs equal their matrices and use only the matrices' denominator primes: matrix [] matrix [2] matrix [2] 
+  SLPchecker 9x11x11_705_dyadic_L.slp: SUCCESS
+  SLPchecker 9x11x11_705_dyadic_P.slp: SUCCESS
+  SLPchecker 9x11x11_705_dyadic_R.slp: SUCCESS
+  MMchecker run 1: SUCCESS
+  MMchecker run 2: SUCCESS
+  MMchecker run 3: SUCCESS
+schemes/9x11x15_953_rational/9x11x15_953_rational: <9x11x15:953> over Q, nonzeros L 10839 R 25065 P 32932, 11935891 trilinear terms
+  2 random products, wrong entries per trial [0, 0]: EXACT
+  control, one P coefficient changed: REJECTED
+  RESULT: PASS
+  ring check: total 10054 additions + 3403 scalings = 13457; programs equal their matrices and use only the matrices' denominator primes: matrix [] matrix [2, 3] matrix [2] 
+  SLPchecker 9x11x15_953_rational_L.slp: SUCCESS
+  SLPchecker 9x11x15_953_rational_P.slp: SUCCESS
+  SLPchecker 9x11x15_953_rational_R.slp: SUCCESS
+  MMchecker run 1: SUCCESS
+  MMchecker run 2: SUCCESS
+  MMchecker run 3: SUCCESS
+schemes/9x11x16_987_dyadic/9x11x16_987_dyadic: <9x11x16:987> over Q, nonzeros L 13322 R 29867 P 24780, 14283956 trilinear terms
+  2 random products, wrong entries per trial [0, 0]: EXACT
+  control, one P coefficient changed: REJECTED
+  RESULT: PASS
+  ring check: total 9985 additions + 3807 scalings = 13792; programs equal their matrices and use only the matrices' denominator primes: matrix [] matrix [2] matrix [2] 
+  SLPchecker 9x11x16_987_dyadic_L.slp: SUCCESS
+  SLPchecker 9x11x16_987_dyadic_P.slp: SUCCESS
+  SLPchecker 9x11x16_987_dyadic_R.slp: SUCCESS
+  MMchecker run 1: SUCCESS
+  MMchecker run 2: SUCCESS
+  MMchecker run 3: SUCCESS
 ALL: PASS
 exit 0
-end 13:41:23
+end 16:39:05
