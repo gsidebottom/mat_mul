@@ -6,7 +6,7 @@ or for the number of additions, and a few near records.  Every scheme in `scheme
 been checked exactly.  Three of them come with Lean 4 proofs that they compute the matrix product.  The rank records
 for formats with a dimension above 16 are in `large/`, as compressed JSON with an exact certificate each.
 
-Status as of 2026-11-20.  "Previous best" is what we knew of when the scheme was found; the rank comparisons use
+Status as of 2026-11-21.  "Previous best" is what we knew of when the scheme was found; the rank comparisons use
 Alexandre Sedoglavic's table at [fmm.univ-lille.fr](https://fmm.univ-lille.fr/) (its `fmm_sota.json` of 2026-11-09)
 and Andrew Perminov's catalog
 [FastMatrixMultiplication](https://github.com/dronperminov/FastMatrixMultiplication) (commit 6f8ef61 of 2026-11-09
@@ -74,6 +74,10 @@ Every denominator in these seven is a power of 2, at most 16, and their programs
 | [14x15x15_1842_rational](schemes/14x15x15_1842_rational) | ⟨14×15×15⟩ | 1842 | 1848 / 1848 | 2, 5 and 17 invertible | 2.800171 (2.801382) | 17,598 + 3,933 | 2026-11-10 |
 | [15x16x16_2200_rational](schemes/15x16x16_2200_rational) | ⟨15×16×16⟩ | 2200 | 2220 / 2223; ours 2202 | 2, 3, 5 and 7 invertible | 2.797528 (2.797859) | 43,330 + 22,473 | 2026-11-20 |
 
+⟨15×16×16⟩ has since gone lower: [15x16x16_2193_rational](large/15x16x16_2193_rational), found 2026-11-21 from LITA's
+⟨17×17×17:2723⟩ by four deletions, has rank 2193.  It is listed with the larger formats below and is in `large/` as
+compressed JSON without PLinOpt programs; 15x16x16_2200 stays here as the lowest rank we have with programs.
+
 A scheme for ⟨m×k×n⟩ gives one of the same rank for every ordering of m, k and n, by cyclic rotation and
 transposition of the trilinear form, so the tables of records index formats by the sorted shape, and every scheme
 here is stored in that ordering.  Four of them (13x13x14_1477, 13x13x15_1577, 13x14x15_1645 and 15x16x16_2200) were
@@ -83,37 +87,123 @@ was verified exactly again ([sorted_formats.verify.log](checks/discovery/sorted_
 #### Larger formats: deletions from LITA's squares 17³ to 32³
 
 <!-- large:begin -->
-21 formats with a dimension above 16, each below Sedoglavic's table of 2026-11-15 (by 38 to 350 products, 3,039 in total).  Every scheme is one of LITA's square schemes ⟨k×k×k⟩ (here k = 17, 18, 19, 20, 21, 22, 23, 24, 25, 26) with one or more indices deleted, each deletion followed by LITA's 2-reduction.  The square schemes and the reduction are theirs; the choice of deletions and of the products to drop is ours.
+106 formats with a dimension above 16 and ⟨15×16×16⟩, each below Sedoglavic's table of 2026-11-15 (by 9 to 723 products, 21,144 in total).  Every scheme is one of LITA's square schemes ⟨k×k×k⟩ (here k = 17, 19, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32) with one or more indices deleted, each deletion followed by LITA's 2-reduction.  The square schemes and the reduction are theirs; the choice of deletions and of the products to drop is ours.
 
 - **Deletions.** `I5` removes row 5 of A, `J5` the inner index 5 (a column of A with the matching row of B) and `K5` column 5 of B, counted from 0 in the scheme as it stands after the earlier deletions.
 - **Coefficients.** All are rational; "Invertible" lists the primes that occur in denominators.
 - **What is listed.** The lowest rank we certified for each format, and only formats for which no larger format in this list has the same or a lower rank.
 - **Form.** Compressed JSON in [large/](large), one folder per scheme, not PLinOpt files: see [Files](#files).  Each was certified by evaluating every Brent equation in exact integer arithmetic ([checks/check_large.log](checks/check_large.log)).
-- **Status.** Written 2026-11-20 22:31 while the searches on the larger squares were still running; more formats will follow.
+- **No file above 10 MB.** 9 schemes marked "no file" are reported here only: their compressed files are 12 to 17 MB.  Each of their folders holds the paths and the certificate log, which ends with the exact check of the scheme; `tools/kronexact replay` on the paths rebuilds and re-certifies it from LITA's file.
 
 | Scheme | Format | Rank | Table | Gain | From LITA's | Deletions | Invertible | Exponent (table's) | Found |
 |---|---|---|---|---|---|---|---|---|---|
+| [14x16x17_2278_rational](large/14x16x17_2278_rational) | ⟨14×16×17⟩ | 2278 | 2306 | 28 | ⟨17×17×17:2723⟩ | `I0`, `J0`, `I15`, `I0` | 2, 3, 5, 7 | 2.813045 (2.817490) | 2026-11-21 |
+| [14x17x17_2435_rational](large/14x17x17_2435_rational) | ⟨14×17×17⟩ | 2435 | 2456 | 21 | ⟨17×17×17:2723⟩ | `I0`, `I15`, `I0` | 2, 3, 5, 7 | 2.816586 (2.819687) | 2026-11-20 |
+| [15x15x17_2286_rational](large/15x15x17_2286_rational) | ⟨15×15×17⟩ | 2286 | 2305 | 19 | ⟨17×17×17:2723⟩ | `I0`, `J0`, `I15`, `J0` | 2, 3, 5, 7 | 2.812801 (2.815811) | 2026-11-21 |
+| [15x16x16_2193_rational](large/15x16x16_2193_rational) | ⟨15×16×16⟩ | 2193 | 2202 | 9 | ⟨17×17×17:2723⟩ | `I0`, `J0`, `I15`, `K0` | 2, 3, 5, 7 | 2.796370 (2.797859) | 2026-11-21 |
+| [15x16x17_2334_rational](large/15x16x17_2334_rational) | ⟨15×16×17⟩ | 2334 | 2442 | 108 | ⟨17×17×17:2723⟩ | `I0`, `J0`, `I15` | 2, 3, 5, 7 | 2.798464 (2.814786) | 2026-11-20 |
 | [15x17x17_2490_rational](large/15x17x17_2490_rational) | ⟨15×17×17⟩ | 2490 | 2622 | 132 | ⟨17×17×17:2723⟩ | `I0`, `I15` | 2, 3, 5, 7 | 2.801383 (2.819887) | 2026-11-20 |
+| [15x19x19_3229_rational](large/15x19x19_3229_rational) | ⟨15×19×19⟩ | 3229 | 3260 | 31 | ⟨19×19×19:3633⟩ | `I0`, `I17`, `I0`, `I0` | 2, 3, 5, 7 | 2.819587 (2.822921) | 2026-11-21 |
 | [16x16x17_2392_rational](large/16x16x17_2392_rational) | ⟨16×16×17⟩ | 2392 | 2492 | 100 | ⟨17×17×17:2723⟩ | `I0`, `J0` | 2, 3, 5, 7 | 2.785697 (2.800361) | 2026-11-20 |
 | [16x17x17_2553_rational](large/16x17x17_2553_rational) | ⟨16×17×17⟩ | 2553 | 2706 | 153 | ⟨17×17×17:2723⟩ | `I0` | 2, 3, 5, 7 | 2.788841 (2.809532) | 2026-11-20 |
-| [17x17x18_2954_rational](large/17x17x18_2954_rational) | ⟨17×17×18⟩ | 2954 | 3012 | 58 | ⟨18×18×18:3031⟩ | `J0`, `K17` | 2, 3, 5, 7 | 2.801602 (2.808419) | 2026-11-20 |
-| [17x18x18_2993_rational](large/17x18x18_2993_rational) | ⟨17×18×18⟩ | 2993 | 3031 | 38 | ⟨18×18×18:3031⟩ | `J0` | 2, 3, 5, 7 | 2.787580 (2.791974) | 2026-11-20 |
+| [16x17x18_2864_rational](large/16x17x18_2864_rational) | ⟨16×17×18⟩ | 2864 | 2884 | 20 | ⟨19×19×19:3633⟩ | `I0`, `J0`, `I17`, `J0`, `I0`, `K18` | 2, 3, 5, 7 | 2.810668 (2.813125) | 2026-11-21 |
+| [16x17x19_3029_rational](large/16x17x19_3029_rational) | ⟨16×17×19⟩ | 3029 | 3066 | 37 | ⟨19×19×19:3633⟩ | `I0`, `J0`, `I17`, `J0`, `I0` | 2, 3, 5, 7 | 2.812548 (2.816808) | 2026-11-21 |
+| [16x18x19_3102_rational](large/16x18x19_3102_rational) | ⟨16×18×19⟩ | 3102 | 3204 | 102 | ⟨19×19×19:3633⟩ | `I0`, `J0`, `I17`, `I16` | 2, 3, 5, 7 | 2.802171 (2.813447) | 2026-11-21 |
+| [16x19x19_3293_rational](large/16x19x19_3293_rational) | ⟨16×19×19⟩ | 3293 | 3408 | 115 | ⟨19×19×19:3633⟩ | `I0`, `I17`, `I0` | 2, 3, 5, 7 | 2.805375 (2.817265) | 2026-11-20 |
+| [17x17x18_2923_rational](large/17x17x18_2923_rational) | ⟨17×17×18⟩ | 2923 | 3012 | 89 | ⟨19×19×19:3633⟩ | `I0`, `J0`, `I17`, `K0`, `J0` | 2, 3, 5, 7 | 2.797904 (2.808419) | 2026-11-21 |
+| [17x17x19_3106_rational](large/17x17x19_3106_rational) | ⟨17×17×19⟩ | 3106 | 3165 | 59 | ⟨19×19×19:3633⟩ | `I0`, `J0`, `I17`, `J0` | 2, 3, 5, 7 | 2.801492 (2.808048) | 2026-11-21 |
+| [17x18x18_2982_rational](large/17x18x18_2982_rational) | ⟨17×18×18⟩ | 2982 | 3031 | 49 | ⟨19×19×19:3633⟩ | `I0`, `J0`, `I17`, `K0` | 2, 3, 5, 7 | 2.786298 (2.791974) | 2026-11-21 |
+| [17x18x19_3160_rational](large/17x18x19_3160_rational) | ⟨17×18×19⟩ | 3160 | 3337 | 177 | ⟨19×19×19:3633⟩ | `I0`, `J0`, `I17` | 2, 3, 5, 7 | 2.788984 (2.807847) | 2026-11-20 |
 | [17x19x19_3354_rational](large/17x19x19_3354_rational) | ⟨17×19×19⟩ | 3354 | 3633 | 279 | ⟨19×19×19:3633⟩ | `I0`, `I17` | 2, 3, 5, 7 | 2.792189 (2.819673) | 2026-11-20 |
+| [17x19x20_3703_rational](large/17x19x20_3703_rational) | ⟨17×19×20⟩ | 3703 | 3800 | 97 | ⟨21×21×21:4723⟩ | `I0`, `J0`, `I0`, `I0`, `K20`, `I0`, `K0` | 2, 7, 29 | 2.809713 (2.818555) | 2026-11-21 |
+| [17x20x20_3796_rational](large/17x20x20_3796_rational) | ⟨17×20×20⟩ | 3796 | 3972 | 176 | ⟨21×21×21:4723⟩ | `I0`, `J0`, `I0`, `I0`, `K20`, `I0` | 2, 7, 29 | 2.801814 (2.817222) | 2026-11-21 |
+| [17x20x21_3997_rational](large/17x20x21_3997_rational) | ⟨17×20×21⟩ | 3997 | 4174 | 177 | ⟨21×21×21:4723⟩ | `I0`, `J0`, `I0`, `I0`, `I17` | 2, 7, 29 | 2.803853 (2.818502) | 2026-11-21 |
+| [17x21x21_4258_rational](large/17x21x21_4258_rational) | ⟨17×21×21⟩ | 4258 | 4310 | 52 | ⟨21×21×21:4723⟩ | `I0`, `I19`, `I18`, `I0` | 2, 7, 29 | 2.809789 (2.813871) | 2026-11-21 |
 | [18x18x19_3225_rational](large/18x18x19_3225_rational) | ⟨18×18×19⟩ | 3225 | 3355 | 130 | ⟨19×19×19:3633⟩ | `I0`, `J0` | 2, 3, 5, 7 | 2.777714 (2.791302) | 2026-11-20 |
 | [18x19x19_3424_rational](large/18x19x19_3424_rational) | ⟨18×19×19⟩ | 3424 | 3633 | 209 | ⟨19×19×19:3633⟩ | `I0` | 2, 3, 5, 7 | 2.781068 (2.801315) | 2026-11-20 |
-| [18x20x20_3910_rational](large/18x20x20_3910_rational) | ⟨18×20×20⟩ | 3910 | 3994 | 84 | ⟨20×20×20:3994⟩ | `J0`, `J0` | 2, 3, 5, 7, 29 | 2.793778 (2.800957) | 2026-11-20 |
-| [19x19x20_3909_rational](large/19x19x20_3909_rational) | ⟨19×19×20⟩ | 3909 | 3994 | 85 | ⟨20×20×20:3994⟩ | `J0`, `K19` | 2, 3, 5, 7, 29 | 2.792819 (2.800083) | 2026-11-20 |
-| [19x20x20_3952_rational](large/19x20x20_3952_rational) | ⟨19×20×20⟩ | 3952 | 3994 | 42 | ⟨20×20×20:3994⟩ | `J0` | 2, 7, 29 | 2.780461 (2.784010) | 2026-11-20 |
+| [18x19x20_3784_rational](large/18x19x20_3784_rational) | ⟨18×19×20⟩ | 3784 | 3878 | 94 | ⟨21×21×21:4723⟩ | `I0`, `J0`, `I0`, `I0`, `K20`, `K0` | 2, 7, 29 | 2.798878 (2.807214) | 2026-11-21 |
+| [18x19x21_4012_rational](large/18x19x21_4012_rational) | ⟨18×19×21⟩ | 4012 | 4090 | 78 | ⟨21×21×21:4723⟩ | `I0`, `J0`, `I0`, `J19`, `I0` | 2, 3, 7, 29 | 2.803266 (2.809772) | 2026-11-21 |
+| [18x20x20_3865_rational](large/18x20x20_3865_rational) | ⟨18×20×20⟩ | 3865 | 3994 | 129 | ⟨21×21×21:4723⟩ | `I0`, `J0`, `I0`, `I0`, `K20` | 2, 7, 29 | 2.789868 (2.800957) | 2026-11-21 |
+| [18x20x21_4073_rational](large/18x20x21_4073_rational) | ⟨18×20×21⟩ | 4073 | 4257 | 184 | ⟨21×21×21:4723⟩ | `I0`, `J0`, `I0`, `I0` | 2, 7, 29 | 2.792235 (2.807077) | 2026-11-21 |
+| [18x21x21_4327_rational](large/18x21x21_4327_rational) | ⟨18×21×21⟩ | 4327 | 4440 | 113 | ⟨21×21×21:4723⟩ | `I0`, `I19`, `I18` | 2, 7, 29 | 2.797274 (2.805887) | 2026-11-20 |
+| [19x19x20_3868_rational](large/19x19x20_3868_rational) | ⟨19×19×20⟩ | 3868 | 3994 | 126 | ⟨21×21×21:4723⟩ | `I0`, `J0`, `I0`, `K20`, `K0` | 2, 7, 29 | 2.789259 (2.800083) | 2026-11-21 |
+| [19x19x21_4092_rational](large/19x19x21_4092_rational) | ⟨19×19×21⟩ | 4092 | 4184 | 92 | ⟨21×21×21:4723⟩ | `I0`, `J0`, `I0`, `J19` | 2, 7, 29 | 2.792931 (2.800397) | 2026-11-21 |
+| [19x20x20_3935_rational](large/19x20x20_3935_rational) | ⟨19×20×20⟩ | 3935 | 3994 | 59 | ⟨21×21×21:4723⟩ | `I0`, `J0`, `I0`, `K20` | 2, 7, 29 | 2.779014 (2.784010) | 2026-11-21 |
+| [19x20x21_4154_rational](large/19x20x21_4154_rational) | ⟨19×20×21⟩ | 4154 | 4374 | 220 | ⟨21×21×21:4723⟩ | `I0`, `J0`, `I0` | 2, 7, 29 | 2.782007 (2.799238) | 2026-11-20 |
 | [19x21x21_4394_rational](large/19x21x21_4394_rational) | ⟨19×21×21⟩ | 4394 | 4723 | 329 | ⟨21×21×21:4723⟩ | `I0`, `I19` | 2, 7, 29 | 2.785635 (2.809614) | 2026-11-20 |
+| [19x21x22_4914_rational](large/19x21x22_4914_rational) | ⟨19×21×22⟩ | 4914 | 4983 | 69 | ⟨22×22×22:5141⟩ | `J0`, `J0`, `J19`, `K0` | 2, 3, 11 | 2.808317 (2.812924) | 2026-11-21 |
+| [19x22x22_4994_rational](large/19x22x22_4994_rational) | ⟨19×22×22⟩ | 4994 | 5141 | 147 | ⟨22×22×22:5141⟩ | `J0`, `J0`, `J19` | 2, 3, 11 | 2.799311 (2.808847) | 2026-11-20 |
+| [19x22x23_5173_rational](large/19x22x23_5173_rational) | ⟨19×22×23⟩ | 5173 | 5440 | 267 | ⟨23×23×23:6009⟩ | `I0`, `J0`, `I21`, `I0`, `I0` | 2, 3, 11 | 2.797262 (2.813725) | 2026-11-21 |
+| [19x23x23_5480_rational](large/19x23x23_5480_rational) | ⟨19×23×23⟩ | 5480 | 5656 | 176 | ⟨23×23×23:6009⟩ | `I0`, `I21`, `I20`, `I19` | 2, 3, 11 | 2.802538 (2.812828) | 2026-11-21 |
 | [20x20x21_4230_rational](large/20x20x21_4230_rational) | ⟨20×20×21⟩ | 4230 | 4394 | 164 | ⟨21×21×21:4723⟩ | `I0`, `J0` | 2, 7, 29 | 2.772234 (2.784863) | 2026-11-20 |
 | [20x21x21_4471_rational](large/20x21x21_4471_rational) | ⟨20×21×21⟩ | 4471 | 4723 | 252 | ⟨21×21×21:4723⟩ | `I0` | 2, 7, 29 | 2.775643 (2.793750) | 2026-11-20 |
-| [20x22x22_5049_rational](large/20x22x22_5049_rational) | ⟨20×22×22⟩ | 5049 | 5141 | 92 | ⟨22×22×22:5141⟩ | `J0`, `J0` | 2, 3, 11 | 2.787246 (2.793149) | 2026-11-20 |
-| [21x21x22_5048_rational](large/21x21x22_5048_rational) | ⟨21×21×22⟩ | 5048 | 5141 | 93 | ⟨22×22×22:5141⟩ | `J0`, `K21` | 2, 3, 11 | 2.786492 (2.792458) | 2026-11-20 |
-| [21x22x22_5095_rational](large/21x22x22_5095_rational) | ⟨21×22×22⟩ | 5095 | 5141 | 46 | ⟨22×22×22:5141⟩ | `J0` | 2, 3, 11 | 2.775456 (2.778379) | 2026-11-20 |
+| [20x21x22_4987_rational](large/20x21x22_4987_rational) | ⟨20×21×22⟩ | 4987 | 5035 | 48 | ⟨22×22×22:5141⟩ | `J0`, `K21`, `K0` | 2, 3, 11 | 2.797387 (2.800534) | 2026-11-20 |
+| [20x21x23_5178_rational](large/20x21x23_5178_rational) | ⟨20×21×23⟩ | 5178 | 5330 | 152 | ⟨23×23×23:6009⟩ | `I0`, `J0`, `I21`, `J0`, `I0` | 2, 3, 11 | 2.796123 (2.805582) | 2026-11-21 |
+| [20x22x22_5005_rational](large/20x22x22_5005_rational) | ⟨20×22×22⟩ | 5005 | 5141 | 136 | ⟨23×23×23:6009⟩ | `I0`, `J0`, `I21`, `I0`, `K22` | 2, 3, 11 | 2.784385 (2.793149) | 2026-11-21 |
+| [20x22x23_5255_rational](large/20x22x23_5255_rational) | ⟨20×22×23⟩ | 5255 | 5581 | 326 | ⟨23×23×23:6009⟩ | `I0`, `J0`, `I21`, `I0` | 2, 3, 11 | 2.786820 (2.806399) | 2026-11-21 |
+| [20x23x23_5554_rational](large/20x23x23_5554_rational) | ⟨20×23×23⟩ | 5554 | 5903 | 349 | ⟨23×23×23:6009⟩ | `I0`, `I21`, `I20` | 2, 3, 11 | 2.791367 (2.811097) | 2026-11-21 |
+| [20x25x25_6828_rational](large/20x25x25_6828_rational) | ⟨20×25×25⟩ | 6828 | 6924 | 96 | ⟨25×25×25:7507⟩ | `I0`, `I0`, `I0`, `I21`, `I0` | 2, 3, 5, 37 | 2.807697 (2.812137) | 2026-11-21 |
+| [21x21x22_5009_rational](large/21x21x22_5009_rational) | ⟨21×21×22⟩ | 5009 | 5141 | 132 | ⟨23×23×23:6009⟩ | `I0`, `J0`, `I21`, `K0`, `J0` | 2, 3, 11 | 2.783958 (2.792458) | 2026-11-21 |
+| [21x21x23_5277_rational](large/21x21x23_5277_rational) | ⟨21×21×23⟩ | 5277 | 5395 | 118 | ⟨23×23×23:6009⟩ | `I0`, `J0`, `I21`, `J0` | 2, 3, 11 | 2.787493 (2.794685) | 2026-11-21 |
+| [21x22x22_5082_rational](large/21x22x22_5082_rational) | ⟨21×22×22⟩ | 5082 | 5141 | 59 | ⟨23×23×23:6009⟩ | `I0`, `J0`, `I21`, `K0` | 2, 3, 11 | 2.774626 (2.778379) | 2026-11-21 |
+| [21x22x23_5344_rational](large/21x22x23_5344_rational) | ⟨21×22×23⟩ | 5344 | 5603 | 259 | ⟨23×23×23:6009⟩ | `I0`, `J0`, `I21` | 2, 3, 11 | 2.777589 (2.792903) | 2026-11-21 |
+| [21x23x23_5628_rational](large/21x23x23_5628_rational) | ⟨21×23×23⟩ | 5628 | 6009 | 381 | ⟨23×23×23:6009⟩ | `I0`, `I21` | 2, 3, 11 | 2.781010 (2.802105) | 2026-11-20 |
+| [21x23x24_6224_rational](large/21x23x24_6224_rational) | ⟨21×23×24⟩ | 6224 | 6339 | 115 | ⟨24×24×24:6488⟩ | `J0`, `J0`, `J0`, `K0` | 2, 3, 5, 37 | 2.800631 (2.806500) | 2026-11-21 |
+| [21x24x24_6331_rational](large/21x24x24_6331_rational) | ⟨21×24×24⟩ | 6331 | 6440 | 109 | ⟨24×24×24:6488⟩ | `J0`, `J0`, `J0` | 2, 3, 5, 37 | 2.793392 (2.798839) | 2026-11-21 |
+| [21x24x25_6564_rational](large/21x24x25_6564_rational) | ⟨21×24×25⟩ | 6564 | 6924 | 360 | ⟨25×25×25:7507⟩ | `I0`, `J0`, `I23`, `I0`, `I0` | 2, 3, 5, 37 | 2.792798 (2.809763) | 2026-11-21 |
+| [21x25x25_6911_rational](large/21x25x25_6911_rational) | ⟨21×25×25⟩ | 6911 | 7223 | 312 | ⟨25×25×25:7507⟩ | `I0`, `I0`, `I0`, `I21` | 2, 3, 5, 37 | 2.797073 (2.811043) | 2026-11-21 |
+| [21x26x26_7757_rational](large/21x26x26_7757_rational) | ⟨21×26×26⟩ | 7757 | 7781 | 24 | ⟨26×26×26:8051⟩ | `J0`, `J0`, `J0`, `J0`, `J0` | 2, 5, 11 | 2.810360 (2.811329) | 2026-11-21 |
+| [22x22x23_5423_rational](large/22x22x23_5423_rational) | ⟨22×22×23⟩ | 5423 | 5625 | 202 | ⟨23×23×23:6009⟩ | `I0`, `J0` | 2, 3, 11 | 2.768446 (2.780221) | 2026-11-20 |
 | [22x23x23_5710_rational](large/22x23x23_5710_rational) | ⟨22×23×23⟩ | 5710 | 6009 | 299 | ⟨23×23×23:6009⟩ | `I0` | 2, 3, 11 | 2.771826 (2.788181) | 2026-11-20 |
-| [23x24x24_6438_rational](large/23x24x24_6438_rational) | ⟨23×24×24⟩ | 6438 | 6488 | 50 | ⟨24×24×24:6488⟩ | `J0` | 2, 3, 5, 37 | 2.771916 (2.774361) | 2026-11-20 |
+| [22x23x24_6321_rational](large/22x23x24_6321_rational) | ⟨22×23×24⟩ | 6321 | 6396 | 75 | ⟨24×24×24:6488⟩ | `J0`, `J0`, `K0` | 2, 3, 5, 37 | 2.791711 (2.795474) | 2026-11-21 |
+| [22x23x25_6557_rational](large/22x23x25_6557_rational) | ⟨22×23×25⟩ | 6557 | 6752 | 195 | ⟨25×25×25:7507⟩ | `I0`, `J0`, `I23`, `J0`, `I0` | 2, 3, 5, 37 | 2.791288 (2.800596) | 2026-11-21 |
+| [22x24x24_6352_rational](large/22x24x24_6352_rational) | ⟨22×24×24⟩ | 6352 | 6488 | 136 | ⟨25×25×25:7507⟩ | `I0`, `J0`, `I23`, `K0`, `I0` | 2, 3, 5, 37 | 2.780688 (2.787415) | 2026-11-21 |
+| [22x24x25_6650_rational](large/22x24x25_6650_rational) | ⟨22×24×25⟩ | 6650 | 7016 | 366 | ⟨25×25×25:7507⟩ | `I0`, `J0`, `I23`, `I0` | 2, 3, 5, 37 | 2.783220 (2.800161) | 2026-11-21 |
+| [22x25x25_6997_rational](large/22x25x25_6997_rational) | ⟨22×25×25⟩ | 6997 | 7441 | 444 | ⟨25×25×25:7507⟩ | `I0`, `I0`, `I0` | 2, 3, 5, 37 | 2.787311 (2.806681) | 2026-11-21 |
+| [22x26x26_7819_rational](large/22x26x26_7819_rational) | ⟨22×26×26⟩ | 7819 | 7906 | 87 | ⟨26×26×26:8051⟩ | `J0`, `J0`, `J0`, `J0` | 2, 5, 11 | 2.799238 (2.802693) | 2026-11-21 |
+| [23x23x24_6344_rational](large/23x23x24_6344_rational) | ⟨23×23×24⟩ | 6344 | 6488 | 144 | ⟨25×25×25:7507⟩ | `I0`, `J0`, `I23`, `K0`, `J0` | 2, 3, 5, 37 | 2.779731 (2.786857) | 2026-11-21 |
+| [23x23x25_6662_rational](large/23x23x25_6662_rational) | ⟨23×23×25⟩ | 6662 | 6814 | 152 | ⟨25×25×25:7507⟩ | `I0`, `J0`, `I23`, `J0` | 2, 3, 5, 37 | 2.783235 (2.790367) | 2026-11-21 |
+| [23x24x24_6424_rational](large/23x24x24_6424_rational) | ⟨23×24×24⟩ | 6424 | 6488 | 64 | ⟨25×25×25:7507⟩ | `I0`, `J0`, `I23`, `K0` | 2, 3, 5, 37 | 2.771228 (2.774361) | 2026-11-21 |
+| [23x24x25_6734_rational](large/23x24x25_6734_rational) | ⟨23×24×25⟩ | 6734 | 7040 | 306 | ⟨25×25×25:7507⟩ | `I0`, `J0`, `I23` | 2, 3, 5, 37 | 2.774192 (2.788178) | 2026-11-21 |
+| [23x25x25_7078_rational](large/23x25x25_7078_rational) | ⟨23×25×25⟩ | 7078 | 7507 | 429 | ⟨25×25×25:7507⟩ | `I0`, `I0` | 2, 3, 5, 37 | 2.777975 (2.796416) | 2026-11-20 |
+| [23x25x26_7757_rational](large/23x25x26_7757_rational) | ⟨23×25×26⟩ | 7757 | 7915 | 158 | ⟨26×26×26:8051⟩ | `J0`, `J0`, `J0`, `K0` | 2, 5, 11, 41 | 2.795230 (2.801523) | 2026-11-21 |
+| [23x26x26_7876_rational](large/23x26x26_7876_rational) | ⟨23×26×26⟩ | 7876 | 8051 | 175 | ⟨26×26×26:8051⟩ | `J0`, `J0`, `J0` | 2, 5, 11, 41 | 2.788603 (2.795434) | 2026-11-21 |
+| [24x24x25_6820_rational](large/24x24x25_6820_rational) | ⟨24×24×25⟩ | 6820 | 7064 | 244 | ⟨25×25×25:7507⟩ | `I0`, `J0` | 2, 3, 5, 37 | 2.765837 (2.776851) | 2026-11-20 |
 | [24x25x25_7157_rational](large/24x25x25_7157_rational) | ⟨24×25×25⟩ | 7157 | 7507 | 350 | ⟨25×25×25:7507⟩ | `I0` | 2, 3, 5, 37 | 2.769143 (2.784039) | 2026-11-20 |
+| [24x25x26_7870_rational](large/24x25x26_7870_rational) | ⟨24×25×26⟩ | 7870 | 7977 | 107 | ⟨26×26×26:8051⟩ | `J0`, `J0`, `K0` | 2, 5, 11, 41 | 2.787402 (2.791598) | 2026-11-21 |
+| [24x26x26_7943_rational](large/24x26x26_7943_rational) | ⟨24×26×26⟩ | 7943 | 8051 | 108 | ⟨26×26×26:8051⟩ | `J0`, `J0` | 2, 5, 11, 41 | 2.778982 (2.783161) | 2026-11-20 |
+| [24x27x27_8655_rational](large/24x27x27_8655_rational) | ⟨24×27×27⟩ | 8655 | 9000 | 345 | ⟨27×27×27:9233⟩ | `I0`, `I0`, `I0` | 2, 5, 11, 41 | 2.783873 (2.795875) | 2026-11-21 |
+| [25x25x26_7943_rational](large/25x25x26_7943_rational) | ⟨25×25×26⟩ | 7943 | 8051 | 108 | ⟨26×26×26:8051⟩ | `J0`, `K0` | 2, 5, 11, 41 | 2.778523 (2.782702) | 2026-11-20 |
 | [25x26x26_7997_rational](large/25x26x26_7997_rational) | ⟨25×26×26⟩ | 7997 | 8051 | 54 | ⟨26×26×26:8051⟩ | `J0` | 2, 5, 11, 41 | 2.769417 (2.771491) | 2026-11-20 |
+| [25x26x27_8345_rational](large/25x26x27_8345_rational) | ⟨25×26×27⟩ | 8345 | 8701 | 356 | ⟨27×27×27:9233⟩ | `I0`, `J0`, `I0` | 2, 5, 11, 41 | 2.771798 (2.784622) | 2026-11-21 |
+| [25x27x27_8743_rational](large/25x27x27_8743_rational) | ⟨25×27×27⟩ | 8743 | 9233 | 490 | ⟨27×27×27:9233⟩ | `I0`, `I0` | 2, 5, 11, 41 | 2.775382 (2.792057) | 2026-11-21 |
+| [25x28x28_9658_rational](large/25x28x28_9658_rational) | ⟨25×28×28⟩ | 9658 | 9846 | 188 | ⟨28×28×28:9846⟩ | `J0`, `J0`, `J0` | 2, 3, 5, 11 | 2.785170 (2.791022) | 2026-11-21 |
+| [26x26x27_8437_rational](large/26x26x27_8437_rational) | ⟨26×26×27⟩ | 8437 | 8727 | 290 | ⟨27×27×27:9233⟩ | `I0`, `J0` | 2, 5, 11, 41 | 2.764071 (2.774404) | 2026-11-21 |
+| [26x27x27_8828_rational](large/26x27x27_8828_rational) | ⟨26×27×27⟩ | 8828 | 9233 | 405 | ⟨27×27×27:9233⟩ | `I0` | 2, 5, 11, 41 | 2.767278 (2.780940) | 2026-11-21 |
+| [26x27x28_9652_rational](large/26x27x28_9652_rational) | ⟨26×27×28⟩ | 9652 | 9794 | 142 | ⟨28×28×28:9846⟩ | `J0`, `J0`, `K0` | 2, 3, 5, 11, 23 | 2.784177 (2.788609) | 2026-11-21 |
+| [26x28x28_9730_rational](large/26x28x28_9730_rational) | ⟨26×28×28⟩ | 9730 | 9846 | 116 | ⟨28×28×28:9846⟩ | `J0`, `J0` | 2, 3, 5, 11, 23 | 2.776406 (2.779990) | 2026-11-21 |
+| [26x29x29_10555_rational](large/26x29x29_10555_rational) | ⟨26×29×29⟩ | 10555 | 11203 | 648 | ⟨29×29×29:11203⟩ | `I0`, `I0`, `I0` | 2, 3, 5, 11 | 2.781340 (2.799228) | 2026-11-21 |
+| [27x27x28_9730_rational](large/27x27x28_9730_rational) | ⟨27×27×28⟩ | 9730 | 9846 | 116 | ⟨28×28×28:9846⟩ | `J0`, `K0` | 2, 3, 5, 11 | 2.776022 (2.779605) | 2026-11-21 |
+| [27x28x28_9788_rational](large/27x28x28_9788_rational) | ⟨27×28×28⟩ | 9788 | 9846 | 58 | ⟨28×28×28:9846⟩ | `J0` | 2, 3, 5, 11 | 2.767676 (2.769456) | 2026-11-21 |
+| [27x28x29_10191_rational](large/27x28x29_10191_rational) | ⟨27×28×29⟩ | 10191 | 10602 | 411 | ⟨29×29×29:11203⟩ | `I0`, `J0`, `I0` | 2, 3, 5, 11 | 2.770070 (2.781937) | 2026-11-21 |
+| [27x29x29_10648_rational](large/27x29x29_10648_rational) | ⟨27×29×29⟩ | 10648 | 11203 | 555 | ⟨29×29×29:11203⟩ | `I0`, `I0` | 2, 3, 5, 11 | 2.773499 (2.788695) | 2026-11-21 |
+| [27x30x30_11699_rational](large/27x30x30_11699_rational) | ⟨27×30×30⟩ | 11699 | 11889 | 190 | ⟨30×30×30:11889⟩ | `J0`, `J0`, `J0` | 2, 3, 7, 13 | 2.782841 (2.787627) | 2026-11-21 |
+| [28x28x29_10290_rational](large/28x28x29_10290_rational) | ⟨28×28×29⟩ | 10290 | 10630 | 340 | ⟨29×29×29:11203⟩ | `I0`, `J0` | 2, 3, 5, 11 | 2.762919 (2.772640) | 2026-11-21 |
+| [28x29x29_10739_rational](large/28x29x29_10739_rational) | ⟨28×29×29⟩ | 10739 | 11203 | 464 | ⟨29×29×29:11203⟩ | `I0` | 2, 3, 5, 11 | 2.766015 (2.778621) | 2026-11-21 |
+| [28x29x30_11682_rational](large/28x29x30_11682_rational) (no file) | ⟨28×29×30⟩ | 11682 | 11863 | 181 | ⟨30×30×30:11889⟩ | `J0`, `J0`, `K0` | 2, 3, 7, 13 | 2.781730 (2.786297) | 2026-11-21 |
+| [28x30x30_11765_rational](large/28x30x30_11765_rational) (no file) | ⟨28×30×30⟩ | 11765 | 11889 | 124 | ⟨30×30×30:11889⟩ | `J0`, `J0` | 2, 3, 7, 13 | 2.774520 (2.777624) | 2026-11-21 |
+| [28x31x31_12710_rational](large/28x31x31_12710_rational) | ⟨28×31×31⟩ | 12710 | 13433 | 723 | ⟨31×31×31:13433⟩ | `I0`, `I0`, `I0` | 2, 3, 7, 13 | 2.779405 (2.795677) | 2026-11-21 |
+| [29x29x30_11765_rational](large/29x29x30_11765_rational) (no file) | ⟨29×29×30⟩ | 11765 | 11889 | 124 | ⟨30×30×30:11889⟩ | `J0`, `K0` | 2, 3, 7, 13 | 2.774195 (2.777298) | 2026-11-21 |
+| [29x30x30_11827_rational](large/29x30x30_11827_rational) (no file) | ⟨29×30×30⟩ | 11827 | 11889 | 62 | ⟨30×30×30:11889⟩ | `J0` | 2, 3, 7, 13 | 2.766497 (2.768040) | 2026-11-21 |
+| [29x30x31_12289_rational](large/29x30x31_12289_rational) | ⟨29×30×31⟩ | 12289 | 12759 | 470 | ⟨31×31×31:13433⟩ | `I0`, `J0`, `I0` | 2, 3, 7, 13 | 2.768874 (2.779910) | 2026-11-21 |
+| [29x31x31_12809_rational](large/29x31x31_12809_rational) | ⟨29×31×31⟩ | 12809 | 13433 | 624 | ⟨31×31×31:13433⟩ | `I0`, `I0` | 2, 3, 7, 13 | 2.772151 (2.786092) | 2026-11-21 |
+| [29x32x32_13994_rational](large/29x32x32_13994_rational) (no file) | ⟨29×32×32⟩ | 13994 | 14196 | 202 | ⟨32×32×32:14196⟩ | `J0`, `J0`, `J0` | 2, 7, 13, 53 | 2.780833 (2.785008) | 2026-11-21 |
+| [30x30x31_12395_rational](large/30x30x31_12395_rational) | ⟨30×30×31⟩ | 12395 | 12789 | 394 | ⟨31×31×31:13433⟩ | `I0`, `J0` | 2, 3, 7, 13 | 2.762221 (2.771392) | 2026-11-21 |
+| [30x31x31_12906_rational](large/30x31x31_12906_rational) | ⟨30×31×31⟩ | 12906 | 13433 | 527 | ⟨31×31×31:13433⟩ | `I0` | 2, 3, 7, 13 | 2.765203 (2.776895) | 2026-11-21 |
+| [30x31x32_13974_rational](large/30x31x32_13974_rational) (no file) | ⟨30×31×32⟩ | 13974 | 14196 | 222 | ⟨32×32×32:14196⟩ | `J0`, `J0`, `K0` | 2, 7, 13, 53 | 2.779835 (2.784426) | 2026-11-21 |
+| [30x32x32_14064_rational](large/30x32x32_14064_rational) (no file) | ⟨30×32×32⟩ | 14064 | 14196 | 132 | ⟨32×32×32:14196⟩ | `J0`, `J0` | 2, 7, 13, 53 | 2.773158 (2.775870) | 2026-11-21 |
+| [31x31x32_14064_rational](large/31x31x32_14064_rational) (no file) | ⟨31×31×32⟩ | 14064 | 14196 | 132 | ⟨32×32×32:14196⟩ | `J0`, `K0` | 2, 7, 13, 53 | 2.772878 (2.775590) | 2026-11-21 |
+| [31x32x32_14130_rational](large/31x32x32_14130_rational) (no file) | ⟨31×32×32⟩ | 14130 | 14196 | 66 | ⟨32×32×32:14196⟩ | `J0` | 2, 7, 13, 53 | 2.765740 (2.767089) | 2026-11-21 |
 <!-- large:end -->
 
 #### Superseded by the schemes above
@@ -367,8 +457,11 @@ To reproduce a scheme from LITA's files: download `schemes/kxkxk_rR.npz` from
 `path_2.json`, … in turn, each on the output of the one before.  The paths were found by a search modulo one
 20-bit prime over which index to delete and which products to drop; that search program is not in this repository.
 
-One deletion takes far more off an odd square's rank than off an even one's: 153 at k = 17 rising to 350 at k = 25,
-against 38 at k = 18 rising to 54 at k = 26.  The squares themselves do not reduce (we tried k = 17, 18 and 19).
+One deletion takes far more off an odd square's rank than off an even one's: 153 at k = 17 rising to 527 at k = 31,
+against 38 at k = 18 rising to 66 at k = 32.  Further deletions keep paying: every format we reached from
+k = 18 or k = 20 is reached at a lower rank from the odd square above it, so no scheme in the list starts from those
+two.  The largest relative gain is 7.7% (⟨17×19×19⟩, 3354 against 3633).  The squares themselves do not reduce (we
+tried k = 17, 18 and 19).
 
 ### The rectangular schemes: projection and 2-reduction
 

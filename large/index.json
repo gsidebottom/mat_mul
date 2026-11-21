@@ -1,5 +1,183 @@
 [
  {
+  "folder": "14x16x17_2278_rational",
+  "shape": [
+   14,
+   16,
+   17
+  ],
+  "stored_as": [
+   14,
+   16,
+   17
+  ],
+  "rank": 2278,
+  "table": 2306,
+  "gain": 28,
+  "square": 17,
+  "square_rank": 2723,
+  "deletions": [
+   "I0",
+   "J0",
+   "I15",
+   "I0"
+  ],
+  "primes": [
+   2,
+   3,
+   5,
+   7
+  ],
+  "ring": "rational",
+  "omega": 2.813044870543602,
+  "omega_table": 2.8174900246336536,
+  "found": "2026-11-21",
+  "bytes": 208562,
+  "scheme_file": true
+ },
+ {
+  "folder": "14x17x17_2435_rational",
+  "shape": [
+   14,
+   17,
+   17
+  ],
+  "stored_as": [
+   14,
+   17,
+   17
+  ],
+  "rank": 2435,
+  "table": 2456,
+  "gain": 21,
+  "square": 17,
+  "square_rank": 2723,
+  "deletions": [
+   "I0",
+   "I15",
+   "I0"
+  ],
+  "primes": [
+   2,
+   3,
+   5,
+   7
+  ],
+  "ring": "rational",
+  "omega": 2.816585530309674,
+  "omega_table": 2.8196873075445756,
+  "found": "2026-11-20",
+  "bytes": 180790,
+  "scheme_file": true
+ },
+ {
+  "folder": "15x15x17_2286_rational",
+  "shape": [
+   15,
+   15,
+   17
+  ],
+  "stored_as": [
+   15,
+   15,
+   17
+  ],
+  "rank": 2286,
+  "table": 2305,
+  "gain": 19,
+  "square": 17,
+  "square_rank": 2723,
+  "deletions": [
+   "I0",
+   "J0",
+   "I15",
+   "J0"
+  ],
+  "primes": [
+   2,
+   3,
+   5,
+   7
+  ],
+  "ring": "rational",
+  "omega": 2.8128008276545855,
+  "omega_table": 2.8158109366153745,
+  "found": "2026-11-21",
+  "bytes": 200624,
+  "scheme_file": true
+ },
+ {
+  "folder": "15x16x16_2193_rational",
+  "shape": [
+   15,
+   16,
+   16
+  ],
+  "stored_as": [
+   15,
+   16,
+   16
+  ],
+  "rank": 2193,
+  "table": 2202,
+  "gain": 9,
+  "square": 17,
+  "square_rank": 2723,
+  "deletions": [
+   "I0",
+   "J0",
+   "I15",
+   "K0"
+  ],
+  "primes": [
+   2,
+   3,
+   5,
+   7
+  ],
+  "ring": "rational",
+  "omega": 2.796369885375531,
+  "omega_table": 2.79785860071477,
+  "found": "2026-11-21",
+  "bytes": 212534,
+  "scheme_file": true
+ },
+ {
+  "folder": "15x16x17_2334_rational",
+  "shape": [
+   15,
+   16,
+   17
+  ],
+  "stored_as": [
+   15,
+   16,
+   17
+  ],
+  "rank": 2334,
+  "table": 2442,
+  "gain": 108,
+  "square": 17,
+  "square_rank": 2723,
+  "deletions": [
+   "I0",
+   "J0",
+   "I15"
+  ],
+  "primes": [
+   2,
+   3,
+   5,
+   7
+  ],
+  "ring": "rational",
+  "omega": 2.798464020075801,
+  "omega_table": 2.8147863603228833,
+  "found": "2026-11-20",
+  "bytes": 215937,
+  "scheme_file": true
+ },
+ {
   "folder": "15x17x17_2490_rational",
   "shape": [
    15,
@@ -30,7 +208,44 @@
   "omega": 2.8013826151446155,
   "omega_table": 2.819886938058713,
   "found": "2026-11-20",
-  "bytes": 181858
+  "bytes": 181858,
+  "scheme_file": true
+ },
+ {
+  "folder": "15x19x19_3229_rational",
+  "shape": [
+   15,
+   19,
+   19
+  ],
+  "stored_as": [
+   15,
+   19,
+   19
+  ],
+  "rank": 3229,
+  "table": 3260,
+  "gain": 31,
+  "square": 19,
+  "square_rank": 3633,
+  "deletions": [
+   "I0",
+   "I17",
+   "I0",
+   "I0"
+  ],
+  "primes": [
+   2,
+   3,
+   5,
+   7
+  ],
+  "ring": "rational",
+  "omega": 2.8195865852004087,
+  "omega_table": 2.82292081229593,
+  "found": "2026-11-21",
+  "bytes": 259424,
+  "scheme_file": true
  },
  {
   "folder": "16x16x17_2392_rational",
@@ -63,7 +278,8 @@
   "omega": 2.785696673058914,
   "omega_table": 2.800361457456245,
   "found": "2026-11-20",
-  "bytes": 242378
+  "bytes": 242378,
+  "scheme_file": true
  },
  {
   "folder": "16x17x17_2553_rational",
@@ -95,28 +311,33 @@
   "omega": 2.788841127467758,
   "omega_table": 2.809531595013718,
   "found": "2026-11-20",
-  "bytes": 224207
+  "bytes": 224207,
+  "scheme_file": true
  },
  {
-  "folder": "17x17x18_2954_rational",
+  "folder": "16x17x18_2864_rational",
   "shape": [
-   17,
+   16,
    17,
    18
   ],
   "stored_as": [
-   18,
+   16,
    17,
-   17
+   18
   ],
-  "rank": 2954,
-  "table": 3012,
-  "gain": 58,
-  "square": 18,
-  "square_rank": 3031,
+  "rank": 2864,
+  "table": 2884,
+  "gain": 20,
+  "square": 19,
+  "square_rank": 3633,
   "deletions": [
+   "I0",
    "J0",
-   "K17"
+   "I17",
+   "J0",
+   "I0",
+   "K18"
   ],
   "primes": [
    2,
@@ -125,29 +346,142 @@
    7
   ],
   "ring": "rational",
-  "omega": 2.801602321304681,
-  "omega_table": 2.808419401063359,
-  "found": "2026-11-20",
-  "bytes": 1399865
+  "omega": 2.810667964001098,
+  "omega_table": 2.8131251772602552,
+  "found": "2026-11-21",
+  "bytes": 244242,
+  "scheme_file": true
  },
  {
-  "folder": "17x18x18_2993_rational",
+  "folder": "16x17x19_3029_rational",
+  "shape": [
+   16,
+   17,
+   19
+  ],
+  "stored_as": [
+   16,
+   17,
+   19
+  ],
+  "rank": 3029,
+  "table": 3066,
+  "gain": 37,
+  "square": 19,
+  "square_rank": 3633,
+  "deletions": [
+   "I0",
+   "J0",
+   "I17",
+   "J0",
+   "I0"
+  ],
+  "primes": [
+   2,
+   3,
+   5,
+   7
+  ],
+  "ring": "rational",
+  "omega": 2.812548009490776,
+  "omega_table": 2.816807976551342,
+  "found": "2026-11-21",
+  "bytes": 233548,
+  "scheme_file": true
+ },
+ {
+  "folder": "16x18x19_3102_rational",
+  "shape": [
+   16,
+   18,
+   19
+  ],
+  "stored_as": [
+   16,
+   18,
+   19
+  ],
+  "rank": 3102,
+  "table": 3204,
+  "gain": 102,
+  "square": 19,
+  "square_rank": 3633,
+  "deletions": [
+   "I0",
+   "J0",
+   "I17",
+   "I16"
+  ],
+  "primes": [
+   2,
+   3,
+   5,
+   7
+  ],
+  "ring": "rational",
+  "omega": 2.802171218525541,
+  "omega_table": 2.8134474342762115,
+  "found": "2026-11-21",
+  "bytes": 314592,
+  "scheme_file": true
+ },
+ {
+  "folder": "16x19x19_3293_rational",
+  "shape": [
+   16,
+   19,
+   19
+  ],
+  "stored_as": [
+   16,
+   19,
+   19
+  ],
+  "rank": 3293,
+  "table": 3408,
+  "gain": 115,
+  "square": 19,
+  "square_rank": 3633,
+  "deletions": [
+   "I0",
+   "I17",
+   "I0"
+  ],
+  "primes": [
+   2,
+   3,
+   5,
+   7
+  ],
+  "ring": "rational",
+  "omega": 2.8053750875276195,
+  "omega_table": 2.8172645077050946,
+  "found": "2026-11-20",
+  "bytes": 262078,
+  "scheme_file": true
+ },
+ {
+  "folder": "17x17x18_2923_rational",
   "shape": [
    17,
-   18,
+   17,
    18
   ],
   "stored_as": [
-   18,
+   17,
    17,
    18
   ],
-  "rank": 2993,
-  "table": 3031,
-  "gain": 38,
-  "square": 18,
-  "square_rank": 3031,
+  "rank": 2923,
+  "table": 3012,
+  "gain": 89,
+  "square": 19,
+  "square_rank": 3633,
   "deletions": [
+   "I0",
+   "J0",
+   "I17",
+   "K0",
    "J0"
   ],
   "primes": [
@@ -157,10 +491,118 @@
    7
   ],
   "ring": "rational",
-  "omega": 2.7875800766409093,
+  "omega": 2.797903613880411,
+  "omega_table": 2.808419401063359,
+  "found": "2026-11-21",
+  "bytes": 328049,
+  "scheme_file": true
+ },
+ {
+  "folder": "17x17x19_3106_rational",
+  "shape": [
+   17,
+   17,
+   19
+  ],
+  "stored_as": [
+   17,
+   17,
+   19
+  ],
+  "rank": 3106,
+  "table": 3165,
+  "gain": 59,
+  "square": 19,
+  "square_rank": 3633,
+  "deletions": [
+   "I0",
+   "J0",
+   "I17",
+   "J0"
+  ],
+  "primes": [
+   2,
+   3,
+   5,
+   7
+  ],
+  "ring": "rational",
+  "omega": 2.8014922010447663,
+  "omega_table": 2.808048103179374,
+  "found": "2026-11-21",
+  "bytes": 255430,
+  "scheme_file": true
+ },
+ {
+  "folder": "17x18x18_2982_rational",
+  "shape": [
+   17,
+   18,
+   18
+  ],
+  "stored_as": [
+   17,
+   18,
+   18
+  ],
+  "rank": 2982,
+  "table": 3031,
+  "gain": 49,
+  "square": 19,
+  "square_rank": 3633,
+  "deletions": [
+   "I0",
+   "J0",
+   "I17",
+   "K0"
+  ],
+  "primes": [
+   2,
+   3,
+   5,
+   7
+  ],
+  "ring": "rational",
+  "omega": 2.7862977347666966,
   "omega_table": 2.791974004800886,
+  "found": "2026-11-21",
+  "bytes": 338887,
+  "scheme_file": true
+ },
+ {
+  "folder": "17x18x19_3160_rational",
+  "shape": [
+   17,
+   18,
+   19
+  ],
+  "stored_as": [
+   17,
+   18,
+   19
+  ],
+  "rank": 3160,
+  "table": 3337,
+  "gain": 177,
+  "square": 19,
+  "square_rank": 3633,
+  "deletions": [
+   "I0",
+   "J0",
+   "I17"
+  ],
+  "primes": [
+   2,
+   3,
+   5,
+   7
+  ],
+  "ring": "rational",
+  "omega": 2.7889841668070794,
+  "omega_table": 2.807846656687258,
   "found": "2026-11-20",
-  "bytes": 1458063
+  "bytes": 319589,
+  "scheme_file": true
  },
  {
   "folder": "17x19x19_3354_rational",
@@ -193,7 +635,154 @@
   "omega": 2.79218893529338,
   "omega_table": 2.8196726271286723,
   "found": "2026-11-20",
-  "bytes": 256840
+  "bytes": 256840,
+  "scheme_file": true
+ },
+ {
+  "folder": "17x19x20_3703_rational",
+  "shape": [
+   17,
+   19,
+   20
+  ],
+  "stored_as": [
+   17,
+   20,
+   19
+  ],
+  "rank": 3703,
+  "table": 3800,
+  "gain": 97,
+  "square": 21,
+  "square_rank": 4723,
+  "deletions": [
+   "I0",
+   "J0",
+   "I0",
+   "I0",
+   "K20",
+   "I0",
+   "K0"
+  ],
+  "primes": [
+   2,
+   7,
+   29
+  ],
+  "ring": "rational",
+  "omega": 2.8097133404817947,
+  "omega_table": 2.8185552296691325,
+  "found": "2026-11-21",
+  "bytes": 424887,
+  "scheme_file": true
+ },
+ {
+  "folder": "17x20x20_3796_rational",
+  "shape": [
+   17,
+   20,
+   20
+  ],
+  "stored_as": [
+   17,
+   20,
+   20
+  ],
+  "rank": 3796,
+  "table": 3972,
+  "gain": 176,
+  "square": 21,
+  "square_rank": 4723,
+  "deletions": [
+   "I0",
+   "J0",
+   "I0",
+   "I0",
+   "K20",
+   "I0"
+  ],
+  "primes": [
+   2,
+   7,
+   29
+  ],
+  "ring": "rational",
+  "omega": 2.801814387349564,
+  "omega_table": 2.8172218161512275,
+  "found": "2026-11-21",
+  "bytes": 467341,
+  "scheme_file": true
+ },
+ {
+  "folder": "17x20x21_3997_rational",
+  "shape": [
+   17,
+   20,
+   21
+  ],
+  "stored_as": [
+   17,
+   20,
+   21
+  ],
+  "rank": 3997,
+  "table": 4174,
+  "gain": 177,
+  "square": 21,
+  "square_rank": 4723,
+  "deletions": [
+   "I0",
+   "J0",
+   "I0",
+   "I0",
+   "I17"
+  ],
+  "primes": [
+   2,
+   7,
+   29
+  ],
+  "ring": "rational",
+  "omega": 2.8038527801065625,
+  "omega_table": 2.818502315774788,
+  "found": "2026-11-21",
+  "bytes": 362772,
+  "scheme_file": true
+ },
+ {
+  "folder": "17x21x21_4258_rational",
+  "shape": [
+   17,
+   21,
+   21
+  ],
+  "stored_as": [
+   17,
+   21,
+   21
+  ],
+  "rank": 4258,
+  "table": 4310,
+  "gain": 52,
+  "square": 21,
+  "square_rank": 4723,
+  "deletions": [
+   "I0",
+   "I19",
+   "I18",
+   "I0"
+  ],
+  "primes": [
+   2,
+   7,
+   29
+  ],
+  "ring": "rational",
+  "omega": 2.8097891721583204,
+  "omega_table": 2.813870539457633,
+  "found": "2026-11-21",
+  "bytes": 366353,
+  "scheme_file": true
  },
  {
   "folder": "18x18x19_3225_rational",
@@ -226,7 +815,8 @@
   "omega": 2.777714357458164,
   "omega_table": 2.7913022062620403,
   "found": "2026-11-20",
-  "bytes": 368178
+  "bytes": 368178,
+  "scheme_file": true
  },
  {
   "folder": "18x19x19_3424_rational",
@@ -258,95 +848,281 @@
   "omega": 2.7810684285071434,
   "omega_table": 2.8013147924475756,
   "found": "2026-11-20",
-  "bytes": 324808
+  "bytes": 324808,
+  "scheme_file": true
  },
  {
-  "folder": "18x20x20_3910_rational",
+  "folder": "18x19x20_3784_rational",
   "shape": [
    18,
-   20,
-   20
-  ],
-  "stored_as": [
-   20,
-   18,
-   20
-  ],
-  "rank": 3910,
-  "table": 3994,
-  "gain": 84,
-  "square": 20,
-  "square_rank": 3994,
-  "deletions": [
-   "J0",
-   "J0"
-  ],
-  "primes": [
-   2,
-   3,
-   5,
-   7,
-   29
-  ],
-  "ring": "rational",
-  "omega": 2.7937778975905876,
-  "omega_table": 2.8009574470440173,
-  "found": "2026-11-20",
-  "bytes": 2327316
- },
- {
-  "folder": "19x19x20_3909_rational",
-  "shape": [
-   19,
    19,
    20
   ],
   "stored_as": [
+   18,
    20,
-   19,
    19
   ],
-  "rank": 3909,
-  "table": 3994,
-  "gain": 85,
-  "square": 20,
-  "square_rank": 3994,
+  "rank": 3784,
+  "table": 3878,
+  "gain": 94,
+  "square": 21,
+  "square_rank": 4723,
   "deletions": [
+   "I0",
    "J0",
-   "K19"
+   "I0",
+   "I0",
+   "K20",
+   "K0"
   ],
   "primes": [
    2,
-   3,
-   5,
    7,
    29
   ],
   "ring": "rational",
-  "omega": 2.792819262720675,
-  "omega_table": 2.8000829403456993,
-  "found": "2026-11-20",
-  "bytes": 2562485
+  "omega": 2.798877799564619,
+  "omega_table": 2.8072140611969987,
+  "found": "2026-11-21",
+  "bytes": 416992,
+  "scheme_file": true
  },
  {
-  "folder": "19x20x20_3952_rational",
+  "folder": "18x19x21_4012_rational",
+  "shape": [
+   18,
+   19,
+   21
+  ],
+  "stored_as": [
+   18,
+   19,
+   21
+  ],
+  "rank": 4012,
+  "table": 4090,
+  "gain": 78,
+  "square": 21,
+  "square_rank": 4723,
+  "deletions": [
+   "I0",
+   "J0",
+   "I0",
+   "J19",
+   "I0"
+  ],
+  "primes": [
+   2,
+   3,
+   7,
+   29
+  ],
+  "ring": "rational",
+  "omega": 2.803266299087296,
+  "omega_table": 2.8097718889472523,
+  "found": "2026-11-21",
+  "bytes": 378718,
+  "scheme_file": true
+ },
+ {
+  "folder": "18x20x20_3865_rational",
+  "shape": [
+   18,
+   20,
+   20
+  ],
+  "stored_as": [
+   18,
+   20,
+   20
+  ],
+  "rank": 3865,
+  "table": 3994,
+  "gain": 129,
+  "square": 21,
+  "square_rank": 4723,
+  "deletions": [
+   "I0",
+   "J0",
+   "I0",
+   "I0",
+   "K20"
+  ],
+  "primes": [
+   2,
+   7,
+   29
+  ],
+  "ring": "rational",
+  "omega": 2.789867999380225,
+  "omega_table": 2.8009574470440173,
+  "found": "2026-11-21",
+  "bytes": 462029,
+  "scheme_file": true
+ },
+ {
+  "folder": "18x20x21_4073_rational",
+  "shape": [
+   18,
+   20,
+   21
+  ],
+  "stored_as": [
+   18,
+   20,
+   21
+  ],
+  "rank": 4073,
+  "table": 4257,
+  "gain": 184,
+  "square": 21,
+  "square_rank": 4723,
+  "deletions": [
+   "I0",
+   "J0",
+   "I0",
+   "I0"
+  ],
+  "primes": [
+   2,
+   7,
+   29
+  ],
+  "ring": "rational",
+  "omega": 2.7922347227285615,
+  "omega_table": 2.8070774188145267,
+  "found": "2026-11-21",
+  "bytes": 388704,
+  "scheme_file": true
+ },
+ {
+  "folder": "18x21x21_4327_rational",
+  "shape": [
+   18,
+   21,
+   21
+  ],
+  "stored_as": [
+   18,
+   21,
+   21
+  ],
+  "rank": 4327,
+  "table": 4440,
+  "gain": 113,
+  "square": 21,
+  "square_rank": 4723,
+  "deletions": [
+   "I0",
+   "I19",
+   "I18"
+  ],
+  "primes": [
+   2,
+   7,
+   29
+  ],
+  "ring": "rational",
+  "omega": 2.7972740598097556,
+  "omega_table": 2.8058870631664523,
+  "found": "2026-11-20",
+  "bytes": 371005,
+  "scheme_file": true
+ },
+ {
+  "folder": "19x19x20_3868_rational",
+  "shape": [
+   19,
+   19,
+   20
+  ],
+  "stored_as": [
+   19,
+   20,
+   19
+  ],
+  "rank": 3868,
+  "table": 3994,
+  "gain": 126,
+  "square": 21,
+  "square_rank": 4723,
+  "deletions": [
+   "I0",
+   "J0",
+   "I0",
+   "K20",
+   "K0"
+  ],
+  "primes": [
+   2,
+   7,
+   29
+  ],
+  "ring": "rational",
+  "omega": 2.78925894585435,
+  "omega_table": 2.8000829403456993,
+  "found": "2026-11-21",
+  "bytes": 410072,
+  "scheme_file": true
+ },
+ {
+  "folder": "19x19x21_4092_rational",
+  "shape": [
+   19,
+   19,
+   21
+  ],
+  "stored_as": [
+   19,
+   19,
+   21
+  ],
+  "rank": 4092,
+  "table": 4184,
+  "gain": 92,
+  "square": 21,
+  "square_rank": 4723,
+  "deletions": [
+   "I0",
+   "J0",
+   "I0",
+   "J19"
+  ],
+  "primes": [
+   2,
+   7,
+   29
+  ],
+  "ring": "rational",
+  "omega": 2.7929306059346706,
+  "omega_table": 2.8003971509301424,
+  "found": "2026-11-21",
+  "bytes": 347565,
+  "scheme_file": true
+ },
+ {
+  "folder": "19x20x20_3935_rational",
   "shape": [
    19,
    20,
    20
   ],
   "stored_as": [
-   20,
    19,
+   20,
    20
   ],
-  "rank": 3952,
+  "rank": 3935,
   "table": 3994,
-  "gain": 42,
-  "square": 20,
-  "square_rank": 3994,
+  "gain": 59,
+  "square": 21,
+  "square_rank": 4723,
   "deletions": [
-   "J0"
+   "I0",
+   "J0",
+   "I0",
+   "K20"
   ],
   "primes": [
    2,
@@ -354,10 +1130,45 @@
    29
   ],
   "ring": "rational",
-  "omega": 2.7804609912750586,
+  "omega": 2.7790137180350625,
   "omega_table": 2.78401008569296,
+  "found": "2026-11-21",
+  "bytes": 467690,
+  "scheme_file": true
+ },
+ {
+  "folder": "19x20x21_4154_rational",
+  "shape": [
+   19,
+   20,
+   21
+  ],
+  "stored_as": [
+   19,
+   20,
+   21
+  ],
+  "rank": 4154,
+  "table": 4374,
+  "gain": 220,
+  "square": 21,
+  "square_rank": 4723,
+  "deletions": [
+   "I0",
+   "J0",
+   "I0"
+  ],
+  "primes": [
+   2,
+   7,
+   29
+  ],
+  "ring": "rational",
+  "omega": 2.782007030455967,
+  "omega_table": 2.7992384014671603,
   "found": "2026-11-20",
-  "bytes": 2332406
+  "bytes": 391873,
+  "scheme_file": true
  },
  {
   "folder": "19x21x21_4394_rational",
@@ -389,7 +1200,148 @@
   "omega": 2.785634663638961,
   "omega_table": 2.809613524324483,
   "found": "2026-11-20",
-  "bytes": 370753
+  "bytes": 370753,
+  "scheme_file": true
+ },
+ {
+  "folder": "19x21x22_4914_rational",
+  "shape": [
+   19,
+   21,
+   22
+  ],
+  "stored_as": [
+   22,
+   19,
+   21
+  ],
+  "rank": 4914,
+  "table": 4983,
+  "gain": 69,
+  "square": 22,
+  "square_rank": 5141,
+  "deletions": [
+   "J0",
+   "J0",
+   "J19",
+   "K0"
+  ],
+  "primes": [
+   2,
+   3,
+   11
+  ],
+  "ring": "rational",
+  "omega": 2.808317157528525,
+  "omega_table": 2.812924152877713,
+  "found": "2026-11-21",
+  "bytes": 2499462,
+  "scheme_file": true
+ },
+ {
+  "folder": "19x22x22_4994_rational",
+  "shape": [
+   19,
+   22,
+   22
+  ],
+  "stored_as": [
+   22,
+   19,
+   22
+  ],
+  "rank": 4994,
+  "table": 5141,
+  "gain": 147,
+  "square": 22,
+  "square_rank": 5141,
+  "deletions": [
+   "J0",
+   "J0",
+   "J19"
+  ],
+  "primes": [
+   2,
+   3,
+   11
+  ],
+  "ring": "rational",
+  "omega": 2.79931085832546,
+  "omega_table": 2.8088469385171724,
+  "found": "2026-11-20",
+  "bytes": 2635129,
+  "scheme_file": true
+ },
+ {
+  "folder": "19x22x23_5173_rational",
+  "shape": [
+   19,
+   22,
+   23
+  ],
+  "stored_as": [
+   19,
+   22,
+   23
+  ],
+  "rank": 5173,
+  "table": 5440,
+  "gain": 267,
+  "square": 23,
+  "square_rank": 6009,
+  "deletions": [
+   "I0",
+   "J0",
+   "I21",
+   "I0",
+   "I0"
+  ],
+  "primes": [
+   2,
+   3,
+   11
+  ],
+  "ring": "rational",
+  "omega": 2.797262275397643,
+  "omega_table": 2.813724952361012,
+  "found": "2026-11-21",
+  "bytes": 526496,
+  "scheme_file": true
+ },
+ {
+  "folder": "19x23x23_5480_rational",
+  "shape": [
+   19,
+   23,
+   23
+  ],
+  "stored_as": [
+   19,
+   23,
+   23
+  ],
+  "rank": 5480,
+  "table": 5656,
+  "gain": 176,
+  "square": 23,
+  "square_rank": 6009,
+  "deletions": [
+   "I0",
+   "I21",
+   "I20",
+   "I19"
+  ],
+  "primes": [
+   2,
+   3,
+   11
+  ],
+  "ring": "rational",
+  "omega": 2.802537526249617,
+  "omega_table": 2.8128284740996956,
+  "found": "2026-11-21",
+  "bytes": 529523,
+  "scheme_file": true
  },
  {
   "folder": "20x20x21_4230_rational",
@@ -421,7 +1373,8 @@
   "omega": 2.7722341630385112,
   "omega_table": 2.784862992949871,
   "found": "2026-11-20",
-  "bytes": 513155
+  "bytes": 513155,
+  "scheme_file": true
  },
  {
   "folder": "20x21x21_4471_rational",
@@ -452,28 +1405,30 @@
   "omega": 2.7756434434360626,
   "omega_table": 2.7937502476304292,
   "found": "2026-11-20",
-  "bytes": 465467
+  "bytes": 465467,
+  "scheme_file": true
  },
  {
-  "folder": "20x22x22_5049_rational",
+  "folder": "20x21x22_4987_rational",
   "shape": [
    20,
-   22,
+   21,
    22
   ],
   "stored_as": [
    22,
-   20,
-   22
+   21,
+   20
   ],
-  "rank": 5049,
-  "table": 5141,
-  "gain": 92,
+  "rank": 4987,
+  "table": 5035,
+  "gain": 48,
   "square": 22,
   "square_rank": 5141,
   "deletions": [
    "J0",
-   "J0"
+   "K21",
+   "K0"
   ],
   "primes": [
    2,
@@ -481,31 +1436,106 @@
    11
   ],
   "ring": "rational",
-  "omega": 2.7872462423382522,
+  "omega": 2.7973867191143347,
+  "omega_table": 2.8005338074525516,
+  "found": "2026-11-20",
+  "bytes": 2782353,
+  "scheme_file": true
+ },
+ {
+  "folder": "20x21x23_5178_rational",
+  "shape": [
+   20,
+   21,
+   23
+  ],
+  "stored_as": [
+   20,
+   21,
+   23
+  ],
+  "rank": 5178,
+  "table": 5330,
+  "gain": 152,
+  "square": 23,
+  "square_rank": 6009,
+  "deletions": [
+   "I0",
+   "J0",
+   "I21",
+   "J0",
+   "I0"
+  ],
+  "primes": [
+   2,
+   3,
+   11
+  ],
+  "ring": "rational",
+  "omega": 2.796122985107139,
+  "omega_table": 2.8055823841419,
+  "found": "2026-11-21",
+  "bytes": 476903,
+  "scheme_file": true
+ },
+ {
+  "folder": "20x22x22_5005_rational",
+  "shape": [
+   20,
+   22,
+   22
+  ],
+  "stored_as": [
+   20,
+   22,
+   22
+  ],
+  "rank": 5005,
+  "table": 5141,
+  "gain": 136,
+  "square": 23,
+  "square_rank": 6009,
+  "deletions": [
+   "I0",
+   "J0",
+   "I21",
+   "I0",
+   "K22"
+  ],
+  "primes": [
+   2,
+   3,
+   11
+  ],
+  "ring": "rational",
+  "omega": 2.784385172781841,
   "omega_table": 2.7931487599549922,
-  "found": "2026-11-20",
-  "bytes": 3436032
+  "found": "2026-11-21",
+  "bytes": 577488,
+  "scheme_file": true
  },
  {
-  "folder": "21x21x22_5048_rational",
+  "folder": "20x22x23_5255_rational",
   "shape": [
-   21,
-   21,
-   22
+   20,
+   22,
+   23
   ],
   "stored_as": [
+   20,
    22,
-   21,
-   21
+   23
   ],
-  "rank": 5048,
-  "table": 5141,
-  "gain": 93,
-  "square": 22,
-  "square_rank": 5141,
+  "rank": 5255,
+  "table": 5581,
+  "gain": 326,
+  "square": 23,
+  "square_rank": 6009,
   "deletions": [
+   "I0",
    "J0",
-   "K21"
+   "I21",
+   "I0"
   ],
   "primes": [
    2,
@@ -513,29 +1543,105 @@
    11
   ],
   "ring": "rational",
-  "omega": 2.786492251810916,
-  "omega_table": 2.7924580407562476,
-  "found": "2026-11-20",
-  "bytes": 3193269
+  "omega": 2.786820250984193,
+  "omega_table": 2.8063993701306047,
+  "found": "2026-11-21",
+  "bytes": 547070,
+  "scheme_file": true
  },
  {
-  "folder": "21x22x22_5095_rational",
+  "folder": "20x23x23_5554_rational",
+  "shape": [
+   20,
+   23,
+   23
+  ],
+  "stored_as": [
+   20,
+   23,
+   23
+  ],
+  "rank": 5554,
+  "table": 5903,
+  "gain": 349,
+  "square": 23,
+  "square_rank": 6009,
+  "deletions": [
+   "I0",
+   "I21",
+   "I20"
+  ],
+  "primes": [
+   2,
+   3,
+   11
+  ],
+  "ring": "rational",
+  "omega": 2.791367283627373,
+  "omega_table": 2.8110966925449254,
+  "found": "2026-11-21",
+  "bytes": 522799,
+  "scheme_file": true
+ },
+ {
+  "folder": "20x25x25_6828_rational",
+  "shape": [
+   20,
+   25,
+   25
+  ],
+  "stored_as": [
+   20,
+   25,
+   25
+  ],
+  "rank": 6828,
+  "table": 6924,
+  "gain": 96,
+  "square": 25,
+  "square_rank": 7507,
+  "deletions": [
+   "I0",
+   "I0",
+   "I0",
+   "I21",
+   "I0"
+  ],
+  "primes": [
+   2,
+   3,
+   5,
+   37
+  ],
+  "ring": "rational",
+  "omega": 2.807696654504349,
+  "omega_table": 2.812136742332547,
+  "found": "2026-11-21",
+  "bytes": 650855,
+  "scheme_file": true
+ },
+ {
+  "folder": "21x21x22_5009_rational",
   "shape": [
    21,
-   22,
+   21,
    22
   ],
   "stored_as": [
-   22,
+   21,
    21,
    22
   ],
-  "rank": 5095,
+  "rank": 5009,
   "table": 5141,
-  "gain": 46,
-  "square": 22,
-  "square_rank": 5141,
+  "gain": 132,
+  "square": 23,
+  "square_rank": 6009,
   "deletions": [
+   "I0",
+   "J0",
+   "I21",
+   "K0",
    "J0"
   ],
   "primes": [
@@ -544,10 +1650,361 @@
    11
   ],
   "ring": "rational",
-  "omega": 2.775456230117115,
+  "omega": 2.7839576906725605,
+  "omega_table": 2.7924580407562476,
+  "found": "2026-11-21",
+  "bytes": 752749,
+  "scheme_file": true
+ },
+ {
+  "folder": "21x21x23_5277_rational",
+  "shape": [
+   21,
+   21,
+   23
+  ],
+  "stored_as": [
+   21,
+   21,
+   23
+  ],
+  "rank": 5277,
+  "table": 5395,
+  "gain": 118,
+  "square": 23,
+  "square_rank": 6009,
+  "deletions": [
+   "I0",
+   "J0",
+   "I21",
+   "J0"
+  ],
+  "primes": [
+   2,
+   3,
+   11
+  ],
+  "ring": "rational",
+  "omega": 2.787493103504365,
+  "omega_table": 2.7946852821273294,
+  "found": "2026-11-21",
+  "bytes": 513396,
+  "scheme_file": true
+ },
+ {
+  "folder": "21x22x22_5082_rational",
+  "shape": [
+   21,
+   22,
+   22
+  ],
+  "stored_as": [
+   21,
+   22,
+   22
+  ],
+  "rank": 5082,
+  "table": 5141,
+  "gain": 59,
+  "square": 23,
+  "square_rank": 6009,
+  "deletions": [
+   "I0",
+   "J0",
+   "I21",
+   "K0"
+  ],
+  "primes": [
+   2,
+   3,
+   11
+  ],
+  "ring": "rational",
+  "omega": 2.7746255515107725,
   "omega_table": 2.7783786303222437,
+  "found": "2026-11-21",
+  "bytes": 670139,
+  "scheme_file": true
+ },
+ {
+  "folder": "21x22x23_5344_rational",
+  "shape": [
+   21,
+   22,
+   23
+  ],
+  "stored_as": [
+   21,
+   22,
+   23
+  ],
+  "rank": 5344,
+  "table": 5603,
+  "gain": 259,
+  "square": 23,
+  "square_rank": 6009,
+  "deletions": [
+   "I0",
+   "J0",
+   "I21"
+  ],
+  "primes": [
+   2,
+   3,
+   11
+  ],
+  "ring": "rational",
+  "omega": 2.777588714343983,
+  "omega_table": 2.7929033828632503,
+  "found": "2026-11-21",
+  "bytes": 636870,
+  "scheme_file": true
+ },
+ {
+  "folder": "21x23x23_5628_rational",
+  "shape": [
+   21,
+   23,
+   23
+  ],
+  "stored_as": [
+   21,
+   23,
+   23
+  ],
+  "rank": 5628,
+  "table": 6009,
+  "gain": 381,
+  "square": 23,
+  "square_rank": 6009,
+  "deletions": [
+   "I0",
+   "I21"
+  ],
+  "primes": [
+   2,
+   3,
+   11
+  ],
+  "ring": "rational",
+  "omega": 2.781009932509056,
+  "omega_table": 2.8021051382417466,
   "found": "2026-11-20",
-  "bytes": 3305575
+  "bytes": 521110,
+  "scheme_file": true
+ },
+ {
+  "folder": "21x23x24_6224_rational",
+  "shape": [
+   21,
+   23,
+   24
+  ],
+  "stored_as": [
+   24,
+   21,
+   23
+  ],
+  "rank": 6224,
+  "table": 6339,
+  "gain": 115,
+  "square": 24,
+  "square_rank": 6488,
+  "deletions": [
+   "J0",
+   "J0",
+   "J0",
+   "K0"
+  ],
+  "primes": [
+   2,
+   3,
+   5,
+   37
+  ],
+  "ring": "rational",
+  "omega": 2.800631203022389,
+  "omega_table": 2.806500438712772,
+  "found": "2026-11-21",
+  "bytes": 3458201,
+  "scheme_file": true
+ },
+ {
+  "folder": "21x24x24_6331_rational",
+  "shape": [
+   21,
+   24,
+   24
+  ],
+  "stored_as": [
+   24,
+   21,
+   24
+  ],
+  "rank": 6331,
+  "table": 6440,
+  "gain": 109,
+  "square": 24,
+  "square_rank": 6488,
+  "deletions": [
+   "J0",
+   "J0",
+   "J0"
+  ],
+  "primes": [
+   2,
+   3,
+   5,
+   37
+  ],
+  "ring": "rational",
+  "omega": 2.793391524473221,
+  "omega_table": 2.7988391396997185,
+  "found": "2026-11-21",
+  "bytes": 3637633,
+  "scheme_file": true
+ },
+ {
+  "folder": "21x24x25_6564_rational",
+  "shape": [
+   21,
+   24,
+   25
+  ],
+  "stored_as": [
+   21,
+   24,
+   25
+  ],
+  "rank": 6564,
+  "table": 6924,
+  "gain": 360,
+  "square": 25,
+  "square_rank": 7507,
+  "deletions": [
+   "I0",
+   "J0",
+   "I23",
+   "I0",
+   "I0"
+  ],
+  "primes": [
+   2,
+   3,
+   5,
+   37
+  ],
+  "ring": "rational",
+  "omega": 2.7927977706255906,
+  "omega_table": 2.809763422802986,
+  "found": "2026-11-21",
+  "bytes": 838881,
+  "scheme_file": true
+ },
+ {
+  "folder": "21x25x25_6911_rational",
+  "shape": [
+   21,
+   25,
+   25
+  ],
+  "stored_as": [
+   21,
+   25,
+   25
+  ],
+  "rank": 6911,
+  "table": 7223,
+  "gain": 312,
+  "square": 25,
+  "square_rank": 7507,
+  "deletions": [
+   "I0",
+   "I0",
+   "I0",
+   "I21"
+  ],
+  "primes": [
+   2,
+   3,
+   5,
+   37
+  ],
+  "ring": "rational",
+  "omega": 2.7970725827626057,
+  "omega_table": 2.8110426600517178,
+  "found": "2026-11-21",
+  "bytes": 685474,
+  "scheme_file": true
+ },
+ {
+  "folder": "21x26x26_7757_rational",
+  "shape": [
+   21,
+   26,
+   26
+  ],
+  "stored_as": [
+   26,
+   21,
+   26
+  ],
+  "rank": 7757,
+  "table": 7781,
+  "gain": 24,
+  "square": 26,
+  "square_rank": 8051,
+  "deletions": [
+   "J0",
+   "J0",
+   "J0",
+   "J0",
+   "J0"
+  ],
+  "primes": [
+   2,
+   5,
+   11
+  ],
+  "ring": "rational",
+  "omega": 2.810360038721381,
+  "omega_table": 2.811329381378302,
+  "found": "2026-11-21",
+  "bytes": 3673281,
+  "scheme_file": true
+ },
+ {
+  "folder": "22x22x23_5423_rational",
+  "shape": [
+   22,
+   22,
+   23
+  ],
+  "stored_as": [
+   22,
+   22,
+   23
+  ],
+  "rank": 5423,
+  "table": 5625,
+  "gain": 202,
+  "square": 23,
+  "square_rank": 6009,
+  "deletions": [
+   "I0",
+   "J0"
+  ],
+  "primes": [
+   2,
+   3,
+   11
+  ],
+  "ring": "rational",
+  "omega": 2.7684458592714885,
+  "omega_table": 2.7802209501240065,
+  "found": "2026-11-20",
+  "bytes": 701106,
+  "scheme_file": true
  },
  {
   "folder": "22x23x23_5710_rational",
@@ -578,26 +2035,246 @@
   "omega": 2.7718262443384094,
   "omega_table": 2.788181452618421,
   "found": "2026-11-20",
-  "bytes": 630773
+  "bytes": 630773,
+  "scheme_file": true
  },
  {
-  "folder": "23x24x24_6438_rational",
+  "folder": "22x23x24_6321_rational",
   "shape": [
+   22,
    23,
-   24,
    24
   ],
   "stored_as": [
    24,
-   23,
-   24
+   22,
+   23
   ],
-  "rank": 6438,
-  "table": 6488,
-  "gain": 50,
+  "rank": 6321,
+  "table": 6396,
+  "gain": 75,
   "square": 24,
   "square_rank": 6488,
   "deletions": [
+   "J0",
+   "J0",
+   "K0"
+  ],
+  "primes": [
+   2,
+   3,
+   5,
+   37
+  ],
+  "ring": "rational",
+  "omega": 2.7917109318512825,
+  "omega_table": 2.7954735746208974,
+  "found": "2026-11-21",
+  "bytes": 4779350,
+  "scheme_file": true
+ },
+ {
+  "folder": "22x23x25_6557_rational",
+  "shape": [
+   22,
+   23,
+   25
+  ],
+  "stored_as": [
+   22,
+   23,
+   25
+  ],
+  "rank": 6557,
+  "table": 6752,
+  "gain": 195,
+  "square": 25,
+  "square_rank": 7507,
+  "deletions": [
+   "I0",
+   "J0",
+   "I23",
+   "J0",
+   "I0"
+  ],
+  "primes": [
+   2,
+   3,
+   5,
+   37
+  ],
+  "ring": "rational",
+  "omega": 2.7912878762154723,
+  "omega_table": 2.8005957521913407,
+  "found": "2026-11-21",
+  "bytes": 709980,
+  "scheme_file": true
+ },
+ {
+  "folder": "22x24x24_6352_rational",
+  "shape": [
+   22,
+   24,
+   24
+  ],
+  "stored_as": [
+   22,
+   24,
+   24
+  ],
+  "rank": 6352,
+  "table": 6488,
+  "gain": 136,
+  "square": 25,
+  "square_rank": 7507,
+  "deletions": [
+   "I0",
+   "J0",
+   "I23",
+   "K0",
+   "I0"
+  ],
+  "primes": [
+   2,
+   3,
+   5,
+   37
+  ],
+  "ring": "rational",
+  "omega": 2.780687793845951,
+  "omega_table": 2.7874150902091457,
+  "found": "2026-11-21",
+  "bytes": 818674,
+  "scheme_file": true
+ },
+ {
+  "folder": "22x24x25_6650_rational",
+  "shape": [
+   22,
+   24,
+   25
+  ],
+  "stored_as": [
+   22,
+   24,
+   25
+  ],
+  "rank": 6650,
+  "table": 7016,
+  "gain": 366,
+  "square": 25,
+  "square_rank": 7507,
+  "deletions": [
+   "I0",
+   "J0",
+   "I23",
+   "I0"
+  ],
+  "primes": [
+   2,
+   3,
+   5,
+   37
+  ],
+  "ring": "rational",
+  "omega": 2.7832202812954185,
+  "omega_table": 2.8001605926039965,
+  "found": "2026-11-21",
+  "bytes": 852264,
+  "scheme_file": true
+ },
+ {
+  "folder": "22x25x25_6997_rational",
+  "shape": [
+   22,
+   25,
+   25
+  ],
+  "stored_as": [
+   22,
+   25,
+   25
+  ],
+  "rank": 6997,
+  "table": 7441,
+  "gain": 444,
+  "square": 25,
+  "square_rank": 7507,
+  "deletions": [
+   "I0",
+   "I0",
+   "I0"
+  ],
+  "primes": [
+   2,
+   3,
+   5,
+   37
+  ],
+  "ring": "rational",
+  "omega": 2.7873107558921597,
+  "omega_table": 2.806680603320613,
+  "found": "2026-11-21",
+  "bytes": 658700,
+  "scheme_file": true
+ },
+ {
+  "folder": "22x26x26_7819_rational",
+  "shape": [
+   22,
+   26,
+   26
+  ],
+  "stored_as": [
+   26,
+   22,
+   26
+  ],
+  "rank": 7819,
+  "table": 7906,
+  "gain": 87,
+  "square": 26,
+  "square_rank": 8051,
+  "deletions": [
+   "J0",
+   "J0",
+   "J0",
+   "J0"
+  ],
+  "primes": [
+   2,
+   5,
+   11
+  ],
+  "ring": "rational",
+  "omega": 2.7992376955964464,
+  "omega_table": 2.802692996249247,
+  "found": "2026-11-21",
+  "bytes": 3584363,
+  "scheme_file": true
+ },
+ {
+  "folder": "23x23x24_6344_rational",
+  "shape": [
+   23,
+   23,
+   24
+  ],
+  "stored_as": [
+   23,
+   23,
+   24
+  ],
+  "rank": 6344,
+  "table": 6488,
+  "gain": 144,
+  "square": 25,
+  "square_rank": 7507,
+  "deletions": [
+   "I0",
+   "J0",
+   "I23",
+   "K0",
    "J0"
   ],
   "primes": [
@@ -607,10 +2284,257 @@
    37
   ],
   "ring": "rational",
-  "omega": 2.771915634216567,
+  "omega": 2.779730851136154,
+  "omega_table": 2.786856916992692,
+  "found": "2026-11-21",
+  "bytes": 857718,
+  "scheme_file": true
+ },
+ {
+  "folder": "23x23x25_6662_rational",
+  "shape": [
+   23,
+   23,
+   25
+  ],
+  "stored_as": [
+   23,
+   23,
+   25
+  ],
+  "rank": 6662,
+  "table": 6814,
+  "gain": 152,
+  "square": 25,
+  "square_rank": 7507,
+  "deletions": [
+   "I0",
+   "J0",
+   "I23",
+   "J0"
+  ],
+  "primes": [
+   2,
+   3,
+   5,
+   37
+  ],
+  "ring": "rational",
+  "omega": 2.783235285745994,
+  "omega_table": 2.7903669724141027,
+  "found": "2026-11-21",
+  "bytes": 778061,
+  "scheme_file": true
+ },
+ {
+  "folder": "23x24x24_6424_rational",
+  "shape": [
+   23,
+   24,
+   24
+  ],
+  "stored_as": [
+   23,
+   24,
+   24
+  ],
+  "rank": 6424,
+  "table": 6488,
+  "gain": 64,
+  "square": 25,
+  "square_rank": 7507,
+  "deletions": [
+   "I0",
+   "J0",
+   "I23",
+   "K0"
+  ],
+  "primes": [
+   2,
+   3,
+   5,
+   37
+  ],
+  "ring": "rational",
+  "omega": 2.771227566092624,
   "omega_table": 2.7743608644433686,
+  "found": "2026-11-21",
+  "bytes": 882962,
+  "scheme_file": true
+ },
+ {
+  "folder": "23x24x25_6734_rational",
+  "shape": [
+   23,
+   24,
+   25
+  ],
+  "stored_as": [
+   23,
+   24,
+   25
+  ],
+  "rank": 6734,
+  "table": 7040,
+  "gain": 306,
+  "square": 25,
+  "square_rank": 7507,
+  "deletions": [
+   "I0",
+   "J0",
+   "I23"
+  ],
+  "primes": [
+   2,
+   3,
+   5,
+   37
+  ],
+  "ring": "rational",
+  "omega": 2.774191974321615,
+  "omega_table": 2.7881775618380025,
+  "found": "2026-11-21",
+  "bytes": 842033,
+  "scheme_file": true
+ },
+ {
+  "folder": "23x25x25_7078_rational",
+  "shape": [
+   23,
+   25,
+   25
+  ],
+  "stored_as": [
+   23,
+   25,
+   25
+  ],
+  "rank": 7078,
+  "table": 7507,
+  "gain": 429,
+  "square": 25,
+  "square_rank": 7507,
+  "deletions": [
+   "I0",
+   "I0"
+  ],
+  "primes": [
+   2,
+   3,
+   5,
+   37
+  ],
+  "ring": "rational",
+  "omega": 2.777975240153026,
+  "omega_table": 2.7964155489552804,
   "found": "2026-11-20",
-  "bytes": 5341977
+  "bytes": 666937,
+  "scheme_file": true
+ },
+ {
+  "folder": "23x25x26_7757_rational",
+  "shape": [
+   23,
+   25,
+   26
+  ],
+  "stored_as": [
+   26,
+   23,
+   25
+  ],
+  "rank": 7757,
+  "table": 7915,
+  "gain": 158,
+  "square": 26,
+  "square_rank": 8051,
+  "deletions": [
+   "J0",
+   "J0",
+   "J0",
+   "K0"
+  ],
+  "primes": [
+   2,
+   5,
+   11,
+   41
+  ],
+  "ring": "rational",
+  "omega": 2.7952297780341673,
+  "omega_table": 2.801522865763181,
+  "found": "2026-11-21",
+  "bytes": 5163667,
+  "scheme_file": true
+ },
+ {
+  "folder": "23x26x26_7876_rational",
+  "shape": [
+   23,
+   26,
+   26
+  ],
+  "stored_as": [
+   26,
+   23,
+   26
+  ],
+  "rank": 7876,
+  "table": 8051,
+  "gain": 175,
+  "square": 26,
+  "square_rank": 8051,
+  "deletions": [
+   "J0",
+   "J0",
+   "J0"
+  ],
+  "primes": [
+   2,
+   5,
+   11,
+   41
+  ],
+  "ring": "rational",
+  "omega": 2.7886032260559914,
+  "omega_table": 2.7954339943588282,
+  "found": "2026-11-21",
+  "bytes": 5481100,
+  "scheme_file": true
+ },
+ {
+  "folder": "24x24x25_6820_rational",
+  "shape": [
+   24,
+   24,
+   25
+  ],
+  "stored_as": [
+   24,
+   24,
+   25
+  ],
+  "rank": 6820,
+  "table": 7064,
+  "gain": 244,
+  "square": 25,
+  "square_rank": 7507,
+  "deletions": [
+   "I0",
+   "J0"
+  ],
+  "primes": [
+   2,
+   3,
+   5,
+   37
+  ],
+  "ring": "rational",
+  "omega": 2.7658370682769213,
+  "omega_table": 2.776850766054871,
+  "found": "2026-11-20",
+  "bytes": 921032,
+  "scheme_file": true
  },
  {
   "folder": "24x25x25_7157_rational",
@@ -642,7 +2566,146 @@
   "omega": 2.769142802271227,
   "omega_table": 2.78403859647171,
   "found": "2026-11-20",
-  "bytes": 813120
+  "bytes": 813120,
+  "scheme_file": true
+ },
+ {
+  "folder": "24x25x26_7870_rational",
+  "shape": [
+   24,
+   25,
+   26
+  ],
+  "stored_as": [
+   26,
+   24,
+   25
+  ],
+  "rank": 7870,
+  "table": 7977,
+  "gain": 107,
+  "square": 26,
+  "square_rank": 8051,
+  "deletions": [
+   "J0",
+   "J0",
+   "K0"
+  ],
+  "primes": [
+   2,
+   5,
+   11,
+   41
+  ],
+  "ring": "rational",
+  "omega": 2.787402072827497,
+  "omega_table": 2.7915981272646584,
+  "found": "2026-11-21",
+  "bytes": 7671736,
+  "scheme_file": true
+ },
+ {
+  "folder": "24x26x26_7943_rational",
+  "shape": [
+   24,
+   26,
+   26
+  ],
+  "stored_as": [
+   26,
+   24,
+   26
+  ],
+  "rank": 7943,
+  "table": 8051,
+  "gain": 108,
+  "square": 26,
+  "square_rank": 8051,
+  "deletions": [
+   "J0",
+   "J0"
+  ],
+  "primes": [
+   2,
+   5,
+   11,
+   41
+  ],
+  "ring": "rational",
+  "omega": 2.7789821334279377,
+  "omega_table": 2.783161499746103,
+  "found": "2026-11-20",
+  "bytes": 8001775,
+  "scheme_file": true
+ },
+ {
+  "folder": "24x27x27_8655_rational",
+  "shape": [
+   24,
+   27,
+   27
+  ],
+  "stored_as": [
+   24,
+   27,
+   27
+  ],
+  "rank": 8655,
+  "table": 9000,
+  "gain": 345,
+  "square": 27,
+  "square_rank": 9233,
+  "deletions": [
+   "I0",
+   "I0",
+   "I0"
+  ],
+  "primes": [
+   2,
+   5,
+   11,
+   41
+  ],
+  "ring": "rational",
+  "omega": 2.7838726545073116,
+  "omega_table": 2.795875257996068,
+  "found": "2026-11-21",
+  "bytes": 851456,
+  "scheme_file": true
+ },
+ {
+  "folder": "25x25x26_7943_rational",
+  "shape": [
+   25,
+   25,
+   26
+  ],
+  "stored_as": [
+   26,
+   25,
+   25
+  ],
+  "rank": 7943,
+  "table": 8051,
+  "gain": 108,
+  "square": 26,
+  "square_rank": 8051,
+  "deletions": [
+   "J0",
+   "K0"
+  ],
+  "primes": [
+   2,
+   5,
+   11,
+   41
+  ],
+  "ring": "rational",
+  "omega": 2.778523181078103,
+  "omega_table": 2.782701857168732,
+  "found": "2026-11-20",
+  "bytes": 7310669,
+  "scheme_file": true
  },
  {
   "folder": "25x26x26_7997_rational",
@@ -674,6 +2737,1000 @@
   "omega": 2.7694169939025572,
   "omega_table": 2.7714908886135015,
   "found": "2026-11-20",
-  "bytes": 7560004
+  "bytes": 7560004,
+  "scheme_file": true
+ },
+ {
+  "folder": "25x26x27_8345_rational",
+  "shape": [
+   25,
+   26,
+   27
+  ],
+  "stored_as": [
+   25,
+   26,
+   27
+  ],
+  "rank": 8345,
+  "table": 8701,
+  "gain": 356,
+  "square": 27,
+  "square_rank": 9233,
+  "deletions": [
+   "I0",
+   "J0",
+   "I0"
+  ],
+  "primes": [
+   2,
+   5,
+   11,
+   41
+  ],
+  "ring": "rational",
+  "omega": 2.771798044332989,
+  "omega_table": 2.784622014439735,
+  "found": "2026-11-21",
+  "bytes": 1258494,
+  "scheme_file": true
+ },
+ {
+  "folder": "25x27x27_8743_rational",
+  "shape": [
+   25,
+   27,
+   27
+  ],
+  "stored_as": [
+   25,
+   27,
+   27
+  ],
+  "rank": 8743,
+  "table": 9233,
+  "gain": 490,
+  "square": 27,
+  "square_rank": 9233,
+  "deletions": [
+   "I0",
+   "I0"
+  ],
+  "primes": [
+   2,
+   5,
+   11,
+   41
+  ],
+  "ring": "rational",
+  "omega": 2.775382339153137,
+  "omega_table": 2.7920574425025246,
+  "found": "2026-11-21",
+  "bytes": 842255,
+  "scheme_file": true
+ },
+ {
+  "folder": "25x28x28_9658_rational",
+  "shape": [
+   25,
+   28,
+   28
+  ],
+  "stored_as": [
+   28,
+   25,
+   28
+  ],
+  "rank": 9658,
+  "table": 9846,
+  "gain": 188,
+  "square": 28,
+  "square_rank": 9846,
+  "deletions": [
+   "J0",
+   "J0",
+   "J0"
+  ],
+  "primes": [
+   2,
+   3,
+   5,
+   11
+  ],
+  "ring": "rational",
+  "omega": 2.785169711325021,
+  "omega_table": 2.7910216201346665,
+  "found": "2026-11-21",
+  "bytes": 6952668,
+  "scheme_file": true
+ },
+ {
+  "folder": "26x26x27_8437_rational",
+  "shape": [
+   26,
+   26,
+   27
+  ],
+  "stored_as": [
+   26,
+   26,
+   27
+  ],
+  "rank": 8437,
+  "table": 8727,
+  "gain": 290,
+  "square": 27,
+  "square_rank": 9233,
+  "deletions": [
+   "I0",
+   "J0"
+  ],
+  "primes": [
+   2,
+   5,
+   11,
+   41
+  ],
+  "ring": "rational",
+  "omega": 2.7640708785727597,
+  "omega_table": 2.774403564020303,
+  "found": "2026-11-21",
+  "bytes": 1191513,
+  "scheme_file": true
+ },
+ {
+  "folder": "26x27x27_8828_rational",
+  "shape": [
+   26,
+   27,
+   27
+  ],
+  "stored_as": [
+   26,
+   27,
+   27
+  ],
+  "rank": 8828,
+  "table": 9233,
+  "gain": 405,
+  "square": 27,
+  "square_rank": 9233,
+  "deletions": [
+   "I0"
+  ],
+  "primes": [
+   2,
+   5,
+   11,
+   41
+  ],
+  "ring": "rational",
+  "omega": 2.767277870943327,
+  "omega_table": 2.7809397736576917,
+  "found": "2026-11-21",
+  "bytes": 1047229,
+  "scheme_file": true
+ },
+ {
+  "folder": "26x27x28_9652_rational",
+  "shape": [
+   26,
+   27,
+   28
+  ],
+  "stored_as": [
+   28,
+   26,
+   27
+  ],
+  "rank": 9652,
+  "table": 9794,
+  "gain": 142,
+  "square": 28,
+  "square_rank": 9846,
+  "deletions": [
+   "J0",
+   "J0",
+   "K0"
+  ],
+  "primes": [
+   2,
+   3,
+   5,
+   11,
+   23
+  ],
+  "ring": "rational",
+  "omega": 2.7841773520776623,
+  "omega_table": 2.788609256318962,
+  "found": "2026-11-21",
+  "bytes": 9349666,
+  "scheme_file": true
+ },
+ {
+  "folder": "26x28x28_9730_rational",
+  "shape": [
+   26,
+   28,
+   28
+  ],
+  "stored_as": [
+   28,
+   26,
+   28
+  ],
+  "rank": 9730,
+  "table": 9846,
+  "gain": 116,
+  "square": 28,
+  "square_rank": 9846,
+  "deletions": [
+   "J0",
+   "J0"
+  ],
+  "primes": [
+   2,
+   3,
+   5,
+   11,
+   23
+  ],
+  "ring": "rational",
+  "omega": 2.7764063586032846,
+  "omega_table": 2.7799895418229994,
+  "found": "2026-11-21",
+  "bytes": 9701765,
+  "scheme_file": true
+ },
+ {
+  "folder": "26x29x29_10555_rational",
+  "shape": [
+   26,
+   29,
+   29
+  ],
+  "stored_as": [
+   26,
+   29,
+   29
+  ],
+  "rank": 10555,
+  "table": 11203,
+  "gain": 648,
+  "square": 29,
+  "square_rank": 11203,
+  "deletions": [
+   "I0",
+   "I0",
+   "I0"
+  ],
+  "primes": [
+   2,
+   3,
+   5,
+   11
+  ],
+  "ring": "rational",
+  "omega": 2.78134014893264,
+  "omega_table": 2.7992278035143947,
+  "found": "2026-11-21",
+  "bytes": 1045053,
+  "scheme_file": true
+ },
+ {
+  "folder": "27x27x28_9730_rational",
+  "shape": [
+   27,
+   27,
+   28
+  ],
+  "stored_as": [
+   28,
+   27,
+   27
+  ],
+  "rank": 9730,
+  "table": 9846,
+  "gain": 116,
+  "square": 28,
+  "square_rank": 9846,
+  "deletions": [
+   "J0",
+   "K0"
+  ],
+  "primes": [
+   2,
+   3,
+   5,
+   11
+  ],
+  "ring": "rational",
+  "omega": 2.776022322446159,
+  "omega_table": 2.7796050100352865,
+  "found": "2026-11-21",
+  "bytes": 9465094,
+  "scheme_file": true
+ },
+ {
+  "folder": "27x28x28_9788_rational",
+  "shape": [
+   27,
+   28,
+   28
+  ],
+  "stored_as": [
+   28,
+   27,
+   28
+  ],
+  "rank": 9788,
+  "table": 9846,
+  "gain": 58,
+  "square": 28,
+  "square_rank": 9846,
+  "deletions": [
+   "J0"
+  ],
+  "primes": [
+   2,
+   3,
+   5,
+   11
+  ],
+  "ring": "rational",
+  "omega": 2.7676763795011685,
+  "omega_table": 2.769455894532121,
+  "found": "2026-11-21",
+  "bytes": 9684525,
+  "scheme_file": true
+ },
+ {
+  "folder": "27x28x29_10191_rational",
+  "shape": [
+   27,
+   28,
+   29
+  ],
+  "stored_as": [
+   27,
+   28,
+   29
+  ],
+  "rank": 10191,
+  "table": 10602,
+  "gain": 411,
+  "square": 29,
+  "square_rank": 11203,
+  "deletions": [
+   "I0",
+   "J0",
+   "I0"
+  ],
+  "primes": [
+   2,
+   3,
+   5,
+   11
+  ],
+  "ring": "rational",
+  "omega": 2.770069703441902,
+  "omega_table": 2.781936542119841,
+  "found": "2026-11-21",
+  "bytes": 1595243,
+  "scheme_file": true
+ },
+ {
+  "folder": "27x29x29_10648_rational",
+  "shape": [
+   27,
+   29,
+   29
+  ],
+  "stored_as": [
+   27,
+   29,
+   29
+  ],
+  "rank": 10648,
+  "table": 11203,
+  "gain": 555,
+  "square": 29,
+  "square_rank": 11203,
+  "deletions": [
+   "I0",
+   "I0"
+  ],
+  "primes": [
+   2,
+   3,
+   5,
+   11
+  ],
+  "ring": "rational",
+  "omega": 2.7734988598121104,
+  "omega_table": 2.7886954742993737,
+  "found": "2026-11-21",
+  "bytes": 1054094,
+  "scheme_file": true
+ },
+ {
+  "folder": "27x30x30_11699_rational",
+  "shape": [
+   27,
+   30,
+   30
+  ],
+  "stored_as": [
+   30,
+   27,
+   30
+  ],
+  "rank": 11699,
+  "table": 11889,
+  "gain": 190,
+  "square": 30,
+  "square_rank": 11889,
+  "deletions": [
+   "J0",
+   "J0",
+   "J0"
+  ],
+  "primes": [
+   2,
+   3,
+   7,
+   13
+  ],
+  "ring": "rational",
+  "omega": 2.7828412906994386,
+  "omega_table": 2.787627346932538,
+  "found": "2026-11-21",
+  "bytes": 9637374,
+  "scheme_file": true
+ },
+ {
+  "folder": "28x28x29_10290_rational",
+  "shape": [
+   28,
+   28,
+   29
+  ],
+  "stored_as": [
+   28,
+   28,
+   29
+  ],
+  "rank": 10290,
+  "table": 10630,
+  "gain": 340,
+  "square": 29,
+  "square_rank": 11203,
+  "deletions": [
+   "I0",
+   "J0"
+  ],
+  "primes": [
+   2,
+   3,
+   5,
+   11
+  ],
+  "ring": "rational",
+  "omega": 2.762918556715064,
+  "omega_table": 2.7726400276892047,
+  "found": "2026-11-21",
+  "bytes": 1496165,
+  "scheme_file": true
+ },
+ {
+  "folder": "28x29x29_10739_rational",
+  "shape": [
+   28,
+   29,
+   29
+  ],
+  "stored_as": [
+   28,
+   29,
+   29
+  ],
+  "rank": 10739,
+  "table": 11203,
+  "gain": 464,
+  "square": 29,
+  "square_rank": 11203,
+  "deletions": [
+   "I0"
+  ],
+  "primes": [
+   2,
+   3,
+   5,
+   11
+  ],
+  "ring": "rational",
+  "omega": 2.7660152536062386,
+  "omega_table": 2.778620939860006,
+  "found": "2026-11-21",
+  "bytes": 1306343,
+  "scheme_file": true
+ },
+ {
+  "folder": "28x29x30_11682_rational",
+  "shape": [
+   28,
+   29,
+   30
+  ],
+  "stored_as": [
+   30,
+   28,
+   29
+  ],
+  "rank": 11682,
+  "table": 11863,
+  "gain": 181,
+  "square": 30,
+  "square_rank": 11889,
+  "deletions": [
+   "J0",
+   "J0",
+   "K0"
+  ],
+  "primes": [
+   2,
+   3,
+   7,
+   13
+  ],
+  "ring": "rational",
+  "omega": 2.7817299554557264,
+  "omega_table": 2.786296506445851,
+  "found": "2026-11-21",
+  "bytes": 12477548,
+  "scheme_file": false
+ },
+ {
+  "folder": "28x30x30_11765_rational",
+  "shape": [
+   28,
+   30,
+   30
+  ],
+  "stored_as": [
+   30,
+   28,
+   30
+  ],
+  "rank": 11765,
+  "table": 11889,
+  "gain": 124,
+  "square": 30,
+  "square_rank": 11889,
+  "deletions": [
+   "J0",
+   "J0"
+  ],
+  "primes": [
+   2,
+   3,
+   7,
+   13
+  ],
+  "ring": "rational",
+  "omega": 2.774520446704837,
+  "omega_table": 2.777624046683722,
+  "found": "2026-11-21",
+  "bytes": 12866346,
+  "scheme_file": false
+ },
+ {
+  "folder": "28x31x31_12710_rational",
+  "shape": [
+   28,
+   31,
+   31
+  ],
+  "stored_as": [
+   28,
+   31,
+   31
+  ],
+  "rank": 12710,
+  "table": 13433,
+  "gain": 723,
+  "square": 31,
+  "square_rank": 13433,
+  "deletions": [
+   "I0",
+   "I0",
+   "I0"
+  ],
+  "primes": [
+   2,
+   3,
+   7,
+   13
+  ],
+  "ring": "rational",
+  "omega": 2.7794054709508473,
+  "omega_table": 2.795677326959864,
+  "found": "2026-11-21",
+  "bytes": 1297050,
+  "scheme_file": true
+ },
+ {
+  "folder": "29x29x30_11765_rational",
+  "shape": [
+   29,
+   29,
+   30
+  ],
+  "stored_as": [
+   30,
+   29,
+   29
+  ],
+  "rank": 11765,
+  "table": 11889,
+  "gain": 124,
+  "square": 30,
+  "square_rank": 11889,
+  "deletions": [
+   "J0",
+   "K0"
+  ],
+  "primes": [
+   2,
+   3,
+   7,
+   13
+  ],
+  "ring": "rational",
+  "omega": 2.774194765496845,
+  "omega_table": 2.7772980011662183,
+  "found": "2026-11-21",
+  "bytes": 12736840,
+  "scheme_file": false
+ },
+ {
+  "folder": "29x30x30_11827_rational",
+  "shape": [
+   29,
+   30,
+   30
+  ],
+  "stored_as": [
+   30,
+   29,
+   30
+  ],
+  "rank": 11827,
+  "table": 11889,
+  "gain": 62,
+  "square": 30,
+  "square_rank": 11889,
+  "deletions": [
+   "J0"
+  ],
+  "primes": [
+   2,
+   3,
+   7,
+   13
+  ],
+  "ring": "rational",
+  "omega": 2.766497243805927,
+  "omega_table": 2.7680396357477823,
+  "found": "2026-11-21",
+  "bytes": 13028614,
+  "scheme_file": false
+ },
+ {
+  "folder": "29x30x31_12289_rational",
+  "shape": [
+   29,
+   30,
+   31
+  ],
+  "stored_as": [
+   29,
+   30,
+   31
+  ],
+  "rank": 12289,
+  "table": 12759,
+  "gain": 470,
+  "square": 31,
+  "square_rank": 13433,
+  "deletions": [
+   "I0",
+   "J0",
+   "I0"
+  ],
+  "primes": [
+   2,
+   3,
+   7,
+   13
+  ],
+  "ring": "rational",
+  "omega": 2.7688736801867715,
+  "omega_table": 2.779909923366752,
+  "found": "2026-11-21",
+  "bytes": 1791462,
+  "scheme_file": true
+ },
+ {
+  "folder": "29x31x31_12809_rational",
+  "shape": [
+   29,
+   31,
+   31
+  ],
+  "stored_as": [
+   29,
+   31,
+   31
+  ],
+  "rank": 12809,
+  "table": 13433,
+  "gain": 624,
+  "square": 31,
+  "square_rank": 13433,
+  "deletions": [
+   "I0",
+   "I0"
+  ],
+  "primes": [
+   2,
+   3,
+   7,
+   13
+  ],
+  "ring": "rational",
+  "omega": 2.772150546206331,
+  "omega_table": 2.7860924303348518,
+  "found": "2026-11-21",
+  "bytes": 1318569,
+  "scheme_file": true
+ },
+ {
+  "folder": "29x32x32_13994_rational",
+  "shape": [
+   29,
+   32,
+   32
+  ],
+  "stored_as": [
+   32,
+   29,
+   32
+  ],
+  "rank": 13994,
+  "table": 14196,
+  "gain": 202,
+  "square": 32,
+  "square_rank": 14196,
+  "deletions": [
+   "J0",
+   "J0",
+   "J0"
+  ],
+  "primes": [
+   2,
+   7,
+   13,
+   53
+  ],
+  "ring": "rational",
+  "omega": 2.780832896642799,
+  "omega_table": 2.785007639379306,
+  "found": "2026-11-21",
+  "bytes": 12253682,
+  "scheme_file": false
+ },
+ {
+  "folder": "30x30x31_12395_rational",
+  "shape": [
+   30,
+   30,
+   31
+  ],
+  "stored_as": [
+   30,
+   30,
+   31
+  ],
+  "rank": 12395,
+  "table": 12789,
+  "gain": 394,
+  "square": 31,
+  "square_rank": 13433,
+  "deletions": [
+   "I0",
+   "J0"
+  ],
+  "primes": [
+   2,
+   3,
+   7,
+   13
+  ],
+  "ring": "rational",
+  "omega": 2.7622206188011793,
+  "omega_table": 2.7713915136727563,
+  "found": "2026-11-21",
+  "bytes": 1860603,
+  "scheme_file": true
+ },
+ {
+  "folder": "30x31x31_12906_rational",
+  "shape": [
+   30,
+   31,
+   31
+  ],
+  "stored_as": [
+   30,
+   31,
+   31
+  ],
+  "rank": 12906,
+  "table": 13433,
+  "gain": 527,
+  "square": 31,
+  "square_rank": 13433,
+  "deletions": [
+   "I0"
+  ],
+  "primes": [
+   2,
+   3,
+   7,
+   13
+  ],
+  "ring": "rational",
+  "omega": 2.765202820094074,
+  "omega_table": 2.7768947210720287,
+  "found": "2026-11-21",
+  "bytes": 1621188,
+  "scheme_file": true
+ },
+ {
+  "folder": "30x31x32_13974_rational",
+  "shape": [
+   30,
+   31,
+   32
+  ],
+  "stored_as": [
+   32,
+   30,
+   31
+  ],
+  "rank": 13974,
+  "table": 14196,
+  "gain": 222,
+  "square": 32,
+  "square_rank": 14196,
+  "deletions": [
+   "J0",
+   "J0",
+   "K0"
+  ],
+  "primes": [
+   2,
+   7,
+   13,
+   53
+  ],
+  "ring": "rational",
+  "omega": 2.7798351854149956,
+  "omega_table": 2.78442558333261,
+  "found": "2026-11-21",
+  "bytes": 15911982,
+  "scheme_file": false
+ },
+ {
+  "folder": "30x32x32_14064_rational",
+  "shape": [
+   30,
+   32,
+   32
+  ],
+  "stored_as": [
+   32,
+   30,
+   32
+  ],
+  "rank": 14064,
+  "table": 14196,
+  "gain": 132,
+  "square": 32,
+  "square_rank": 14196,
+  "deletions": [
+   "J0",
+   "J0"
+  ],
+  "primes": [
+   2,
+   7,
+   13,
+   53
+  ],
+  "ring": "rational",
+  "omega": 2.7731576749888056,
+  "omega_table": 2.7758700120448334,
+  "found": "2026-11-21",
+  "bytes": 16334922,
+  "scheme_file": false
+ },
+ {
+  "folder": "31x31x32_14064_rational",
+  "shape": [
+   31,
+   31,
+   32
+  ],
+  "stored_as": [
+   32,
+   31,
+   31
+  ],
+  "rank": 14064,
+  "table": 14196,
+  "gain": 132,
+  "square": 32,
+  "square_rank": 14196,
+  "deletions": [
+   "J0",
+   "K0"
+  ],
+  "primes": [
+   2,
+   7,
+   13,
+   53
+  ],
+  "ring": "rational",
+  "omega": 2.772878278495773,
+  "omega_table": 2.7755903422830044,
+  "found": "2026-11-21",
+  "bytes": 16278361,
+  "scheme_file": false
+ },
+ {
+  "folder": "31x32x32_14130_rational",
+  "shape": [
+   31,
+   32,
+   32
+  ],
+  "stored_as": [
+   32,
+   31,
+   32
+  ],
+  "rank": 14130,
+  "table": 14196,
+  "gain": 66,
+  "square": 32,
+  "square_rank": 14196,
+  "deletions": [
+   "J0"
+  ],
+  "primes": [
+   2,
+   7,
+   13,
+   53
+  ],
+  "ring": "rational",
+  "omega": 2.7657401760157785,
+  "omega_table": 2.76708889721084,
+  "found": "2026-11-21",
+  "bytes": 16545173,
+  "scheme_file": false
  }
 ]

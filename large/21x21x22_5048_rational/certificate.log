@@ -1,9 +1,0 @@
-21x22x22_m5095_Q.json: <22x21x22:5095> loaded (1.1 s); path 21x21x22_m5048_K21.path.json (sequence "K21")
-  primes [2305843009213693951, 2305843009213693921, 2305843009213693907]
-  stage 0: delete K21: 5095 -> 5095 products, <22x21x21>
-  stage 0 step 0: direction 2: 22 dependencies on 2062 products (lifted from 2 primes of 61 bits, equal modulo a third; 8050 nonzero coefficients, largest numerator or denominator 386603); 5095 -> 5050 products (22 pivots, 23 left with a zero factor) (23.5 s)
-  stage 0 step 1: direction 1: 1 dependencies on 24 products (lifted from 2 primes of 61 bits, equal modulo a third; 23 nonzero coefficients, largest numerator or denominator 1); 5050 -> 5048 products (1 pivots, 1 left with a zero factor) (0.0 s)
-  u 628128 nonzeros, 587443 fractions, largest numerator 1139065, largest denominator 101376; v 614518 nonzeros, 575931 fractions, largest numerator 394177, largest denominator 648; w 643321 nonzeros, 605548 fractions, largest numerator 1027361, largest denominator 2592; denominator primes [2, 3, 11] -> rational
-  [output] <22x21x21:5048> 0 of 94128804 Brent equations fail; common denominators [2737152, 1296, 2592], partial sums below 2^88 (9.0 s)
-  [output, one coefficient of product 2524 changed] 144 equations fail -> REJECTED
-  RESULT: output with 5048 products VERIFIES EXACTLY; corrupted copy REJECTED; written 21x21x22_m5048_Q.json (44.0 s)

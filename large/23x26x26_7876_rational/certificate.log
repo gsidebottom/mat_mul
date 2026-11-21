@@ -1,0 +1,9 @@
+24x26x26_m7943_Q.json: <26x24x26:7943> loaded (3.0 s); path 23x26x26_m7876_J0.path.json (sequence "J0")
+  primes [2305843009213693951, 2305843009213693921, 2305843009213693907]
+  stage 0: delete J0: 7943 -> 7943 products, <26x23x26>
+  stage 0 step 0: direction 0: 26 dependencies on 6224 products (lifted from 2 primes of 61 bits, equal modulo a third; 46665 nonzero coefficients, largest numerator or denominator 277013715); 7943 -> 7877 products (26 pivots, 40 left with a zero factor) (472.8 s)
+  stage 0 step 1: direction 1: 1 dependencies on 3 products (lifted from 2 primes of 61 bits, equal modulo a third; 2 nonzero coefficients, largest numerator or denominator 11); 7877 -> 7876 products (1 pivots, 0 left with a zero factor) (0.0 s)
+  u 365343 nonzeros, 255628 fractions, largest numerator 25183825, largest denominator 3280; v 1092464 nonzeros, 1037072 fractions, largest numerator 890755, largest denominator 1210; w 1246285 nonzeros, 1180451 fractions, largest numerator 890755, largest denominator 1210; denominator primes [2, 5, 11, 41] -> rational
+  [output] <26x23x26:7876> 0 of 241740304 Brent equations fail; common denominators [396880, 4840, 4840], partial sums below 2^93 (12.4 s)
+  [output, one coefficient of product 3938 changed] 432 equations fail -> REJECTED
+  RESULT: output with 7876 products VERIFIES EXACTLY; corrupted copy REJECTED; written 23x26x26_m7876_Q.json (503.8 s)
