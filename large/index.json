@@ -1,0 +1,679 @@
+[
+ {
+  "folder": "15x17x17_2490_rational",
+  "shape": [
+   15,
+   17,
+   17
+  ],
+  "stored_as": [
+   15,
+   17,
+   17
+  ],
+  "rank": 2490,
+  "table": 2622,
+  "gain": 132,
+  "square": 17,
+  "square_rank": 2723,
+  "deletions": [
+   "I0",
+   "I15"
+  ],
+  "primes": [
+   2,
+   3,
+   5,
+   7
+  ],
+  "ring": "rational",
+  "omega": 2.8013826151446155,
+  "omega_table": 2.819886938058713,
+  "found": "2026-11-20",
+  "bytes": 181858
+ },
+ {
+  "folder": "16x16x17_2392_rational",
+  "shape": [
+   16,
+   16,
+   17
+  ],
+  "stored_as": [
+   16,
+   16,
+   17
+  ],
+  "rank": 2392,
+  "table": 2492,
+  "gain": 100,
+  "square": 17,
+  "square_rank": 2723,
+  "deletions": [
+   "I0",
+   "J0"
+  ],
+  "primes": [
+   2,
+   3,
+   5,
+   7
+  ],
+  "ring": "rational",
+  "omega": 2.785696673058914,
+  "omega_table": 2.800361457456245,
+  "found": "2026-11-20",
+  "bytes": 242378
+ },
+ {
+  "folder": "16x17x17_2553_rational",
+  "shape": [
+   16,
+   17,
+   17
+  ],
+  "stored_as": [
+   16,
+   17,
+   17
+  ],
+  "rank": 2553,
+  "table": 2706,
+  "gain": 153,
+  "square": 17,
+  "square_rank": 2723,
+  "deletions": [
+   "I0"
+  ],
+  "primes": [
+   2,
+   3,
+   5,
+   7
+  ],
+  "ring": "rational",
+  "omega": 2.788841127467758,
+  "omega_table": 2.809531595013718,
+  "found": "2026-11-20",
+  "bytes": 224207
+ },
+ {
+  "folder": "17x17x18_2954_rational",
+  "shape": [
+   17,
+   17,
+   18
+  ],
+  "stored_as": [
+   18,
+   17,
+   17
+  ],
+  "rank": 2954,
+  "table": 3012,
+  "gain": 58,
+  "square": 18,
+  "square_rank": 3031,
+  "deletions": [
+   "J0",
+   "K17"
+  ],
+  "primes": [
+   2,
+   3,
+   5,
+   7
+  ],
+  "ring": "rational",
+  "omega": 2.801602321304681,
+  "omega_table": 2.808419401063359,
+  "found": "2026-11-20",
+  "bytes": 1399865
+ },
+ {
+  "folder": "17x18x18_2993_rational",
+  "shape": [
+   17,
+   18,
+   18
+  ],
+  "stored_as": [
+   18,
+   17,
+   18
+  ],
+  "rank": 2993,
+  "table": 3031,
+  "gain": 38,
+  "square": 18,
+  "square_rank": 3031,
+  "deletions": [
+   "J0"
+  ],
+  "primes": [
+   2,
+   3,
+   5,
+   7
+  ],
+  "ring": "rational",
+  "omega": 2.7875800766409093,
+  "omega_table": 2.791974004800886,
+  "found": "2026-11-20",
+  "bytes": 1458063
+ },
+ {
+  "folder": "17x19x19_3354_rational",
+  "shape": [
+   17,
+   19,
+   19
+  ],
+  "stored_as": [
+   17,
+   19,
+   19
+  ],
+  "rank": 3354,
+  "table": 3633,
+  "gain": 279,
+  "square": 19,
+  "square_rank": 3633,
+  "deletions": [
+   "I0",
+   "I17"
+  ],
+  "primes": [
+   2,
+   3,
+   5,
+   7
+  ],
+  "ring": "rational",
+  "omega": 2.79218893529338,
+  "omega_table": 2.8196726271286723,
+  "found": "2026-11-20",
+  "bytes": 256840
+ },
+ {
+  "folder": "18x18x19_3225_rational",
+  "shape": [
+   18,
+   18,
+   19
+  ],
+  "stored_as": [
+   18,
+   18,
+   19
+  ],
+  "rank": 3225,
+  "table": 3355,
+  "gain": 130,
+  "square": 19,
+  "square_rank": 3633,
+  "deletions": [
+   "I0",
+   "J0"
+  ],
+  "primes": [
+   2,
+   3,
+   5,
+   7
+  ],
+  "ring": "rational",
+  "omega": 2.777714357458164,
+  "omega_table": 2.7913022062620403,
+  "found": "2026-11-20",
+  "bytes": 368178
+ },
+ {
+  "folder": "18x19x19_3424_rational",
+  "shape": [
+   18,
+   19,
+   19
+  ],
+  "stored_as": [
+   18,
+   19,
+   19
+  ],
+  "rank": 3424,
+  "table": 3633,
+  "gain": 209,
+  "square": 19,
+  "square_rank": 3633,
+  "deletions": [
+   "I0"
+  ],
+  "primes": [
+   2,
+   3,
+   5,
+   7
+  ],
+  "ring": "rational",
+  "omega": 2.7810684285071434,
+  "omega_table": 2.8013147924475756,
+  "found": "2026-11-20",
+  "bytes": 324808
+ },
+ {
+  "folder": "18x20x20_3910_rational",
+  "shape": [
+   18,
+   20,
+   20
+  ],
+  "stored_as": [
+   20,
+   18,
+   20
+  ],
+  "rank": 3910,
+  "table": 3994,
+  "gain": 84,
+  "square": 20,
+  "square_rank": 3994,
+  "deletions": [
+   "J0",
+   "J0"
+  ],
+  "primes": [
+   2,
+   3,
+   5,
+   7,
+   29
+  ],
+  "ring": "rational",
+  "omega": 2.7937778975905876,
+  "omega_table": 2.8009574470440173,
+  "found": "2026-11-20",
+  "bytes": 2327316
+ },
+ {
+  "folder": "19x19x20_3909_rational",
+  "shape": [
+   19,
+   19,
+   20
+  ],
+  "stored_as": [
+   20,
+   19,
+   19
+  ],
+  "rank": 3909,
+  "table": 3994,
+  "gain": 85,
+  "square": 20,
+  "square_rank": 3994,
+  "deletions": [
+   "J0",
+   "K19"
+  ],
+  "primes": [
+   2,
+   3,
+   5,
+   7,
+   29
+  ],
+  "ring": "rational",
+  "omega": 2.792819262720675,
+  "omega_table": 2.8000829403456993,
+  "found": "2026-11-20",
+  "bytes": 2562485
+ },
+ {
+  "folder": "19x20x20_3952_rational",
+  "shape": [
+   19,
+   20,
+   20
+  ],
+  "stored_as": [
+   20,
+   19,
+   20
+  ],
+  "rank": 3952,
+  "table": 3994,
+  "gain": 42,
+  "square": 20,
+  "square_rank": 3994,
+  "deletions": [
+   "J0"
+  ],
+  "primes": [
+   2,
+   7,
+   29
+  ],
+  "ring": "rational",
+  "omega": 2.7804609912750586,
+  "omega_table": 2.78401008569296,
+  "found": "2026-11-20",
+  "bytes": 2332406
+ },
+ {
+  "folder": "19x21x21_4394_rational",
+  "shape": [
+   19,
+   21,
+   21
+  ],
+  "stored_as": [
+   19,
+   21,
+   21
+  ],
+  "rank": 4394,
+  "table": 4723,
+  "gain": 329,
+  "square": 21,
+  "square_rank": 4723,
+  "deletions": [
+   "I0",
+   "I19"
+  ],
+  "primes": [
+   2,
+   7,
+   29
+  ],
+  "ring": "rational",
+  "omega": 2.785634663638961,
+  "omega_table": 2.809613524324483,
+  "found": "2026-11-20",
+  "bytes": 370753
+ },
+ {
+  "folder": "20x20x21_4230_rational",
+  "shape": [
+   20,
+   20,
+   21
+  ],
+  "stored_as": [
+   20,
+   20,
+   21
+  ],
+  "rank": 4230,
+  "table": 4394,
+  "gain": 164,
+  "square": 21,
+  "square_rank": 4723,
+  "deletions": [
+   "I0",
+   "J0"
+  ],
+  "primes": [
+   2,
+   7,
+   29
+  ],
+  "ring": "rational",
+  "omega": 2.7722341630385112,
+  "omega_table": 2.784862992949871,
+  "found": "2026-11-20",
+  "bytes": 513155
+ },
+ {
+  "folder": "20x21x21_4471_rational",
+  "shape": [
+   20,
+   21,
+   21
+  ],
+  "stored_as": [
+   20,
+   21,
+   21
+  ],
+  "rank": 4471,
+  "table": 4723,
+  "gain": 252,
+  "square": 21,
+  "square_rank": 4723,
+  "deletions": [
+   "I0"
+  ],
+  "primes": [
+   2,
+   7,
+   29
+  ],
+  "ring": "rational",
+  "omega": 2.7756434434360626,
+  "omega_table": 2.7937502476304292,
+  "found": "2026-11-20",
+  "bytes": 465467
+ },
+ {
+  "folder": "20x22x22_5049_rational",
+  "shape": [
+   20,
+   22,
+   22
+  ],
+  "stored_as": [
+   22,
+   20,
+   22
+  ],
+  "rank": 5049,
+  "table": 5141,
+  "gain": 92,
+  "square": 22,
+  "square_rank": 5141,
+  "deletions": [
+   "J0",
+   "J0"
+  ],
+  "primes": [
+   2,
+   3,
+   11
+  ],
+  "ring": "rational",
+  "omega": 2.7872462423382522,
+  "omega_table": 2.7931487599549922,
+  "found": "2026-11-20",
+  "bytes": 3436032
+ },
+ {
+  "folder": "21x21x22_5048_rational",
+  "shape": [
+   21,
+   21,
+   22
+  ],
+  "stored_as": [
+   22,
+   21,
+   21
+  ],
+  "rank": 5048,
+  "table": 5141,
+  "gain": 93,
+  "square": 22,
+  "square_rank": 5141,
+  "deletions": [
+   "J0",
+   "K21"
+  ],
+  "primes": [
+   2,
+   3,
+   11
+  ],
+  "ring": "rational",
+  "omega": 2.786492251810916,
+  "omega_table": 2.7924580407562476,
+  "found": "2026-11-20",
+  "bytes": 3193269
+ },
+ {
+  "folder": "21x22x22_5095_rational",
+  "shape": [
+   21,
+   22,
+   22
+  ],
+  "stored_as": [
+   22,
+   21,
+   22
+  ],
+  "rank": 5095,
+  "table": 5141,
+  "gain": 46,
+  "square": 22,
+  "square_rank": 5141,
+  "deletions": [
+   "J0"
+  ],
+  "primes": [
+   2,
+   3,
+   11
+  ],
+  "ring": "rational",
+  "omega": 2.775456230117115,
+  "omega_table": 2.7783786303222437,
+  "found": "2026-11-20",
+  "bytes": 3305575
+ },
+ {
+  "folder": "22x23x23_5710_rational",
+  "shape": [
+   22,
+   23,
+   23
+  ],
+  "stored_as": [
+   22,
+   23,
+   23
+  ],
+  "rank": 5710,
+  "table": 6009,
+  "gain": 299,
+  "square": 23,
+  "square_rank": 6009,
+  "deletions": [
+   "I0"
+  ],
+  "primes": [
+   2,
+   3,
+   11
+  ],
+  "ring": "rational",
+  "omega": 2.7718262443384094,
+  "omega_table": 2.788181452618421,
+  "found": "2026-11-20",
+  "bytes": 630773
+ },
+ {
+  "folder": "23x24x24_6438_rational",
+  "shape": [
+   23,
+   24,
+   24
+  ],
+  "stored_as": [
+   24,
+   23,
+   24
+  ],
+  "rank": 6438,
+  "table": 6488,
+  "gain": 50,
+  "square": 24,
+  "square_rank": 6488,
+  "deletions": [
+   "J0"
+  ],
+  "primes": [
+   2,
+   3,
+   5,
+   37
+  ],
+  "ring": "rational",
+  "omega": 2.771915634216567,
+  "omega_table": 2.7743608644433686,
+  "found": "2026-11-20",
+  "bytes": 5341977
+ },
+ {
+  "folder": "24x25x25_7157_rational",
+  "shape": [
+   24,
+   25,
+   25
+  ],
+  "stored_as": [
+   24,
+   25,
+   25
+  ],
+  "rank": 7157,
+  "table": 7507,
+  "gain": 350,
+  "square": 25,
+  "square_rank": 7507,
+  "deletions": [
+   "I0"
+  ],
+  "primes": [
+   2,
+   3,
+   5,
+   37
+  ],
+  "ring": "rational",
+  "omega": 2.769142802271227,
+  "omega_table": 2.78403859647171,
+  "found": "2026-11-20",
+  "bytes": 813120
+ },
+ {
+  "folder": "25x26x26_7997_rational",
+  "shape": [
+   25,
+   26,
+   26
+  ],
+  "stored_as": [
+   26,
+   25,
+   26
+  ],
+  "rank": 7997,
+  "table": 8051,
+  "gain": 54,
+  "square": 26,
+  "square_rank": 8051,
+  "deletions": [
+   "J0"
+  ],
+  "primes": [
+   2,
+   5,
+   11,
+   41
+  ],
+  "ring": "rational",
+  "omega": 2.7694169939025572,
+  "omega_table": 2.7714908886135015,
+  "found": "2026-11-20",
+  "bytes": 7560004
+ }
+]

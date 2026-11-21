@@ -1,0 +1,8 @@
+../../external/lita/json/24x24x24_m6488_Q.json: <24x24x24:6488> loaded (1.8 s); path kron_runs/2026-11-20_lita/paths/24/23x24x24_m6438_J0.path.json (sequence "J0")
+  primes [2305843009213693951, 2305843009213693921, 2305843009213693907]
+  stage 0: delete J0: 6488 -> 6488 products, <24x23x24>
+  stage 0 step 0: direction 0: 24 dependencies on 2159 products (lifted from 2 primes of 61 bits, equal modulo a third; 21605 nonzero coefficients, largest numerator or denominator 201709); 6488 -> 6438 products (24 pivots, 26 left with a zero factor) (38.2 s)
+  u 912226 nonzeros, 857966 fractions, largest numerator 493685, largest denominator 11988; v 912928 nonzeros, 860466 fractions, largest numerator 151249, largest denominator 3600; w 945717 nonzeros, 894255 fractions, largest numerator 151249, largest denominator 3600; denominator primes [2, 3, 5, 37] -> rational
+  [output] <24x23x24:6438> 0 of 175509504 Brent equations fail; common denominators [1198800, 3600, 3600], partial sums below 2^89 (33.0 s)
+  [output, one coefficient of product 3219 changed] 304704 equations fail -> REJECTED
+  RESULT: output with 6438 products VERIFIES EXACTLY; corrupted copy REJECTED; written kron_runs/2026-11-20_lita/exact/23x24x24_m6438_Q.json (104.5 s)

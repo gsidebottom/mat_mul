@@ -1,0 +1,85 @@
+15x17x17_m2490_Q.json.gz: <15x17x17:2490> p=2147483647: correct; p=998244353: correct; p=18446744069414584321: correct; p=1000000007: correct; one coefficient changed: 6 wrong entries -> REJECTED; PASS (2.2 s)
+    [scheme] <15x17x17:2490> 0 of 18792225 Brent equations fail; common denominators [4200, 60, 60], partial sums below 2^67 (0.0 s)
+    [scheme, one coefficient of product 1245 changed] 520 equations fail -> REJECTED
+    RESULT: VERIFIES EXACTLY; corrupted copy REJECTED
+16x16x17_m2392_Q.json.gz: <16x16x17:2392> p=2147483647: correct; p=998244353: correct; p=18446744069414584321: correct; p=1000000007: correct; one coefficient changed: 8 wrong entries -> REJECTED; PASS (2.4 s)
+    [scheme] <16x16x17:2392> 0 of 18939904 Brent equations fail; common denominators [2100, 60, 60], partial sums below 2^67 (0.0 s)
+    [scheme, one coefficient of product 1196 changed] 756 equations fail -> REJECTED
+    RESULT: VERIFIES EXACTLY; corrupted copy REJECTED
+16x17x17_m2553_Q.json.gz: <16x17x17:2553> p=2147483647: correct; p=998244353: correct; p=18446744069414584321: correct; p=1000000007: correct; one coefficient changed: 48 wrong entries -> REJECTED; PASS (2.0 s)
+    [scheme] <16x17x17:2553> 0 of 21381376 Brent equations fail; common denominators [2100, 60, 60], partial sums below 2^67 (0.0 s)
+    [scheme, one coefficient of product 1276 changed] 2331 equations fail -> REJECTED
+    RESULT: VERIFIES EXACTLY; corrupted copy REJECTED
+17x17x18_m2954_Q.json.gz: <18x17x17:2954> p=2147483647: correct; p=998244353: correct; p=18446744069414584321: correct; p=1000000007: correct; one coefficient changed: 8 wrong entries -> REJECTED; PASS (12.0 s)
+    [scheme] <18x17x17:2954> 0 of 27060804 Brent equations fail; common denominators [117600, 1176, 16464], partial sums below 2^82 (2.0 s)
+    [scheme, one coefficient of product 1477 changed] 100 equations fail -> REJECTED
+    RESULT: VERIFIES EXACTLY; corrupted copy REJECTED
+17x18x18_m2993_Q.json.gz: <18x17x18:2993> p=2147483647: correct; p=998244353: correct; p=18446744069414584321: correct; p=1000000007: correct; one coefficient changed: 324 wrong entries -> REJECTED; PASS (11.8 s)
+    [scheme] <18x17x18:2993> 0 of 30338064 Brent equations fail; common denominators [117600, 1176, 1176], partial sums below 2^77 (2.2 s)
+    [scheme, one coefficient of product 1496 changed] 93330 equations fail -> REJECTED
+    RESULT: VERIFIES EXACTLY; corrupted copy REJECTED
+17x19x19_m3354_Q.json.gz: <17x19x19:3354> p=2147483647: correct; p=998244353: correct; p=18446744069414584321: correct; p=1000000007: correct; one coefficient changed: 8 wrong entries -> REJECTED; PASS (2.3 s)
+    [scheme] <17x19x19:3354> 0 of 37662769 Brent equations fail; common denominators [8400, 84, 84], partial sums below 2^72 (0.0 s)
+    [scheme, one coefficient of product 1677 changed] 470 equations fail -> REJECTED
+    RESULT: VERIFIES EXACTLY; corrupted copy REJECTED
+18x18x19_m3225_Q.json.gz: <18x18x19:3225> p=2147483647: correct; p=998244353: correct; p=18446744069414584321: correct; p=1000000007: correct; one coefficient changed: 8 wrong entries -> REJECTED; PASS (2.9 s)
+    [scheme] <18x18x19:3225> 0 of 37896336 Brent equations fail; common denominators [8400, 84, 84], partial sums below 2^73 (0.1 s)
+    [scheme, one coefficient of product 1612 changed] 920 equations fail -> REJECTED
+    RESULT: VERIFIES EXACTLY; corrupted copy REJECTED
+18x19x19_m3424_Q.json.gz: <18x19x19:3424> p=2147483647: correct; p=998244353: correct; p=18446744069414584321: correct; p=1000000007: correct; one coefficient changed: 8 wrong entries -> REJECTED; PASS (2.7 s)
+    [scheme] <18x19x19:3424> 0 of 42224004 Brent equations fail; common denominators [8400, 84, 84], partial sums below 2^73 (0.0 s)
+    [scheme, one coefficient of product 1712 changed] 400 equations fail -> REJECTED
+    RESULT: VERIFIES EXACTLY; corrupted copy REJECTED
+18x20x20_m3910_Q.json.gz: <20x18x20:3910> p=2147483647: correct; p=998244353: correct; p=18446744069414584321: correct; p=1000000007: correct; one coefficient changed: 8 wrong entries -> REJECTED; PASS (15.6 s)
+    [scheme] <20x18x20:3910> 0 of 51840000 Brent equations fail; common denominators [5456640, 1792, 1792], partial sums below 2^87 (5.2 s)
+    [scheme, one coefficient of product 1955 changed] 129600 equations fail -> REJECTED
+    RESULT: VERIFIES EXACTLY; corrupted copy REJECTED
+19x19x20_m3909_Q.json.gz: <20x19x19:3909> p=2147483647: correct; p=998244353: correct; p=18446744069414584321: correct; p=1000000007: correct; one coefficient changed: 14 wrong entries -> REJECTED; PASS (21.1 s)
+    [scheme] <20x19x19:3909> 0 of 52128400 Brent equations fail; common denominators [5820416, 1792, 80640], partial sums below 2^94 (4.4 s)
+    [scheme, one coefficient of product 1954 changed] 168 equations fail -> REJECTED
+    RESULT: VERIFIES EXACTLY; corrupted copy REJECTED
+19x20x20_m3952_Q.json.gz: <20x19x20:3952> p=2147483647: correct; p=998244353: correct; p=18446744069414584321: correct; p=1000000007: correct; one coefficient changed: 10 wrong entries -> REJECTED; PASS (15.3 s)
+    [scheme] <20x19x20:3952> 0 of 57760000 Brent equations fail; common denominators [5820416, 1792, 1792], partial sums below 2^86 (7.7 s)
+    [scheme, one coefficient of product 1976 changed] 100 equations fail -> REJECTED
+    RESULT: VERIFIES EXACTLY; corrupted copy REJECTED
+19x21x21_m4394_Q.json.gz: <19x21x21:4394> p=2147483647: correct; p=998244353: correct; p=18446744069414584321: correct; p=1000000007: correct; one coefficient changed: 8 wrong entries -> REJECTED; PASS (3.8 s)
+    [scheme] <19x21x21:4394> 0 of 70207641 Brent equations fail; common denominators [45472, 112, 112], partial sums below 2^78 (0.1 s)
+    [scheme, one coefficient of product 2197 changed] 480 equations fail -> REJECTED
+    RESULT: VERIFIES EXACTLY; corrupted copy REJECTED
+20x20x21_m4230_Q.json.gz: <20x20x21:4230> p=2147483647: correct; p=998244353: correct; p=18446744069414584321: correct; p=1000000007: correct; one coefficient changed: 8 wrong entries -> REJECTED; PASS (5.0 s)
+    [scheme] <20x20x21:4230> 0 of 70560000 Brent equations fail; common denominators [22736, 112, 112], partial sums below 2^77 (0.1 s)
+    [scheme, one coefficient of product 2115 changed] 1100 equations fail -> REJECTED
+    RESULT: VERIFIES EXACTLY; corrupted copy REJECTED
+20x21x21_m4471_Q.json.gz: <20x21x21:4471> p=2147483647: correct; p=998244353: correct; p=18446744069414584321: correct; p=1000000007: correct; one coefficient changed: 60 wrong entries -> REJECTED; PASS (4.4 s)
+    [scheme] <20x21x21:4471> 0 of 77792400 Brent equations fail; common denominators [22736, 112, 112], partial sums below 2^77 (0.1 s)
+    [scheme, one coefficient of product 2235 changed] 440 equations fail -> REJECTED
+    RESULT: VERIFIES EXACTLY; corrupted copy REJECTED
+20x22x22_m5049_Q.json.gz: <22x20x22:5049> p=2147483647: correct; p=998244353: correct; p=18446744069414584321: correct; p=1000000007: correct; one coefficient changed: 8 wrong entries -> REJECTED; PASS (29.7 s)
+    [scheme] <22x20x22:5049> 0 of 93702400 Brent equations fail; common denominators [1368576, 1296, 1296], partial sums below 2^85 (13.3 s)
+    [scheme, one coefficient of product 2524 changed] 144 equations fail -> REJECTED
+    RESULT: VERIFIES EXACTLY; corrupted copy REJECTED
+21x21x22_m5048_Q.json.gz: <22x21x21:5048> p=2147483647: correct; p=998244353: correct; p=18446744069414584321: correct; p=1000000007: correct; one coefficient changed: 10 wrong entries -> REJECTED; PASS (29.9 s)
+    [scheme] <22x21x21:5048> 0 of 94128804 Brent equations fail; common denominators [2737152, 1296, 2592], partial sums below 2^88 (12.7 s)
+    [scheme, one coefficient of product 2524 changed] 144 equations fail -> REJECTED
+    RESULT: VERIFIES EXACTLY; corrupted copy REJECTED
+21x22x22_m5095_Q.json.gz: <22x21x22:5095> p=2147483647: correct; p=998244353: correct; p=18446744069414584321: correct; p=1000000007: correct; one coefficient changed: 10 wrong entries -> REJECTED; PASS (29.4 s)
+    [scheme] <22x21x22:5095> 0 of 103306896 Brent equations fail; common denominators [2737152, 1296, 1296], partial sums below 2^86 (11.5 s)
+    [scheme, one coefficient of product 2547 changed] 100 equations fail -> REJECTED
+    RESULT: VERIFIES EXACTLY; corrupted copy REJECTED
+22x23x23_m5710_Q.json.gz: <22x23x23:5710> p=2147483647: correct; p=998244353: correct; p=18446744069414584321: correct; p=1000000007: correct; one coefficient changed: 8 wrong entries -> REJECTED; PASS (6.8 s)
+    [scheme] <22x23x23:5710> 0 of 135443044 Brent equations fail; common denominators [25344, 144, 144], partial sums below 2^80 (0.1 s)
+    [scheme, one coefficient of product 2855 changed] 5194 equations fail -> REJECTED
+    RESULT: VERIFIES EXACTLY; corrupted copy REJECTED
+23x24x24_m6438_Q.json.gz: <24x23x24:6438> p=2147483647: correct; p=998244353: correct; p=18446744069414584321: correct; p=1000000007: correct; one coefficient changed: 8 wrong entries -> REJECTED; PASS (33.6 s)
+    [scheme] <24x23x24:6438> 0 of 175509504 Brent equations fail; common denominators [1198800, 3600, 3600], partial sums below 2^89 (39.2 s)
+    [scheme, one coefficient of product 3219 changed] 304704 equations fail -> REJECTED
+    RESULT: VERIFIES EXACTLY; corrupted copy REJECTED
+24x25x25_m7157_Q.json.gz: <24x25x25:7157> p=2147483647: correct; p=998244353: correct; p=18446744069414584321: correct; p=1000000007: correct; one coefficient changed: 8 wrong entries -> REJECTED; PASS (8.7 s)
+    [scheme] <24x25x25:7157> 0 of 225000000 Brent equations fail; common denominators [59940, 180, 180], partial sums below 2^84 (0.2 s)
+    [scheme, one coefficient of product 3578 changed] 6148 equations fail -> REJECTED
+    RESULT: VERIFIES EXACTLY; corrupted copy REJECTED
+25x26x26_m7997_Q.json.gz: <26x25x26:7997> p=2147483647: correct; p=998244353: correct; p=18446744069414584321: correct; p=1000000007: correct; one coefficient changed: 12 wrong entries -> REJECTED; PASS (53.3 s)
+    [scheme] <26x25x26:7997> 0 of 285610000 Brent equations fail; common denominators [87313600, 4840, 4840], partial sums below 2^97 (85.5 s)
+    [scheme, one coefficient of product 3998 changed] 196 equations fail -> REJECTED
+    RESULT: VERIFIES EXACTLY; corrupted copy REJECTED
+ALL LARGE SCHEMES PASS

@@ -1,16 +1,21 @@
 # mat_mul
 
 Matrix multiplication schemes found by Greg Sidebottom in 2026: records for the number of multiplications (the rank)
-or for the number of additions, and a few near records.  Every scheme is in the format of
+or for the number of additions, and a few near records.  Every scheme in `schemes/` is in the format of
 [PLinOpt](https://github.com/jgdumas/plinopt), with a straight-line program for each of its three linear maps, and has
-been checked exactly.  Three of them come with Lean 4 proofs that they compute the matrix product.
+been checked exactly.  Three of them come with Lean 4 proofs that they compute the matrix product.  The rank records
+for formats with a dimension above 16 are in `large/`, as compressed JSON with an exact certificate each.
 
 Status as of 2026-11-20.  "Previous best" is what we knew of when the scheme was found; the rank comparisons use
 Alexandre Sedoglavic's table at [fmm.univ-lille.fr](https://fmm.univ-lille.fr/) (its `fmm_sota.json` of 2026-11-09)
 and Andrew Perminov's catalog
 [FastMatrixMultiplication](https://github.com/dronperminov/FastMatrixMultiplication) (commit 6f8ef61 of 2026-11-09
 for the schemes of 2026-11-10 and 11; commit f70078c of 2026-11-16, still its head on 2026-11-20, for those of
-2026-11-20).
+2026-11-20).  On 2026-11-15 the table, now published at
+[sedoglavic/fmm_digest](https://github.com/sedoglavic/fmm_digest), took up our five schemes of 2026-11-10 and 11
+(it lists 1565 for ⟨13×14×14⟩, where our scheme has 1564, and 1763, 1715, 1842 and 2202 for the others) and Arhan
+Canli's 708 for ⟨9×11×11⟩.  Every rank record below is still below that table, and the schemes of `large/` are
+compared with it (commit 8e6ad05).
 
 ## Index
 
@@ -74,6 +79,42 @@ transposition of the trilinear form, so the tables of records index formats by t
 here is stored in that ordering.  Four of them (13x13x14_1477, 13x13x15_1577, 13x14x15_1645 and 15x16x16_2200) were
 found in another ordering and rotated or transposed with [tools/scheme_orient.py](tools/scheme_orient.py); the result
 was verified exactly again ([sorted_formats.verify.log](checks/discovery/sorted_formats.verify.log)).
+
+#### Larger formats: deletions from LITA's squares 17³ to 32³
+
+<!-- large:begin -->
+21 formats with a dimension above 16, each below Sedoglavic's table of 2026-11-15 (by 38 to 350 products, 3,039 in total).  Every scheme is one of LITA's square schemes ⟨k×k×k⟩ (here k = 17, 18, 19, 20, 21, 22, 23, 24, 25, 26) with one or more indices deleted, each deletion followed by LITA's 2-reduction.  The square schemes and the reduction are theirs; the choice of deletions and of the products to drop is ours.
+
+- **Deletions.** `I5` removes row 5 of A, `J5` the inner index 5 (a column of A with the matching row of B) and `K5` column 5 of B, counted from 0 in the scheme as it stands after the earlier deletions.
+- **Coefficients.** All are rational; "Invertible" lists the primes that occur in denominators.
+- **What is listed.** The lowest rank we certified for each format, and only formats for which no larger format in this list has the same or a lower rank.
+- **Form.** Compressed JSON in [large/](large), one folder per scheme, not PLinOpt files: see [Files](#files).  Each was certified by evaluating every Brent equation in exact integer arithmetic ([checks/check_large.log](checks/check_large.log)).
+- **Status.** Written 2026-11-20 22:31 while the searches on the larger squares were still running; more formats will follow.
+
+| Scheme | Format | Rank | Table | Gain | From LITA's | Deletions | Invertible | Exponent (table's) | Found |
+|---|---|---|---|---|---|---|---|---|---|
+| [15x17x17_2490_rational](large/15x17x17_2490_rational) | ⟨15×17×17⟩ | 2490 | 2622 | 132 | ⟨17×17×17:2723⟩ | `I0`, `I15` | 2, 3, 5, 7 | 2.801383 (2.819887) | 2026-11-20 |
+| [16x16x17_2392_rational](large/16x16x17_2392_rational) | ⟨16×16×17⟩ | 2392 | 2492 | 100 | ⟨17×17×17:2723⟩ | `I0`, `J0` | 2, 3, 5, 7 | 2.785697 (2.800361) | 2026-11-20 |
+| [16x17x17_2553_rational](large/16x17x17_2553_rational) | ⟨16×17×17⟩ | 2553 | 2706 | 153 | ⟨17×17×17:2723⟩ | `I0` | 2, 3, 5, 7 | 2.788841 (2.809532) | 2026-11-20 |
+| [17x17x18_2954_rational](large/17x17x18_2954_rational) | ⟨17×17×18⟩ | 2954 | 3012 | 58 | ⟨18×18×18:3031⟩ | `J0`, `K17` | 2, 3, 5, 7 | 2.801602 (2.808419) | 2026-11-20 |
+| [17x18x18_2993_rational](large/17x18x18_2993_rational) | ⟨17×18×18⟩ | 2993 | 3031 | 38 | ⟨18×18×18:3031⟩ | `J0` | 2, 3, 5, 7 | 2.787580 (2.791974) | 2026-11-20 |
+| [17x19x19_3354_rational](large/17x19x19_3354_rational) | ⟨17×19×19⟩ | 3354 | 3633 | 279 | ⟨19×19×19:3633⟩ | `I0`, `I17` | 2, 3, 5, 7 | 2.792189 (2.819673) | 2026-11-20 |
+| [18x18x19_3225_rational](large/18x18x19_3225_rational) | ⟨18×18×19⟩ | 3225 | 3355 | 130 | ⟨19×19×19:3633⟩ | `I0`, `J0` | 2, 3, 5, 7 | 2.777714 (2.791302) | 2026-11-20 |
+| [18x19x19_3424_rational](large/18x19x19_3424_rational) | ⟨18×19×19⟩ | 3424 | 3633 | 209 | ⟨19×19×19:3633⟩ | `I0` | 2, 3, 5, 7 | 2.781068 (2.801315) | 2026-11-20 |
+| [18x20x20_3910_rational](large/18x20x20_3910_rational) | ⟨18×20×20⟩ | 3910 | 3994 | 84 | ⟨20×20×20:3994⟩ | `J0`, `J0` | 2, 3, 5, 7, 29 | 2.793778 (2.800957) | 2026-11-20 |
+| [19x19x20_3909_rational](large/19x19x20_3909_rational) | ⟨19×19×20⟩ | 3909 | 3994 | 85 | ⟨20×20×20:3994⟩ | `J0`, `K19` | 2, 3, 5, 7, 29 | 2.792819 (2.800083) | 2026-11-20 |
+| [19x20x20_3952_rational](large/19x20x20_3952_rational) | ⟨19×20×20⟩ | 3952 | 3994 | 42 | ⟨20×20×20:3994⟩ | `J0` | 2, 7, 29 | 2.780461 (2.784010) | 2026-11-20 |
+| [19x21x21_4394_rational](large/19x21x21_4394_rational) | ⟨19×21×21⟩ | 4394 | 4723 | 329 | ⟨21×21×21:4723⟩ | `I0`, `I19` | 2, 7, 29 | 2.785635 (2.809614) | 2026-11-20 |
+| [20x20x21_4230_rational](large/20x20x21_4230_rational) | ⟨20×20×21⟩ | 4230 | 4394 | 164 | ⟨21×21×21:4723⟩ | `I0`, `J0` | 2, 7, 29 | 2.772234 (2.784863) | 2026-11-20 |
+| [20x21x21_4471_rational](large/20x21x21_4471_rational) | ⟨20×21×21⟩ | 4471 | 4723 | 252 | ⟨21×21×21:4723⟩ | `I0` | 2, 7, 29 | 2.775643 (2.793750) | 2026-11-20 |
+| [20x22x22_5049_rational](large/20x22x22_5049_rational) | ⟨20×22×22⟩ | 5049 | 5141 | 92 | ⟨22×22×22:5141⟩ | `J0`, `J0` | 2, 3, 11 | 2.787246 (2.793149) | 2026-11-20 |
+| [21x21x22_5048_rational](large/21x21x22_5048_rational) | ⟨21×21×22⟩ | 5048 | 5141 | 93 | ⟨22×22×22:5141⟩ | `J0`, `K21` | 2, 3, 11 | 2.786492 (2.792458) | 2026-11-20 |
+| [21x22x22_5095_rational](large/21x22x22_5095_rational) | ⟨21×22×22⟩ | 5095 | 5141 | 46 | ⟨22×22×22:5141⟩ | `J0` | 2, 3, 11 | 2.775456 (2.778379) | 2026-11-20 |
+| [22x23x23_5710_rational](large/22x23x23_5710_rational) | ⟨22×23×23⟩ | 5710 | 6009 | 299 | ⟨23×23×23:6009⟩ | `I0` | 2, 3, 11 | 2.771826 (2.788181) | 2026-11-20 |
+| [23x24x24_6438_rational](large/23x24x24_6438_rational) | ⟨23×24×24⟩ | 6438 | 6488 | 50 | ⟨24×24×24:6488⟩ | `J0` | 2, 3, 5, 37 | 2.771916 (2.774361) | 2026-11-20 |
+| [24x25x25_7157_rational](large/24x25x25_7157_rational) | ⟨24×25×25⟩ | 7157 | 7507 | 350 | ⟨25×25×25:7507⟩ | `I0` | 2, 3, 5, 37 | 2.769143 (2.784039) | 2026-11-20 |
+| [25x26x26_7997_rational](large/25x26x26_7997_rational) | ⟨25×26×26⟩ | 7997 | 8051 | 54 | ⟨26×26×26:8051⟩ | `J0` | 2, 5, 11, 41 | 2.769417 (2.771491) | 2026-11-20 |
+<!-- large:end -->
 
 #### Superseded by the schemes above
 
@@ -143,6 +184,20 @@ conventions:
 - The rectangular schemes are also given as `.json.gz` in the JSON layout of Perminov's catalog (fields `n`, `m`, `u`,
   `v`, `w`; w indexes C transposed).
 
+`large/` is different.  Each folder there holds:
+
+- `SHAPE_mRANK_Q.json.gz`: the scheme in the JSON layout of Perminov's catalog (`n`, `m`, `u`, `v`, `w`; u on A and
+  v on B row-major, w on C transposed, index k·n₀ + i), with sparse rows `[{"index": i, "value": v}, …]` and values
+  that are integers or `"a/b"` strings.  `n` is the format as the scheme stands, a permutation of the sorted format
+  in the folder name.  A `note` field names the LITA file and the deletions.
+- `path_1.json`, `path_2.json`, …: one file per deletion, from LITA's square down to the scheme, with the deleted
+  index, the direction of every reduction step and the products dropped.  `tools/kronexact replay` redoes a path
+  exactly.
+- `certificate.log`: the output of the last replay and of the exact check.
+
+[large/index.json](large/index.json) is the table of the index in machine-readable form.  PLinOpt `.sms` files of
+these schemes would be tens of megabytes each, so they are not included.
+
 ## Checking
 
 ```sh
@@ -151,6 +206,9 @@ python3 tools/check_scheme.py --mod 2 schemes/4x4x4_47_mod_2_166/4x4x4_47_mod_2_
 tools/check_all.sh                              # every scheme, Python standard library only
 PLINOPT=/path/to/plinopt tools/check_all.sh     # also PLinOpt's SLPchecker, MMchecker and ALTchecker
 python3 tools/ring_slp.py --check schemes/4x11x14_426_integer/4x11x14_426_integer   # programs against their matrices
+tools/check_large.sh                            # large/: random matrices modulo four primes, standard library only
+cargo build --release --manifest-path tools/kronexact/Cargo.toml
+EXACT=1 tools/check_large.sh                    # large/: also every Brent equation, in exact integers
 ```
 
 `check_scheme.py` checks the 3×3 and 4×4 schemes against the Brent equations, exactly: every coefficient of the
@@ -286,6 +344,31 @@ annealing over the class's orbit, with moves by elementary matrices scored by Bo
 search that took the expensive side from 50 to 49.  It was the record until the 166.  Also in PLinOpt as
 `data/4x4x4_47_mod_2_167` ([jgdumas/plinopt#22](https://github.com/jgdumas/plinopt/pull/22), merged 2026-10-19),
 where J.-G. Dumas later compacted the A-side program; the files here are the ones we submitted.
+
+### The schemes of large/: checking and reproducing
+
+`tools/kronexact` (Rust; `rayon` and `serde_json` only) is the certificate for the schemes of `large/`.
+
+- **`check SCHEME.json.gz`** clears the common denominator of each of the three factors and evaluates every Brent
+  equation in 128-bit integers, after proving from the largest entries that no partial sum can overflow.  For
+  ⟨31×32×32⟩ that is about 10⁹ equations.  It then changes one coefficient and requires the check to fail.  The
+  check does not depend on how a scheme was found.
+- **`replay SOURCE PATH OUT`** redoes one deletion and its reductions over ℚ: the dependencies among the Kronecker
+  products are computed modulo three primes just below 2⁶¹, lifted to rationals from two of them and compared with
+  the third, and the fold is done in exact rational arithmetic.  The result is then checked as above.
+- **`tools/check_json.py`** is a second opinion from other code: it multiplies random matrices modulo four primes.
+
+We gated `kronexact` before using it: on the ⟨15×16×16:2200⟩ scheme it reproduces, entry for entry, the scheme that
+the earlier Python pipeline had verified by two other routes, and it rejects a scheme with a product removed.
+
+To reproduce a scheme from LITA's files: download `schemes/kxkxk_rR.npz` from
+[khoruzhii/lita](https://github.com/khoruzhii/lita) (commit 472a79f), convert it with
+`python3 tools/lita_npz2json.py IN.npz kxkxk_mR_Q.json`, then run `kronexact replay` with `path_1.json`,
+`path_2.json`, … in turn, each on the output of the one before.  The paths were found by a search modulo one
+20-bit prime over which index to delete and which products to drop; that search program is not in this repository.
+
+One deletion takes far more off an odd square's rank than off an even one's: 153 at k = 17 rising to 350 at k = 25,
+against 38 at k = 18 rising to 54 at k = 26.  The squares themselves do not reduce (we tried k = 17, 18 and 19).
 
 ### The rectangular schemes: projection and 2-reduction
 
@@ -437,11 +520,12 @@ here.
 ## Credits
 
 - Khoruzhii, Serafin, Gelß and Pokutta ([LITA](https://github.com/khoruzhii/lita)): the square schemes behind twelve
-  of the rectangular ones, and 2-reducibility, the reduction all of them use.
+  of the rectangular ones and every scheme of `large/`, and 2-reducibility, the reduction all of them use.
 - Andrew Perminov's [catalog](https://github.com/dronperminov/FastMatrixMultiplication), where we found LITA's and
   MerlijnW70's schemes and the nine schemes that nine of the records of 2026-11-20 start from, and his 58-addition
   scheme cn122, the start of the 55.
-- Alexandre Sedoglavic's table at [fmm.univ-lille.fr](https://fmm.univ-lille.fr/).
+- Alexandre Sedoglavic's table at [fmm.univ-lille.fr](https://fmm.univ-lille.fr/) and
+  [sedoglavic/fmm_digest](https://github.com/sedoglavic/fmm_digest).
 - Heule, Kauers and Seidl's database of rank-23 3×3 schemes; Yinqi Sun's chain covering; Karstadt and Schwartz's
   alternative-basis model; Nielsen's 52; Stapleton and Perminov's 51.
 - Dumas, Pernet and Sedoglavic for the rational rank-48 class, made from AlphaEvolve's complex scheme, and Li, Wang
