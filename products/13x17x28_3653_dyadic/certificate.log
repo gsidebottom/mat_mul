@@ -1,0 +1,9 @@
+source_plan.json: <13x18x28:3747> built (0.0 s); path path_1.json (sequence "J17")
+  primes [2305843009213693951, 2305843009213693921, 2305843009213693907]
+  stage 0: delete J17: 3747 -> 3709 products, <13x17x28>
+  stage 0 step 0: direction 1: 33 dependencies on 518 products (lifted from 2 primes of 61 bits, equal modulo a third; 523 nonzero coefficients, largest numerator or denominator 1); 3709 -> 3669 products (33 pivots, 7 left with a zero factor) (0.6 s)
+  stage 0 step 1: direction 0: 14 dependencies on 94 products (lifted from 2 primes of 61 bits, equal modulo a third; 102 nonzero coefficients, largest numerator or denominator 1); 3669 -> 3653 products (14 pivots, 2 left with a zero factor) (0.0 s)
+  u 71697 nonzeros, 20240 fractions, largest numerator 3, largest denominator 4; v 57879 nonzeros, 16904 fractions, largest numerator 2, largest denominator 2; w 63211 nonzeros, 0 fractions, largest numerator 3, largest denominator 1; denominator primes [2] -> dyadic
+  [output] <13x17x28:3653> 0 of 38291344 Brent equations fail; common denominators [4, 2, 1], partial sums below 2^20 (0.0 s)
+  [output, one coefficient of product 1826 changed] 432 equations fail -> REJECTED
+  RESULT: output with 3653 products VERIFIES EXACTLY; corrupted copy REJECTED; written 13x17x28_m3653.json (0.8 s)

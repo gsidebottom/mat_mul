@@ -1,0 +1,5 @@
+plan.json: built <8x30x30:4158> (0.0 s)
+  u 79309 nonzeros, 12768 fractions, largest numerator 47, largest denominator 25; v 316635 nonzeros, 97088 fractions, largest numerator 93, largest denominator 55; w 88234 nonzeros, 0 fractions, largest numerator 4, largest denominator 1; denominator primes [3, 5, 7, 11] -> rational
+  [output] <8x30x30:4158> 0 of 51840000 Brent equations fail; common denominators [75, 17325, 1], partial sums below 2^44 (0.1 s)
+  [output, one coefficient of product 2079 changed] 891 equations fail -> REJECTED
+  RESULT: output with 4158 products VERIFIES EXACTLY; corrupted copy REJECTED; written 8x30x30_m4158.json (0.4 s)

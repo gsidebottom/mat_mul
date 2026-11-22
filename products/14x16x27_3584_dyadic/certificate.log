@@ -1,0 +1,5 @@
+plan.json: built <14x16x27:3584> (0.0 s)
+  u 55299 nonzeros, 24696 fractions, largest numerator 2, largest denominator 2; v 169605 nonzeros, 57024 fractions, largest numerator 3, largest denominator 2; w 149062 nonzeros, 45966 fractions, largest numerator 5, largest denominator 2; denominator primes [2] -> dyadic
+  [output] <14x16x27:3584> 0 of 36578304 Brent equations fail; common denominators [2, 2, 2], partial sums below 2^20 (0.1 s)
+  [output, one coefficient of product 1792 changed] 32 equations fail -> REJECTED
+  RESULT: output with 3584 products VERIFIES EXACTLY; corrupted copy REJECTED; written 14x16x27_m3584.json (0.3 s)

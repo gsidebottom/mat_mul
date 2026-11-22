@@ -4,7 +4,8 @@ Matrix multiplication schemes found by Greg Sidebottom in 2026: records for the 
 or for the number of additions, and a few near records.  Every scheme in `schemes/` is in the format of
 [PLinOpt](https://github.com/jgdumas/plinopt), with a straight-line program for each of its three linear maps, and has
 been checked exactly.  Three of them come with Lean 4 proofs that they compute the matrix product.  The rank records
-for formats with a dimension above 16 are in `large/`, as compressed JSON with an exact certificate each.
+for formats with a dimension above 16 are in `large/` (deletions from LITA's squares) and `products/` (shared-factor
+products and deletions from them), as compressed JSON with an exact certificate each.
 
 Status as of 2026-11-21.  "Previous best" is what we knew of when the scheme was found; the rank comparisons use
 Alexandre Sedoglavic's table at [fmm.univ-lille.fr](https://fmm.univ-lille.fr/) (its `fmm_sota.json` of 2026-11-09)
@@ -14,8 +15,8 @@ for the schemes of 2026-11-10 and 11; commit f70078c of 2026-11-16, still its he
 2026-11-20).  On 2026-11-15 the table, now published at
 [sedoglavic/fmm_digest](https://github.com/sedoglavic/fmm_digest), took up our five schemes of 2026-11-10 and 11
 (it lists 1565 for ⟨13×14×14⟩, where our scheme has 1564, and 1763, 1715, 1842 and 2202 for the others) and Arhan
-Canli's 708 for ⟨9×11×11⟩.  Every rank record below is still below that table, and the schemes of `large/` are
-compared with it (commit 8e6ad05).
+Canli's 708 for ⟨9×11×11⟩.  Every rank record below is still below that table, and the schemes of `large/` and
+`products/` are compared with it (commit 8e6ad05).
 
 ## Index
 
@@ -206,6 +207,80 @@ was verified exactly again ([sorted_formats.verify.log](checks/discovery/sorted_
 | [31x32x32_14130_rational](large/31x32x32_14130_rational) (no file) | ⟨31×32×32⟩ | 14130 | 14196 | 66 | ⟨32×32×32:14196⟩ | `J0` | 2, 7, 13, 53 | 2.765740 (2.767089) | 2026-11-21 |
 <!-- large:end -->
 
+<!-- products:begin -->
+#### Larger formats: shared-factor products, and deletions from them
+
+910 formats with a dimension above 16, each below Sedoglavic's table of 2026-11-15 and none implied by that table
+together with the other schemes of this repository (by taking a sub-format, splitting a dimension or a Kronecker
+product).  The full table is [products/INDEX.md](products/INDEX.md); the largest gains are below.
+
+- **Products (683 formats, below the table by 1 to 243 products, 18,974 in total).**  Each is a Kronecker product of
+  a base scheme with a second format, the block sizes, in which every group of base products that share a factor
+  is replaced by one scheme of a larger format (a worked example is in
+  [the method section](#the-schemes-of-products-shared-factor-products)).  This is the serendipitous product as Perminov defines and uses it in
+  [arXiv:2606.02480](https://arxiv.org/abs/2606.02480) (Section 2.5), where he attributes it to Smith and its
+  general form to Sedoglavic; the base schemes come from Perminov's catalog.  The method and the base schemes are
+  theirs.  Ours is a screen in which every rank is the rank of a scheme we hold or can build, a builder that
+  carries out each plan, and the exact check of the result.
+- **Deletions (227 formats, below the table by 1 to 97, 4,265 in total).**  One index deleted from a product scheme
+  (two for three of them), followed by LITA's 2-reduction, as for the schemes of `large/`.  Part of each gain is
+  inherited from the product scheme; "Own" in the table is what the deletion adds beyond what the table and our
+  other schemes imply (1 to 67).
+- **Coefficients.**  Products: 390 integer, 157 over ℤ[1/2], 136 with other denominators.  Deletions: 85 integer,
+  68 over ℤ[1/2], 74 with other denominators.  "Invertible" lists the primes that occur in denominators.
+- **Form.**  Compressed JSON in [products/](products), one folder per scheme with its build plan or deletion path
+  and its certificate: see [Files](#files).  Each was certified by evaluating every Brent equation in exact integer
+  arithmetic ([checks/check_products.log](checks/check_products.log)).
+- **Exponents.**  None is near a record: the lowest is 2.7886 (⟨9×17×18⟩:1576), against 2.7743 for ⟨3×3×6:40⟩.
+
+Largest relative gains among the products.  "Base scheme" is the catalog scheme the product starts from.  "Block
+sizes" ⟨p×q×s⟩ is the second format: every entry of A becomes a p×q block, every entry of B a q×s block and every
+entry of C a p×s block.  Position by position the two multiply to the format: ⟨11×4×3⟩ with blocks ⟨1×3×6⟩ is
+⟨11×12×18⟩.  Every scheme is stored with its dimensions in that order; the catalog file may hold the base scheme
+with its dimensions in another order (here ⟨3×4×11⟩), and the plan says how it is turned.
+
+| Format | Rank | Table | Gain | Base scheme | Block sizes | Invertible | Exponent (table's) |
+|---|---|---|---|---|---|---|---|
+| [⟨11×12×18⟩](products/11x12x18_1400_dyadic) | 1400 | 1476 | 76 (5.1%) | ⟨11×4×3:104⟩ | ⟨1×3×6⟩ | 2 | 2.7959 (2.8163) |
+| [⟨13×20×21⟩](products/13x20x21_3165_integer) | 3165 | 3304 | 139 (4.2%) | ⟨13×4×3:123⟩ | ⟨1×5×7⟩ | none | 2.8099 (2.8249) |
+| [⟨9×9×27⟩](products/9x9x27_1287_dyadic) | 1287 | 1343 | 56 (4.2%) | ⟨3×3×9:63⟩ | ⟨3×3×3⟩ | 2 | 2.7932 (2.8098) |
+| [⟨15×20×32⟩](products/15x20x32_5220_rational) | 5220 | 5440 | 220 (4.0%) | ⟨3×4×8:75⟩ | ⟨5×5×4⟩ | 3 | 2.8007 (2.8142) |
+| [⟨13×15×32⟩](products/13x15x32_3594_integer) | 3594 | 3744 | 150 (4.0%) | ⟨13×3×4:123⟩ | ⟨1×5×8⟩ | none | 2.8106 (2.8246) |
+| [⟨11×20×21⟩](products/11x20x21_2719_rational) | 2719 | 2828 | 109 (3.9%) | ⟨11×4×3:104⟩ | ⟨1×5×7⟩ | 3, 5 | 2.8115 (2.8255) |
+| [⟨12×13×18⟩](products/12x13x18_1662_dyadic) | 1662 | 1725 | 63 (3.7%) | ⟨4×13×3:123⟩ | ⟨3×1×6⟩ | 2 | 2.8019 (2.8159) |
+| [⟨13×15×28⟩](products/13x15x28_3165_integer) | 3165 | 3281 | 116 (3.5%) | ⟨13×3×4:123⟩ | ⟨1×5×7⟩ | none | 2.8099 (2.8224) |
+| [⟨9×11×24⟩](products/9x11x24_1400_dyadic) | 1400 | 1450 | 50 (3.4%) | ⟨3×11×4:104⟩ | ⟨3×1×6⟩ | 2 | 2.7959 (2.8094) |
+| [⟨6×18×27⟩](products/6x18x27_1738_dyadic) | 1738 | 1800 | 62 (3.4%) | ⟨2×6×9:86⟩ | ⟨3×3×3⟩ | 2 | 2.8054 (2.8186) |
+| [⟨9×13×32⟩](products/9x13x32_2229_dyadic) | 2229 | 2303 | 74 (3.2%) | ⟨3×13×4:123⟩ | ⟨3×1×8⟩ | 2 | 2.8109 (2.8228) |
+| [⟨13×18×28⟩](products/13x18x28_3747_dyadic) | 3747 | 3870 | 123 (3.2%) | ⟨13×3×4:123⟩ | ⟨1×6×7⟩ | 2 | 2.8092 (2.8203) |
+| [⟨6×18×28⟩](products/6x18x28_1788_dyadic) | 1788 | 1844 | 56 (3.0%) | ⟨2×6×14:133⟩ | ⟨3×3×2⟩ | 2 | 2.8033 (2.8148) |
+| [⟨13×20×27⟩](products/13x20x27_4035_integer) | 4035 | 4160 | 125 (3.0%) | ⟨13×4×3:123⟩ | ⟨1×5×9⟩ | none | 2.8124 (2.8228) |
+| [⟨11×15×28⟩](products/11x15x28_2719_rational) | 2719 | 2803 | 84 (3.0%) | ⟨11×3×4:104⟩ | ⟨1×5×7⟩ | 3, 5 | 2.8115 (2.8223) |
+
+Largest own gains among the deletions, relative to the table's rank.  "From" is the product scheme and the
+deleted index, named as for `large/`: in ⟨m×k×n⟩, `I17` removes row 17 of A (and of C), `J17` the inner index 17 (a
+column of A with the matching row of B) and `K17` column 17 of B, counted from 0.  So ⟨12×13×18:1662⟩, `K17` is
+that scheme without the last column of B, a scheme for ⟨12×13×17⟩.  The source is written in the orientation in
+which the deletion leaves the dimensions sorted, so it can be a product scheme of the list turned: ⟨12×11×18:1400⟩
+is the ⟨11×12×18⟩ scheme of the table above.
+
+| Format | Rank | Table | Gain | Own | From | Invertible | Exponent (table's) |
+|---|---|---|---|---|---|---|---|
+| [⟨6×17×28⟩](products/6x17x28_1741_dyadic) | 1741 | 1796 | 55 | 47 | ⟨6×18×28:1788⟩, `J17` | 2 | 2.8134 (2.8251) |
+| [⟨12×13×17⟩](products/12x13x17_1617_dyadic) | 1617 | 1655 | 38 | 38 | ⟨12×13×18:1662⟩, `K17` | 2 | 2.8117 (2.8206) |
+| [⟨11×11×18⟩](products/11x11x18_1352_dyadic) | 1352 | 1383 | 31 | 31 | ⟨12×11×18:1400⟩, `I11` | 2 | 2.8139 (2.8227) |
+| [⟨9×14×24⟩](products/9x14x24_1809_dyadic) | 1809 | 1856 | 47 | 41 | ⟨9×15×24:1873⟩, `J14` | 2 | 2.8077 (2.8173) |
+| [⟨11×12×17⟩](products/11x12x17_1369_dyadic) | 1369 | 1410 | 41 | 31 | ⟨11×12×18:1400⟩, `K17` | 2 | 2.8079 (2.8193) |
+| [⟨8×17×30⟩](products/8x17x30_2454_dyadic) | 2454 | 2509 | 55 | 55 | ⟨8×18×30:2526⟩, `J17` | 2 | 2.8166 (2.8246) |
+| [⟨13×19×21⟩](products/13x19x21_3098_integer) | 3098 | 3171 | 73 | 67 | ⟨13×20×21:3165⟩, `J19` | none | 2.8192 (2.8274) |
+| [⟨9×11×23⟩](products/9x11x23_1371_dyadic) | 1371 | 1419 | 48 | 29 | ⟨9×11×24:1400⟩, `K0` | 2 | 2.8031 (2.8165) |
+| [⟨9×17×17⟩](products/9x17x17_1542_dyadic) | 1542 | 1574 | 32 | 32 | ⟨9×18×18:1600⟩, `K0`, `J6` | 2 | 2.8005 (2.8084) |
+| [⟨6×17×27⟩](products/6x17x27_1693_rational) | 1693 | 1728 | 35 | 35 | ⟨6×18×27:1738⟩, `J17` | 2, 11 | 2.8157 (2.8235) |
+
+Five of the deletions start from the plain Kronecker product of ⟨3×3×6:40⟩ with ⟨3×6×3:40⟩, a scheme for
+⟨9×18×18⟩ of rank 40 · 40 = 1600, which ties the table: ⟨9×17×18⟩ 1576 (table 1591), ⟨8×18×18⟩ 1560 (table 1575), ⟨9×17×17⟩ 1542 (table 1574), ⟨9×16×18⟩ 1537 (table 1560), ⟨7×18×18⟩ 1424 (table 1425).
+<!-- products:end -->
+
 #### Superseded by the schemes above
 
 | Scheme | Format | Rank | Superseded by | Valid over | Found |
@@ -288,6 +363,24 @@ conventions:
 [large/index.json](large/index.json) is the table of the index in machine-readable form.  PLinOpt `.sms` files of
 these schemes would be tens of megabytes each, so they are not included.
 
+`products/` has one folder per scheme, named like those of `large/`:
+
+- `SHAPE_mRANK.json.gz`: the scheme, in the same layout as in `large/`, with its dimensions in the order of the
+  folder name.
+- For a product, `plan.json`: the base scheme, the block sizes (the second format) and, for every group of base
+  products that share a factor, the products in it and the scheme that replaces it, each given down to files.  A file node names a file of Perminov's
+  catalog at commit f70078c by its path there (`"catalog"`) or a file of this repository by its path from the
+  plan's folder (`"here"`); a `trivial` node is the schoolbook scheme of a format.  The plan forms the product with
+  the base scheme as its file has it and ends with the rotations and transpositions that sort the dimensions.
+  `tools/kronexact build plan.json OUT --catalog DIR` carries it out.
+- For a deletion, `source_plan.json` (the plan of the product scheme it starts from) and `path_1.json` (the
+  deletions and their reductions, as in `large/`).  `tools/kronexact replay source_plan.json path_1.json OUT
+  --catalog DIR` builds the product scheme and redoes the path.
+- `certificate.log`: the output of that build or replay, which ends with the exact check.
+
+`products/base/` holds the one base scheme that is in neither place.
+[products/index.json](products/index.json) and [products/INDEX.md](products/INDEX.md) are the full table.
+
 ## Checking
 
 ```sh
@@ -299,6 +392,8 @@ python3 tools/ring_slp.py --check schemes/4x11x14_426_integer/4x11x14_426_intege
 tools/check_large.sh                            # large/: random matrices modulo four primes, standard library only
 cargo build --release --manifest-path tools/kronexact/Cargo.toml
 EXACT=1 tools/check_large.sh                    # large/: also every Brent equation, in exact integers
+tools/check_large.sh products                   # products/: random matrices modulo four primes
+EXACT=1 tools/check_large.sh products           # products/: also every Brent equation, in exact integers
 ```
 
 `check_scheme.py` checks the 3×3 and 4×4 schemes against the Brent equations, exactly: every coefficient of the
@@ -463,6 +558,83 @@ k = 18 or k = 20 is reached at a lower rank from the odd square above it, so no 
 two.  The largest relative gain is 7.7% (⟨17×19×19⟩, 3354 against 3633).  The squares themselves do not reduce (we
 tried k = 17, 18 and 19).
 
+### The schemes of products/: shared-factor products
+
+**The product.**  Take a base scheme for ⟨a×b×c⟩ with r products and a second format ⟨p×q×s⟩, the block sizes: every
+entry of A becomes a p×q block, every entry of B a q×s block, every entry of C a p×s block, and the result is a scheme
+for ⟨ap×bq×cs⟩.  The plain Kronecker product replaces each base product by a scheme of ⟨p×q×s⟩ and has rank
+r · R(p,q,s).  If g of the base products have the same factor on B up to a scalar, then after blocking that factor
+is one q×s block matrix Y and the g other factors are p×q blocks X₁, …, X_g, and the g block products X₁·Y, …, X_g·Y
+are one product: the X's stacked into a gp×q matrix, times Y.  So the group can be replaced by one scheme of
+⟨gp×q×s⟩, at R(gp,q,s) instead of g · R(p,q,s).  A shared factor on A gives ⟨p×q×gs⟩ in the same way (the other
+factors side by side), and one on C gives ⟨p×gq×s⟩.  That is the serendipitous product of Section 2.5 of Perminov's
+paper, which attributes it to Smith and its general form to Sedoglavic (a scheme written as a sum of blocks, each
+block replaced by a scheme of the block's format times the second format).  The paper applies it across the catalog;
+the groups of base products sharing a factor are its "buds", a term it credits to Sedoglavic.
+
+Example 1: ⟨11×4×3:104⟩ with block sizes ⟨1×3×6⟩ gives ⟨11×12×18⟩.  The plain Kronecker product turns each of the 104
+base products into a row vector times a 3×6 matrix, 18 multiplications: 104 · 18 = 1872.  The 104 base products fall
+into 30 groups that share their factor on B:
+
+| Groups | Products in each | Replaced by | Cost |
+|---|---|---|---|
+| 15 | 4 | ⟨4×3×6:54⟩ | 810 |
+| 14 | 3 | ⟨3×3×6:40⟩ | 560 |
+| 1 | 2 | ⟨2×3×6:30⟩ | 30 |
+
+That is 1400 for ⟨11×12×18⟩, where the table has 1476.
+
+Example 2: the catalog's ⟨3×3×9:63⟩ has 27 pairs of products that share a factor.  With block sizes ⟨3×3×3⟩,
+each pair is replaced by a scheme of ⟨3×3×6⟩ of rank 40 and each of the other 9 products by ⟨3×3×3:23⟩:
+27 · 40 + 9 · 23 = 1287 for ⟨9×9×27⟩, where the table has 1343 and the plain product has 63 · 23 = 1449.
+
+**What we did.**  Perminov's paper reports ranks; many of them need a scheme for every format that appears in a
+replacement, and those in turn may be sub-formats, direct sums or products of other schemes.
+
+1. *A screen that only uses what can be built.*  Every rank in a plan is the rank of a scheme we hold as a file, or
+   of one that sub-format, direct sum or Kronecker product gives from such files.  The bar a plan has to beat is
+   Sedoglavic's table closed under the same three operations.
+2. *A builder.*  `kronexact build` executes a plan down to its files and writes the scheme.
+3. *An exact check* of every result, as for `large/`, and a second check by other code (random matrices modulo four
+   primes).
+
+864 schemes were built this way; 683 are listed.  126 of the listed ones use the rank-40 scheme of ⟨3×3×6⟩ as a
+replacing block, which the catalog's JSON files do not have (they have rank 42).  It is Smirnov's scheme in the
+accurate form of Dumas, Pernet and Sedoglavic, PLinOpt's `data/3x3x6_40_DPS-accurate`, here as
+[products/base/3x3x6_m40_DPS-accurate.json](products/base/3x3x6_m40_DPS-accurate.json).
+
+**Blocks with two dimensions.**  Products that share factors in two slots form a grid, an image of ⟨1×q×r⟩ (Section
+2.6.4 of Perminov's paper).  38 of the listed schemes use one.  6 use a variant in which the factors of four
+products lie in a plane in each of two slots without being proportional; their sum is still an image of ⟨1×2×2⟩.
+Where we built the same format with and without them, either gained 1 to 12 products.
+
+**Deletions.**  The product schemes do not 2-reduce as they stand (we tried the 40 of lowest rank).  After deleting
+one index they do.  We searched every product scheme of rank up to 4000, deleting the first and the last index of
+each slot: 628 results below the table, all certified, of which the best per format that is not implied by other
+schemes is listed (227, with the five from ⟨9×18×18:1600⟩ below).  Product schemes above rank 4000 were not searched.
+
+**Exponent.**  We also tried ⟨3×3×6:40⟩ for a better exponent.  No rank-40 scheme we hold has two products sharing a
+factor, the ⟨9×18×18:1600⟩ products do not 2-reduce, and every deletion moves the exponent away from 2.7743.  The
+five deletions listed above are what that attempt left.
+
+**To reproduce.**  The plans name the catalog's files by their paths in
+[Perminov's catalog](https://github.com/dronperminov/FastMatrixMultiplication) at commit f70078c, so a checkout of
+that commit is needed; the other files they name are in this repository.  Every scheme file is, byte for byte, the
+compressed output of one command run in its folder, and `certificate.log` is what that command printed:
+
+```sh
+cargo build --release --manifest-path tools/kronexact/Cargo.toml
+KX=$PWD/tools/kronexact/target/release/kronexact
+cd products/9x9x27_1287_dyadic                  # a product
+$KX build plan.json out.json --catalog /path/to/FastMatrixMultiplication
+gunzip -c 9x9x27_m1287.json.gz | cmp - out.json
+cd ../9x17x17_1542_dyadic                # a deletion: builds the product scheme, then replays the path
+$KX replay source_plan.json path_1.json out.json --catalog /path/to/FastMatrixMultiplication
+gunzip -c 9x17x17_m1542.json.gz | cmp - out.json
+```
+
+Both commands end with the exact check of what they wrote.
+
 ### The rectangular schemes: projection and 2-reduction
 
 Twelve of the twenty-two start from the square schemes of Khoruzhii, Serafin, Gelß and Pokutta, *Local Improvements
@@ -615,10 +787,17 @@ here.
 - Khoruzhii, Serafin, Gelß and Pokutta ([LITA](https://github.com/khoruzhii/lita)): the square schemes behind twelve
   of the rectangular ones and every scheme of `large/`, and 2-reducibility, the reduction all of them use.
 - Andrew Perminov's [catalog](https://github.com/dronperminov/FastMatrixMultiplication), where we found LITA's and
-  MerlijnW70's schemes and the nine schemes that nine of the records of 2026-11-20 start from, and his 58-addition
-  scheme cn122, the start of the 55.
+  MerlijnW70's schemes and the nine schemes that nine of the records of 2026-11-20 start from; the base schemes
+  of all but five of the schemes of `products/`; his paper [arXiv:2606.02480](https://arxiv.org/abs/2606.02480), whose
+  shared-factor product those schemes are built with; and his 58-addition scheme cn122, the start of the 55.
 - Alexandre Sedoglavic's table at [fmm.univ-lille.fr](https://fmm.univ-lille.fr/) and
-  [sedoglavic/fmm_digest](https://github.com/sedoglavic/fmm_digest).
+  [sedoglavic/fmm_digest](https://github.com/sedoglavic/fmm_digest), and the general form of the serendipitous
+  product, which Perminov's paper attributes to him.
+- Warren D. Smith, to whose report *Fast matrix multiplication formulae* (technical report, 2002) Perminov's
+  paper attributes the serendipitous product.  We have not found a copy of the report and rely on that paper's
+  account of it.
+- Smirnov's ⟨3×3×6:40⟩, in Dumas, Pernet and Sedoglavic's accurate form (PLinOpt's `data/3x3x6_40_DPS-accurate`),
+  the replacing block in 126 of the listed product schemes.
 - Heule, Kauers and Seidl's database of rank-23 3×3 schemes; Yinqi Sun's chain covering; Karstadt and Schwartz's
   alternative-basis model; Nielsen's 52; Stapleton and Perminov's 51.
 - Dumas, Pernet and Sedoglavic for the rational rank-48 class, made from AlphaEvolve's complex scheme, and Li, Wang

@@ -1,0 +1,9 @@
+source_plan.json: <15x15x24:3026> built (0.0 s); path path_1.json (sequence "K23")
+  primes [2305843009213693951, 2305843009213693921, 2305843009213693907]
+  stage 0: delete K23: 3026 -> 3025 products, <15x15x23>
+  stage 0 step 0: direction 1: 33 dependencies on 1256 products (lifted from 2 primes of 61 bits, equal modulo a third; 1870 nonzero coefficients, largest numerator or denominator 4); 3025 -> 2988 products (33 pivots, 4 left with a zero factor) (4.5 s)
+  stage 0 step 1: direction 2: 3 dependencies on 40 products (lifted from 2 primes of 61 bits, equal modulo a third; 67 nonzero coefficients, largest numerator or denominator 2); 2988 -> 2984 products (3 pivots, 1 left with a zero factor) (0.0 s)
+  u 62793 nonzeros, 0 fractions, largest numerator 3, largest denominator 1; v 108144 nonzeros, 100068 fractions, largest numerator 3, largest denominator 4; w 107385 nonzeros, 99463 fractions, largest numerator 3, largest denominator 4; denominator primes [2] -> dyadic
+  [output] <15x15x23:2984> 0 of 26780625 Brent equations fail; common denominators [1, 4, 4], partial sums below 2^20 (0.0 s)
+  [output, one coefficient of product 1492 changed] 64 equations fail -> REJECTED
+  RESULT: output with 2984 products VERIFIES EXACTLY; corrupted copy REJECTED; written 15x15x23_m2984.json (4.7 s)

@@ -3,7 +3,7 @@ name = "kronexact"
 version = "0.1.0"
 edition = "2024"
 license = "Apache-2.0"
-description = "Exact replay over Q of a projection + 2-reduction path, and an exact check of every Brent equation"
+description = "Exact replay over Q of a projection + 2-reduction path, exact build of a product plan, and an exact check of every Brent equation"
 
 [dependencies]
 rayon = "1"

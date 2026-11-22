@@ -1,0 +1,5 @@
+plan.json: built <4x26x28:1859> (0.0 s)
+  u 28656 nonzeros, 0 fractions, largest numerator 5, largest denominator 1; v 138899 nonzeros, 0 fractions, largest numerator 15, largest denominator 1; w 24126 nonzeros, 0 fractions, largest numerator 3, largest denominator 1; denominator primes [] -> integer
+  [output] <4x26x28:1859> 0 of 8479744 Brent equations fail; common denominators [1, 1, 1], partial sums below 2^19 (0.0 s)
+  [output, one coefficient of product 929 changed] 360 equations fail -> REJECTED
+  RESULT: output with 1859 products VERIFIES EXACTLY; corrupted copy REJECTED; written 4x26x28_m1859.json (0.1 s)
